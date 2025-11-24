@@ -1,0 +1,223 @@
+:root {
+    /* Colors derived from the image */
+    --body-bg-color: #f0f3f5; /* Distinct light background for the area outside the white card */
+    --text-dark: #2c3e50; /* Main text color */
+    --text-light: #7f8c8d; /* Secondary description text */
+    --accent-color: #55c1b6; /* The light blue/teal for the icons (approximation) */
+    --card-bg-light: #ecf0f1; /* Light gray background for the top 3 cards */
+    --card-bg-white: #ffffff; /* Main container background (The big white block) */
+    --border-color: #e0e0e0; /* Subtle border/separator color */
+}
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Work Sans;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--body-bg-color); /* Applied the overall body background color */
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: var(--card-bg-white); /* The central content block is white */
+            padding: 60px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        /* --- Header Section --- */
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-dark);
+            padding: 5px 15px;
+            border: 1px solid var(--border-color);
+            display: inline-block;
+            margin-bottom: 15px;
+            border-radius: 20px;
+            background: linear-gradient(#F2FAFC,#FAEDDD);
+        }
+
+        .header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        .header p {
+            font-size: 18px;
+            color: var(--text-light);
+        }
+        
+        /* --- What We Do Best Section (3 Cards) --- */
+        .what-we-do-grid {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+
+        .service-card {
+            background-color: var(--card-bg-light); 
+            padding: 30px;
+            border-radius: 10px;
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+            position: relative;
+        }
+
+        /* Icon Styling for the top 3 cards */
+        .service-card .icon {
+            display: block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            color: var(--card-bg-white);
+            font-size: 18px;
+            text-align: center;
+            line-height: 30px;
+            margin-bottom: 15px;
+            color: #247785;
+        }
+
+        .service-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* --- Service Portfolio & Image Section --- */
+        .portfolio-section {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .portfolio-list {
+            flex: 1;
+            min-width: 300px;
+            
+        }
+
+        .portfolio-list h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .portfolio-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-top: 5px;
+        }
+
+        .portfolio-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Icon Styling for the Portfolio list */
+        .item-icon {
+            font-size: 24px;
+            color: var(--accent-color);
+            margin-right: 15px;
+            line-height: 1;
+            color: #247785;
+        }
+
+        .item-content h3 {
+            font-size: 17px;
+            margin-bottom: 3px;
+            font-weight: 600;
+        }
+
+        .item-content p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* Placeholder for the Image (Right Side) */
+        .team-image-container {
+            flex: 1;
+            min-height: 550px;
+            border-radius: 10px;
+            overflow: hidden;
+            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('/assets/images/meeting.png'); /* Ensure the image is in the assets folder */
+            background-size: cover;
+            background-position: center;
+            /* Added shadow and border radius to the image container to match the image */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+        }
+
+        /* --- Responsive Design (Media Queries) --- */
+        @media (max-width: 1000px) {
+            .portfolio-section {
+                flex-direction: column;
+            }
+
+            .team-image-container {
+                min-height: 350px;
+                width: 100%;
+                order: -1;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .what-we-do-grid {
+                flex-direction: column; 
+            }
+
+            .service-card {
+                max-width: 100%;
+            }
+
+            .container {
+                padding: 30px 20px;
+            }
+        }
+.service-card{
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);}
+
+  .portfolio-item{
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);}

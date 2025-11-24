@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Work Sans;
+}
+
+body {
+    background: #fff;
+}
+
+.testimonials {
+    text-align: center;
+    padding: 60px 20px;
+    position: static;
+    
+}
+
+.tag {
+    padding: 8px 20px;
+    background: #f1f5f9;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    height:auto;
+    width: auto;
+    display: inline-block;
+}
+
+.testimonials h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+/* Hide radio buttons */
+input[type="radio"] {
+    display: none;
+}
+
+.slider {
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    transition: transform 0.6s ease-in-out;
+}
+
+.card {
+    width: 100%;
+    padding: 28px;
+    background: #e8f6fb;
+    border-radius: 20px;
+    text-align: left;
+}
+
+.card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.profile {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.profile img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.stars {
+    margin-top: 5px;
+    color: #007a87;
+}
+
+/* Slide Navigation via Radio Buttons */
+#s1:checked ~ .slides {
+    transform: translateX(0);
+}
+
+#s2:checked ~ .slides {
+    transform: translateX(-33.33%);
+}
+
+#s3:checked ~ .slides {
+    transform: translateX(-66.66%);
+}
+
+/* Dots */
+.dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    background: #c6d1d8;
+    margin: 0 6px;
+    cursor: pointer;
+}
+
+#s1:checked ~ .dots label:nth-child(1),
+#s2:checked ~ .dots label:nth-child(2),
+#s3:checked ~ .dots label:nth-child(3) {
+    background: #00b4c5;
+}
+
+/* Responsive */
+/* Large tablets / small laptops */
+@media (max-width: 1024px) {
+    .testimonials h1 {
+        font-size: 32px;
+    }
+    .testimonials {
+        margin-top: 15vh;
+    }
+}
+
+/* Medium tablets */
+@media (max-width: 768px) {
+    .testimonials h1 {
+        font-size: 28px;
+    }
+    .testimonials {
+        margin-top: 32vh;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    .testimonials h1 {
+        font-size: 22px;
+    }
+    .testimonials {
+        margin-top: 100vh;
+    }
+}

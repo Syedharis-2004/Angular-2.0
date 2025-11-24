@@ -1,0 +1,324 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Work Sans;
+}
+
+body {
+    background: #000;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo img{
+  inline-size: 100px;
+}
+.logo {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.right-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.search i{
+  color: white;
+}
+.search {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.cta-btn {
+    background: #d7ffe7;
+    padding: 10px 26px;
+    border-radius: 10px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* HERO SECTION */
+.hero {
+    margin-top: 40px;
+    padding: 40px 60px;
+    display: grid;
+    grid-template-columns: 1.2fr 1.5fr 1fr;
+    align-items: center;
+    gap: 20px;
+    min-height: 80vh;
+    color: white;
+    border-radius: 20px;
+}
+
+/* LEFT */
+.tag-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.tag {
+    background: #fff;
+    color: black;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.subtag {
+    border: 1px solid #555;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-light {
+    background: #d7ffe7;
+    padding: 12px 28px;
+    border-radius: 10px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-outline {
+    border: 1px solid #fff;
+    padding: 12px 28px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+/* CENTER (Laptop Image) */
+.laptop-img {
+    width: 100%;
+    transform: rotate(-8deg);
+    filter: drop-shadow(0px 20px 35px rgba(0, 0, 0, 0.6));
+    border-radius: 10px;
+}
+
+/* RIGHT */
+.hero-right p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0.85;
+}
+
+.clients {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.clients img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+}
+
+.clients span {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-right,
+    .hero-left {
+        margin-top: 20px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .laptop-img {
+        margin: 30px auto;
+        transform: rotate(0deg);
+    }
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+}
+
+ /* Pill Toggle Plugin - Namespaced to avoid conflicts */
+.pill-toggle-plugin {
+  position: relative;
+  width: 100%;
+  height: 60PX;
+  background: none;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: inherit;
+  border: 1PX solid #F2FAFC80;
+}
+
+/* Labels */
+.pill-toggle-plugin span {
+  z-index: 2;
+  width: 50%;
+  text-align: center;
+  font-weight: bold;
+  color: white; /* default color */
+  pointer-events: none;
+  transition: color 0.3s;
+}
+
+/* Hide default checkbox */
+.pill-toggle-plugin input {
+  display: none;
+}
+
+/* The sliding circle */
+.pill-slider {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 49%;
+  height: 51px;
+  background: #f4f7f4;
+  border-radius: 50px;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+/* Move circle when toggled */
+.pill-toggle-plugin input:checked + .pill-slider {
+  transform: translateX(100%);
+}
+
+/* Change label colors when toggled */
+.pill-toggle-plugin input:checked ~ .pill-off img {
+  color: white; /* inactive label remains white */
+}
+
+
+.pill-toggle-plugin input:checked ~ .pill-on {
+  color: black; /* active label becomes black */
+}
+
+/* When unchecked, the left label becomes black and right remains white */
+.pill-toggle-plugin input:not(:checked) ~ .pill-off  {
+  color: black; /* active label */
+}
+
+.pill-toggle-plugin input:not(:checked) ~ .pill-on {
+  color: white; /* inactive label */
+}
+.pill-off img{
+  color: #d7ffe7;
+}
+/* Styling for the main container */
+.language-toggle {
+  display: flex; /* Use flexbox to lay out the options side-by-side */
+  width: 160px; /* Adjust width as needed */
+  height: 50px; /* Adjust height as needed */
+  background-color: #020202; /* Dark/Black background */
+  border-radius: 25px; /* Half of the height to make it a pill shape */
+  border: 1px solid white; /* Dashed white border effect */
+  overflow: hidden; /* Ensures contents respect the border-radius */
+  font-family: Arial, sans-serif; /* Use a clear font */
+  box-sizing: border-box;
+}
+
+/* Styling for each language option */
+.language-option {
+  flex: 1; /* Each option takes up equal space */
+  display: flex;
+  justify-content: center; /* Center the text horizontally */
+  align-items: center; /* Center the text vertically */
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer; /* Indicates it's clickable */
+  transition: all 0.3s ease; /* Smooth transition for hover/active states */
+}
+
+/* Separator Line (optional, but helps with the vertical split look) */
+.language-toggle .language-option:first-child {
+  border-right: 1px solid white; /* Subtle vertical line */
+}
+
+/* State for the actively selected (left side - ENG) */
+.eng-active {
+  color: #a0ffff; /* Light blue/teal color for active text */
+  /* background-color: #333; /* Uncomment if you want an active background color */
+}
+
+/* State for the inactive (right side - ARABIC) */
+.arb-inactive {
+  color: #e0e0e0; /* Slightly dimmer white for inactive text */
+  /* background-color: #000; /* Keep background dark */
+}
+
+/* Hover effect for better user experience */
+.language-option:hover {
+  opacity: 0.8;
+}

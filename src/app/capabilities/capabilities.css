@@ -1,0 +1,131 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Work Sans;
+}
+
+body {
+  
+  color: #333;
+  line-height: 1.6;
+}
+
+.core-capabilities {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+.section-subtitle {
+   background: linear-gradient(#F2FAFC,#FAEDDD);
+  color: #555;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  width: 400px;
+  height: 58px;
+  border-radius: 68px;
+  display: inline;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+.capability-card{
+  background-image: url('../../assets/images/capabilities.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.capability-card {
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.capability-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.capability-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.capability-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.capability-card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #444;
+}
+
+.capability-card ul li {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .capability-card {
+    padding: 20px;
+  }
+}

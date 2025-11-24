@@ -1,0 +1,66 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+.main{
+   /* position: relative;*/
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    height: auto;
+    
+}
+.navbar{
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    background-color:rgb(65, 61, 61);
+}
+.navbar {
+  background-image: url('/assets/images/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.servicesportfolio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: auto;
+} 
+.choose_us{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: auto;
+}
+.projects {
+  display: grid;
+  width: 100%;
+  padding: 20px;
+  gap: 20px; /* spacing between grid items */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: start;
+}
+
+.Testimonials {
+  position: static;
+  margin-top: 400px;      /* adjust as needed */
+  display: flex;          /* cleaner layout */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  
+}
