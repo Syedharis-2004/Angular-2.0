@@ -134,7 +134,7 @@ input[type="radio"] {
         font-size: 28px;
     }
     .testimonials {
-        margin-top: 32vh;
+        margin-top: 40vh;
     }
 }
 
@@ -142,6 +142,14 @@ input[type="radio"] {
 @media (max-width: 480px) {
     .testimonials h1 {
         font-size: 22px;
+    }
+    .testimonials {
+        margin-top: 100vh;
+    }
+}
+@media (max-width: 320px) {
+    .testimonials h1 {
+        font-size: 18px;
     }
     .testimonials {
         margin-top: 100vh;

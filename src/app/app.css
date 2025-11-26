@@ -6,9 +6,9 @@
     padding: 0px;
     justify-content: center;
     align-items: center;
-    
-    width: 100%;
+    width: auto;
     height: auto;
+    display: inline-flexbox;
     
 }
 .navbar{
@@ -20,7 +20,8 @@
     align-items: center;
     margin: 0px;
     padding: 0px;
-    background-color:rgb(65, 61, 61);
+    border-radius: 40px;
+    
 }
 .navbar {
   background-image: url('/assets/images/background.png');
