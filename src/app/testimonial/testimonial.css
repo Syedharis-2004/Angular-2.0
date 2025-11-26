@@ -155,4 +155,140 @@ input[type="radio"] {
         margin-top: 100vh;
     }
 }
-*/
+/*Additon*/
+/* Slider wrapper */
+.slider {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Slides container */
+.slides {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+    gap: 20px; /* space between cards */
+}
+
+/* Individual card */
+.card {
+    flex: 0 0 calc(100% - 20px); /* 100% minus gap for one card at a time */
+    max-width: calc(100% - 20px);
+    padding: 20px;
+    background: #e8f6fb;
+    border-radius: 20px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+/* Profile inside card */
+.profile {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Slide navigation via radio buttons */
+#s1:checked ~ .slides {
+    transform: translateX(0%);
+}
+#s2:checked ~ .slides {
+    transform: translateX(calc(-100% - 20px));
+}
+#s3:checked ~ .slides {
+    transform: translateX(calc(-200% - 40px));
+}
+
+/* Dots */
+.dots {
+    text-align: center;
+    margin-top: 20px;
+}
+.dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    background: #c6d1d8;
+    margin: 0 6px;
+    cursor: pointer;
+}
+#s1:checked ~ .dots label:nth-child(1),
+#s2:checked ~ .dots label:nth-child(2),
+#s3:checked ~ .dots label:nth-child(3) {
+    background: #00b4c5;
+}
+
+/* ---------------- Responsive ---------------- */
+
+/* Large tablets */
+@media (max-width: 1024px) {
+    .card {
+        padding: 18px;
+    }
+    .profile img {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Medium tablets */
+@media (max-width: 768px) {
+    .card {
+        padding: 16px;
+        flex: 0 0 calc(100% - 16px);
+        max-width: calc(100% - 16px);
+    }
+    .profile img {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+/* Large phones */
+@media (max-width: 480px) {
+    .card {
+        padding: 14px;
+        flex: 0 0 calc(100% - 14px);
+        max-width: calc(100% - 14px);
+    }
+    .profile img {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 360px) {
+    .card {
+        padding: 12px;
+        flex: 0 0 calc(100% - 12px);
+        max-width: calc(100% - 12px);
+    }
+    .profile img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Ultra-small phones */
+@media (max-width: 320px) {
+    .card {
+        padding: 10px;
+        flex: 0 0 calc(100% - 10px);
+        max-width: calc(100% - 10px);
+    }
+    .profile img {
+        width: 32px;
+        height: 32px;
+    }
+}
