@@ -313,3 +313,22 @@ input[type="radio"] {
         margin-top: 100vh;
     }
 }
+.testimonials {
+    padding: 5% 4%; /* instead of 60px 20px */
+}
+/* Mobile layout: single-column slider */
+@media (max-width: 480px) {
+    .slides {
+        flex-direction: column;
+        width: 100%;
+    }
+    .card {
+        width: 100%;
+        margin-bottom: 20px; /* spacing between cards */
+    }
+}
+
+/* Responsive padding/margin */
+.testimonials {
+    padding: 5% 4%; /* instead of fixed px */
+}

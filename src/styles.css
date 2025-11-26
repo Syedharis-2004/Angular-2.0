@@ -4,5 +4,8 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 body{
     background-image:url(./assets/images/Group\ 2.png) ;
-
+}
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
 }
