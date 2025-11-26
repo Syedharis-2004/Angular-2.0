@@ -114,20 +114,85 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border: 1px solid white;
 }
+/* Default (Large screens) */
+.navbar-main {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 111px;
+  border: 1px solid #FAEDDD80;
+  border-radius: 20px;
+  text-align: center;
+}
+
+/* Tablets & small laptops */
+@media (max-width: 1024px) {
+  .navbar-main {
+    height: 100px;
+    border-radius: 18px;
+    padding: 0 20px;
+  }
+}
+
+/* Large phones */
+@media (max-width: 768px) {
+  .navbar-main {
+    flex-direction: column;
+    height: auto; /* Let height adjust automatically */
+    padding: 10px 15px;
+    border-radius: 16px;
+  }
+}
+
+/* Medium phones */
+@media (max-width: 480px) {
+  .navbar-main {
+    flex-direction: column;
+    height: auto;
+    padding: 8px 12px;
+    border-radius: 14px;
+  }
+}
+
+/* Small phones / ultra-small devices */
+@media (max-width: 360px) {
+  .navbar-main {
+    flex-direction: column;
+    height: auto;
+    padding: 6px 10px;
+    border-radius: 12px;
+  }
+}
+
+/* Extra small devices (320px and below) */
+@media (max-width: 320px) {
+  .navbar-main {
+    flex-direction: column;
+    height: auto;
+    padding: 5px 8px;
+    border-radius: 10px;
+  }
+}
+
 .logo img{
-  inline-size: 100px;
+  inline-size: 200px;
 }
 .logo {
+  margin-top: 35px;
+  margin-left: 10px;
     font-size: 18px;
     font-weight: 700;
     line-height: 18px;
 }
 
 .nav-links {
+  margin-top: 35px;
     display: flex;
     gap: 40px;
     height: 28px;
+    
 }
 
 .nav-links a {
@@ -158,6 +223,7 @@ body {
     font-weight: 600;
     font-size: 16px;
     text-align: center;
+    margin-right: 10px;
 }
 
 /* Tablets & small laptops (max-width: 768px) */
@@ -212,11 +278,13 @@ body {
 .hero-left{
   margin-left: px;
   width: 1004px;
-  margin-bottom: 10%; 
+  margin-bottom: 20%; 
 }
 .hero-left h1{
   font-size: 70px;
   font-weight: 500;
+  line-height: 100%;
+  font-family:worksans,sans-serif ;
 
 }
 .hero-right p{
@@ -232,6 +300,98 @@ body {
   height: 162px;
   margin-bottom: 100px;
 }
+@media (max-width: 1024px) {
+  .hero-left {
+    width: 80%;
+    margin-left: 5%;
+    margin-bottom: 15%;
+  }
+
+  .hero-left h1 {
+    font-size: 55px;
+  }
+
+  .hero-right {
+    width: 60%;
+    height: auto;
+    margin: 50px auto;
+  }
+
+  .hero-right p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .hero-left {
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 12%;
+  }
+
+  .hero-left h1 {
+    font-size: 45px;
+    line-height: 110%;
+    text-align: center;
+  }
+
+  .hero-right {
+    width: 80%;
+    margin: 40px auto;
+    height: auto;
+    padding: 10px;
+  }
+
+  .hero-right p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .hero-left {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-bottom: 10%;
+  }
+
+  .hero-left h1 {
+    font-size: 38px;
+    text-align: center;
+    line-height: 110%;
+  }
+
+  .hero-right {
+    width: 90%;
+    margin: 35px auto;
+    padding: 10px;
+  }
+
+  .hero-right p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .hero-left {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-bottom: 8%;
+  }
+
+  .hero-left h1 {
+    font-size: 30px;
+    line-height: 115%;
+  }
+
+  .hero-right {
+    width: 95%;
+    padding: 8px;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .hero-right p {
+    font-size: 15px;
+  }
+}
+
 /* LEFT */
 .tag-row {
     display: flex;
@@ -393,7 +553,7 @@ h1 {
 
  /* Pill Toggle Plugin - Namespaced to avoid conflicts */
 .pill-toggle-plugin {
-  
+  font-weight: 400;
   border-radius: 100px;
   display: flex;
   align-items: center;
@@ -417,8 +577,9 @@ gap: 25px;
 position: absolute;
 width: 479px;
 height: 76px;
-left: 95px;
-top: 350px;
+left: 100px;
+top: 465px;
+margin-left: 10px;
 
 background: rgba(5, 3, 4, 0.1);
 border: 1px solid rgba(242, 250, 252, 0.5);
@@ -427,6 +588,109 @@ backdrop-filter: blur(4.5px);
 border-radius: 100px;
 
 }
+@media (max-width: 1024px) {
+  .hero-left {
+    width: 80%;
+    margin-left: 5%;
+    margin-bottom: 15%;
+  }
+
+  .hero-left h1 {
+    font-size: 55px;
+  }
+
+  .hero-right {
+    width: 60%;
+    height: auto;
+    margin: 50px auto;
+  }
+
+  .hero-right p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .hero-left {
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 12%;
+  }
+
+  .hero-left h1 {
+    font-size: 45px;
+    line-height: 110%;
+    text-align: center;
+  }
+
+  .hero-right {
+    width: 80%;
+    margin: 40px auto;
+    height: auto;
+    padding: 10px;
+  }
+
+  .hero-right p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .hero-left {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-bottom: 10%;
+  }
+
+  .hero-left h1 {
+    font-size: 38px;
+    text-align: center;
+    line-height: 110%;
+  }
+
+  .hero-right {
+    width: 90%;
+    margin: 35px auto;
+    padding: 10px;
+  }
+
+  .hero-right p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .hero-left {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-bottom: 8%;
+  }
+
+  .hero-left h1 {
+    font-size: 30px;
+    line-height: 115%;
+  }
+
+  .hero-right {
+    width: 95%;
+    padding: 8px;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .hero-right p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .pill-toggle-plugin {
+    width: 70%;
+    left: 15%;
+    top: 420px;
+    height: auto;
+    padding: 12px 20px;
+    gap: 20px;
+  }
+}
+
 
 /* Labels */
 .pill-toggle-plugin span {
@@ -627,3 +891,78 @@ border-radius: 100px;
         font-size: 11px;
     }
 }
+/* ------------------------------ */
+/* DESKTOP (Your original design) */
+/* ------------------------------ */
+
+.pill-toggle-plugin {
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px 10px 10px;
+  gap: 25px;
+
+  position: absolute;
+  width: 479px;
+  height: 76px;
+  left: 120px;
+  top: 465px;
+  margin-left: 10px;
+
+  background: rgba(5, 3, 4, 0.1);
+  border: 1px solid rgba(242, 250, 252, 0.5);
+  backdrop-filter: blur(4.5px);
+  cursor: pointer;
+}
+
+
+/* ------------------------------ */
+/* TABLET (768px – 1024px)        */
+/* ------------------------------ */
+
+@media (max-width: 1024px) {
+  .pill-toggle-plugin {
+    width: 380px;
+    height: 70px;
+    left: 40px;
+    top: 380px;
+    padding: 10px 20px;
+    gap: 15px;
+  }
+}
+
+
+/* ------------------------------ */
+/* LARGE MOBILE (600px – 767px)   */
+/* ------------------------------ */
+
+@media (max-width: 767px) {
+  .pill-toggle-plugin {
+    width: 90%;
+    height: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 350px;
+    padding: 10px 18px;
+    gap: 10px;
+  }
+}
+
+
+/* ------------------------------ */
+/* SMALL MOBILE (below 480px)     */
+/* ------------------------------ */
+
+@media (max-width: 480px) {
+  .pill-toggle-plugin {
+    width: 92%;
+    height: auto;
+    padding: 10px 15px;
+    top: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 8px;
+  }
+}
+

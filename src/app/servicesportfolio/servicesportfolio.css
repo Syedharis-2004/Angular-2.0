@@ -117,6 +117,9 @@
             min-width: 300px;
             
         }
+        .icon img{
+        inline-size: 30px;
+        }
 
         .portfolio-list h2 {
             font-size: 28px;
@@ -143,6 +146,9 @@
             margin-right: 15px;
             line-height: 1;
             color: #247785;
+        }
+        .item-icon img{
+            inline-size: 30px;
         }
 
         .item-content h3 {
