@@ -127,6 +127,7 @@ body {
 .nav-links {
     display: flex;
     gap: 40px;
+    height: 28px;
 }
 
 .nav-links a {
@@ -209,7 +210,27 @@ body {
     justify-content: space-between;
 }
 .hero-left{
-  margin-left: 5px;
+  margin-left: px;
+  width: 1004px;
+  margin-bottom: 10%; 
+}
+.hero-left h1{
+  font-size: 70px;
+  font-weight: 500;
+
+}
+.hero-right p{
+  font-size: 24px;
+  line-height: 100%;
+  font-weight: 400;
+
+}
+.hero-right{
+  text-align: center;
+  align-items: center;
+  width: 408px;
+  height: 162px;
+  margin-bottom: 100px;
 }
 /* LEFT */
 .tag-row {
@@ -307,12 +328,7 @@ h1 {
 }
 
 /* RIGHT */
-.hero-right p {
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    opacity: 0.85;
-}
+
 
 .clients {
     display: flex;
@@ -377,11 +393,8 @@ h1 {
 
  /* Pill Toggle Plugin - Namespaced to avoid conflicts */
 .pill-toggle-plugin {
-  position: relative;
-  width: 100%;
-  height: 60PX;
-  background: none;
-  border-radius: 50px;
+  
+  border-radius: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -390,7 +403,29 @@ h1 {
   cursor: pointer;
   font-family: inherit;
   border: 1PX solid #F2FAFC80;
-  margin-bottom: 30px;
+    /* Frame 5 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 10px 30px 10px 10px;
+gap: 25px;
+
+position: absolute;
+width: 479px;
+height: 76px;
+left: 95px;
+top: 350px;
+
+background: rgba(5, 3, 4, 0.1);
+border: 1px solid rgba(242, 250, 252, 0.5);
+backdrop-filter: blur(4.5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 100px;
+
 }
 
 /* Labels */
@@ -415,7 +450,7 @@ h1 {
   top: 4px;
   left: 4px;
   width: 49%;
-  height: 51px;
+  height: 67px;
   background: #f4f7f4;
   border-radius: 50px;
   transition: 0.3s;
