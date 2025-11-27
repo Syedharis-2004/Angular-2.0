@@ -56,12 +56,22 @@
   align-items: start;
 }
 
-.Testimonials {
-  position: static;
+/*.Testimonials {
   margin-top: 400px;      /* adjust as needed */
-  display: flex;          /* cleaner layout */
-  justify-content: center;
+  /*display: flex;          /* cleaner layout */
+  /*justify-content: center;
   align-items: center;
   width: 100%;
   
+}*/
+.Testimonials {
+  /* FIX: Significantly reduce or remove this large, fixed margin. */
+  margin-top: 400px; /* Example: Use a smaller, more sensible margin */
+  /* OR use relative units for responsiveness: */
+  /* margin-top: 5vw; */
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }

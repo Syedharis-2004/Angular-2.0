@@ -54,7 +54,7 @@ input[type="radio"] {
 
 .card {
     width: 400px;
-    height: 200px;
+    height: 600px;
     padding: 28px;
     background: #e8f6fb;
     border-radius: 20px;
@@ -146,14 +146,14 @@ input[type="radio"] {
         font-size: 22px;
     }
     .testimonials {
-        margin-top: 100vh;
+        margin-top: 190vh;
     }
 }
 /*Addition*/
 /* Base Card Styles */
 .card {
     width: 400px;          /* default width on desktop */
-    height: 200px;         /* default height */
+    height: 250px;         /* default height */
     padding: 28px;
     background: #e8f6fb;
     border-radius: 20px;
