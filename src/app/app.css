@@ -47,6 +47,25 @@
     width: 100%;
     height: auto;
 }
+/*.capabilities{
+/* Auto layout */
+/*display: flex;
+flex-direction:column;
+align-items: flex-start;
+padding: 0px;
+gap: 100px;
+text-align: center;
+align-items: center;
+justify-content: space-between;
+width: 1800px;
+height: 1341.8px;
+/* Inside auto layout */
+/*flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
+}*/
 .projects {
   display: grid;
   width: 100%;
