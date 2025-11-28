@@ -198,8 +198,8 @@ flex-grow: 0;
             /*figma*/
             /* cbc5c214d7-accf5fe12250f7358c8c 1 */
 
-            width: 619px;
-            height: 899px;
+            min-width: 619px;
+            min-height: 899px;
 
             
             box-shadow: 0px 2px 30px rgba(201, 197, 186, 0.35);

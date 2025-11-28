@@ -7,16 +7,16 @@
 }
 body{
 /* Auto layout */
-display: flex;
+/*display: flex;
 flex-direction:column;
-align-items: flex-start;
+align-items: flex-start;*/
 padding: 0px;
 gap: 100px;
 text-align: center;
 align-items: center;
 justify-content: space-between;
-width: 1800px;
-height: 1341.8px;
+max-width: 1800px;
+max-height: 1341.8px;
 /* Inside auto layout */
 flex: none;
 order: 3;
@@ -41,21 +41,29 @@ body {
 }
 
 .section-subtitle {
-   background: linear-gradient(#F2FAFC,#FAEDDD);
-  color: #555;
-  font-size: 0.9rem;
-  letter-spacing: 1px;
+  background: linear-gradient(90deg, #F2FAFC 0%, #FAEDDD 100%);
+  box-shadow: 0px 1px 11px rgba(201, 197, 186, 0.26);
+  color: #050304;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0;
   margin-bottom: 10px;
-  width: 400px;
-  height: 58px;
-  border-radius: 68px;
+  border-radius: 68px;  
   display: inline;
-}
+  gap: 10px;
+  width: 250px;
+  height: 58px;
+
+  /*figma*/
+  }
 
 .section-title {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 72px;
+  line-height: 100%;
+  font-weight: 600;
   margin-bottom: 10px;
+
 }
 
 .section-description {
@@ -70,23 +78,20 @@ body {
 /* Auto layout */
 display: flex;
 flex-direction: column;
-align-items: flex-start;
+align-items: self-start;
 padding: 0px;
 gap: 48px;
-
-width: 1640px;
-height: 1046.8px;
-
-
+max-width: 1640px;
+max-height: 1046.8px;
 /* Inside auto layout */
 flex: none;
 order: 3;
 align-self: stretch;
 flex-grow: 0;
-
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 48px;
+/*original*/
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 48px;
 }
 .capability-card1{
   background-image: url('../../assets/images/capabilities.png');
@@ -95,8 +100,8 @@ flex-grow: 0;
   background-position: center;
 }
 .capability-card1 {
-  width: 514.67px;
-  height: 482.8px;
+  max-width: 514.67px;
+  max-height: 482.8px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -105,8 +110,6 @@ flex-grow: 0;
   align-items: flex-start;
   padding: 70px 60px;
   gap: 30px;
-  width: 514.67px;
-  height: 482.8px;
   filter: drop-shadow(0px 4px 20px rgba(201, 197, 186, 0.3));
   border-radius: 30px;
 
@@ -164,8 +167,8 @@ flex-grow: 1;
   background-position: center;
 }
 .capability-card2 {
-    width: 514.67px;
-  height: 482.8px;
+  max-width: 514.67px;
+  max-height: 482.8px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -174,8 +177,6 @@ flex-grow: 1;
   align-items: flex-start;
   padding: 70px 60px;
   gap: 30px;
-  width: 514.67px;
-  height: 482.8px;
   filter: drop-shadow(0px 4px 20px rgba(201, 197, 186, 0.3));
   border-radius: 30px;
 
@@ -229,8 +230,8 @@ flex-grow: 1;
   background-position: center;
 }
 .capability-card3 {
-  width: 514.67px;
-  height: 482.8px;
+  max-width: 514.67px;
+  max-height: 482.8px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -239,8 +240,6 @@ flex-grow: 1;
   align-items: flex-start;
   padding: 70px 60px;
   gap: 30px;
-  width: 514.67px;
-  height: 482.8px;
   filter: drop-shadow(0px 4px 20px rgba(201, 197, 186, 0.3));
   border-radius: 30px;
 
@@ -294,11 +293,25 @@ flex-grow: 1;
   background-position: center;
 }
 .capability-card4 {
-  padding: 25px;
-  border-radius: 12px;
+   max-width: 514.67px;
+  max-height: 482.8px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 70px 60px;
+  gap: 30px;
+  filter: drop-shadow(0px 4px 20px rgba(201, 197, 186, 0.3));
+  border-radius: 30px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+flex-grow: 1;
+
 }
 
 .capability-card4:hover {
@@ -343,11 +356,24 @@ flex-grow: 1;
   background-position: center;
 }
 .capability-card5{
-  padding: 25px;
-  border-radius: 12px;
+   max-width: 514.67px;
+  max-height: 482.8px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 70px 60px;
+  gap: 30px;
+  filter: drop-shadow(0px 4px 20px rgba(201, 197, 186, 0.3));
+  border-radius: 30px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+flex-grow: 1;
 }
 
 .capability-card5:hover {
@@ -416,11 +442,25 @@ flex-grow: 1;
   background-position: center;
 }
 .capability-card6 {
-  padding: 25px;
-  border-radius: 12px;
+ max-width: 514.67px;
+  max-height: 482.8px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 70px 60px;
+  gap: 30px;
+  filter: drop-shadow(0px 4px 20px rgba(201, 197, 186, 0.3));
+  border-radius: 30px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+flex-grow: 1;
+  
 }
 
 .capability-card6:hover {
