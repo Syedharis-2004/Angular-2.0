@@ -19,16 +19,20 @@ body {
 .tag {
     padding: 8px 20px;
     background: linear-gradient(#F2FAFC,#FAEDDD);
-    border-radius: 20px;
-    font-size: 14px;
+    border-radius: 68px;
+    font-size: 24px;
+    font-weight: 400;
     margin-bottom: 10px;
-    height:auto;
-    width: auto;
+    height:58px;
+    width: 227px;
+    text-align: center;
+    align-items: center;
+    line-height:100% ;
     display: inline-block;
 }
 
 .testimonials h1 {
-    font-size: 36px;
+    font-size: 72px;
     font-weight: 700;
     margin-bottom: 40px;
 }
@@ -51,20 +55,31 @@ input[type="radio"] {
     transition: transform 0.6s ease-in-out;
     justify-content: space-around;
 }
-
+.card{
+    width: 751px!important;
+    height: auto!important;
+}
 .card {
-    width: 400px;
-    height: 600px;
     padding: 28px;
     background: #e8f6fb;
     border-radius: 20px;
     text-align: left;
 }
-
-.card p {
+.card h3{
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 100%;
+}
+.card span{
     font-size: 16px;
+    font-weight: 500;
+    line-height: 100%;
+}
+.card p {
+    font-size: 28px;
     margin-bottom: 20px;
-    line-height: 1.5;
+    line-height: 100%;
+    font-weight: 400;
 }
 
 .profile {
@@ -74,12 +89,15 @@ input[type="radio"] {
 }
 
 .profile img {
-    width: 60px;
-    height: 60px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
 }
 
 .stars {
+    display:flex;
+    width: 28px;
+    height: 28px;
     margin-top: 5px;
     color: #007a87;
 }

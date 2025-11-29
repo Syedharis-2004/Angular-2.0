@@ -10,14 +10,48 @@ body {
     padding: 0;
      align-items: center;
     color: #333;
+    /* Frame 25 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 20px;
+
+max-width: 1800px;
+max-height: 1600.57px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+align-self: stretch;
+flex-grow: 0;
+
 }
 
 
 .portfolio-grid {
-    width: 90%;
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding-bottom: 50px;
+    /* Frame 24 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 60px 0px 0px;
+gap: 48px;
+
+max-width: 1640px;
+max-height: 1305.57px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
 }
 
 a {
@@ -37,28 +71,31 @@ a {
     display: inline;
 }
 .project-tag {
-    font-size: 0.9rem;
-    color: #888;
+    font-size: 24px;
+    font-weight: 400;
+    color:#050304;
     margin-bottom: 10px;
     background: linear-gradient(#F2FAFC,#FAEDDD);
     padding: 8px 20px;
     border: none;
-    border-radius: 20px;
-    font-size: 14px;
-    width: 200px;
+    border-radius: 68px;
+    width: 227px;
     height:58px ;
     
 }
 
 
 .hero-section h1 {
-    font-size: 2.5rem;
+    font-size: 72px;
+    font-weight: 600;
+    color: #050304;
     margin: 0 0 15px 0;
 }
 
 .subtitle {
-    font-size: 1.1rem;
-    color: #555;
+    font-size: 28px;
+    color:#050304;
+    font-weight: 400;
     line-height: 1.5;
 }
 
@@ -72,11 +109,15 @@ a {
 
 
 .project-card {
-    background-color: #f9f9f9; 
+    background-color: #FFFFFF; 
     padding: 15px;
-    border-radius: 8px;
-   
+    border-radius: 30px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    max-width: 514.67px;
+    max-height: 598.78px;
+    gap: 10px;
+
+
 }
 .project-card button{
     margin-top: 10px;
@@ -108,35 +149,43 @@ a {
 }
 
 .project-title {
-    font-size: 1.4rem;
+    font-size: 28px;
+    font-weight: 600;
     margin: 0 0 5px 0;
     color: #333;
 }
 
 .project-description {
-    font-size: 0.9rem;
+    font-size: 20px;
+    font-weight: 500;
     color: #666;
     margin: 0 0 15px 0;
 }
 
-.case-study-link {
-    display: inline-flex;
+.case-study-link button {
+    display: flex;
     align-items: center;
-    font-weight: bold;
-    color: #007bff; 
-    padding: 5px 0;
+    font-weight: 400;
+    font-size: 24px;
+    color: black; 
+    padding: 15px 30px;
     transition: color 0.3s;
+    width: 297px;
+    height: 63px;
+    text-align: center;
+    background-color: none;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, rgba(187, 227, 229, 0.01) 0%, rgba(250, 237, 221, 0.01) 100%);
+    border: 1px solid #050304;
+    box-shadow: 0px 0px 20px rgba(187, 227, 229, 0.25);
+    border-radius: 8px;
 }
 
 .case-study-link:hover {
-    color: #0056b3;
+    background: linear-gradient(90deg, rgba(187, 227, 229, 0.01) 0%, rgba(250, 237, 221, 0.01) 100%);
+    
 }
 
-.arrow {
-    margin-left: 5px;
-    font-size: 1.2em;
-    line-height: 1;
-}
 @media (max-width: 992px) {
     .portfolio-grid {
         

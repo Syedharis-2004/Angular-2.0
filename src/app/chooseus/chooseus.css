@@ -6,7 +6,8 @@
 }
 
 body {
-    
+    max-width:1800px;
+    max-height:1240px ;
     padding: 40px 20px;
     display: flex;
     justify-content: center;
@@ -21,18 +22,34 @@ body {
 .title {
     margin-bottom: 40px;
 }
-
 .why-btn {
+    width: 188px;
+    height: 58px;
     background: #f5f0e8;
     padding: 8px 20px;
     border: none;
-    border-radius: 20px;
-    font-size: 14px;
+    border-radius: 68px;
+    font-size: 24px;
+    /*figma*/
+    /* Why Us? */
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #050304;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    text-align: center;
+    
+
 }
 
 .title h2 {
-    font-size: 36px;
-    font-weight: 700;
+    font-size: 72px;
+    font-weight: 600;
     margin-top: 15px;
 }
 
@@ -56,52 +73,171 @@ body {
     padding: 18px;
     margin-bottom: 12px;
     border-radius: 12px;
-    font-size: 16px;
+    font-size: 28px;
     display: flex;
     align-items: center;
+    font-weight: 600;
+    font-style: normal;
     gap: 10px;
+    max-height:110px ;
+    max-width: 859px;
+    color: #050304;
+    font-family: 'Work Sans';
+    line-height: 100%;
 }
 
 /* Right grid boxes */
 .stats-grid {
-    flex: 1;
+    display:grid ;
     min-width: 280px;
-    display: grid;
-    gap: 15px;
+    gap: 25px;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+.stats-grid .stat-cream .stat-light-blue{
+    align-items: end;
 }
-
-.stat {
+/*.stat {
     padding: 35px 20px;
     border-radius: 15px;
     color: #000;
+}*/
+.stat-blue{
+    
+    background: #1e828c;
+    color: #ffffff;
+    max-width: 350px;
+    max-height: 293px;
+    padding: 35px 20px;
+    border-radius: 30px;
+}
+.stat-blue h3 {
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 70px;
+line-height: 82px;
+text-align: center;
 }
 
-.stat h3 {
-    font-size: 30px;
-    font-weight: 700;
-}
+.stat-blue p {
+margin-top: 8px;
+    /* Client Retention Rate */
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 21px;
+color: #F2FAFC;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
 
-.stat p {
-    margin-top: 8px;
 }
 
 /* Colors */
-.blue {
-    background: #1e828c;
-    color: #ffffff;
-}
 
-.gold {
+.stat-gold {
+    margin-top: 20px;
     background: #d3b178;
+    max-width: 318px;
+    max-height:293px ;
+    border-radius: 30px;
+    padding: 35px 20px;
+}
+.stat-gold h3 {
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 70px;
+line-height: 82px;
+text-align: center;
 }
 
-.light-blue {
+.stat-gold p {
+margin-top: 8px;
+    /* Client Retention Rate */
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 21px;
+color: black    ;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+}
+
+
+.stat-light-blue {
+    
     background: #a9d7dd;
+    max-width: 346px;
+    max-height:293px ;
+    border-radius: 30px;
+    padding: 35px 20px;
+    
+}
+.stat-light-blue h3 {
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 70px;
+line-height: 82px;
+text-align: center;
 }
 
-.cream {
+.stat-light-blue p {
+margin-top: 8px;
+    /* Client Retention Rate */
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 21px;
+color: black;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+}
+
+
+.stat-cream {
+    margin-top: 10px;
     background: #f0ddc6;
+    max-width: 315px;
+    max-height: 293px;
+    border-radius: 30px;
+    padding: 35px 20px;
+    margin-bottom:-10px ;
+}
+.stat-cream h3 {
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 70px;
+line-height: 82px;
+text-align: center;
+}
+
+.stat-cream p {
+margin-top: 8px;
+    /* Client Retention Rate */
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 21px;
+color:black;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
 }
 
 /* CTA button */
@@ -116,7 +252,8 @@ body {
     border: none;
     padding: 12px 28px;
     border-radius: 10px;
-    font-size: 15px;
+    font-size: 25px;
+    font-weight: 400;
     cursor: pointer;
 }
 

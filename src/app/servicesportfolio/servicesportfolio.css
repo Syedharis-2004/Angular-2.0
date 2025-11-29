@@ -39,8 +39,9 @@
         }
 
         .header .subtitle {
-            font-size: 14px;
-            font-weight: 600;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 100%;
             color: var(--text-dark);
             padding: 5px 15px;
             border: 1px solid var(--border-color);
@@ -51,13 +52,14 @@
         }
 
         .header h1 {
-            font-size: 42px;
+            font-size: 72px;
             margin-bottom: 10px;
-            font-weight: 800;
+            font-weight: 600;
         }
 
         .header p {
-            font-size: 18px;
+            font-size: 28px;
+            font-weight: 400;
             color: var(--text-light);
         }
         
@@ -117,25 +119,33 @@
             min-width: 300px;
             
         }
+        .icon2 img{
+        width: 48.75px;
+        height: 65px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+
+        }
         .icon img{
         /* Frame */
 
-width: 48.75px;
-height: 65px;
+        width: 48.75px;
+        height: 65px;
 
-transform: rotate(-15deg);
+        transform: rotate(-15deg);
 
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
+        /* Inside auto layout */
+        flex: none;
+        order: 0;
+        flex-grow: 0;
 
         }
 
         .portfolio-list h2 {
-            font-size: 28px;
+            font-size: 52px;
             margin-bottom: 30px;
-            font-weight: 700;
+            font-weight: 600;
         }
 
         .portfolio-item {
