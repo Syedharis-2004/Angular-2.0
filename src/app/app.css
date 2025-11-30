@@ -39,6 +39,7 @@
     height: auto;
 } 
 .choose_us{
+    
     display: flex;
     justify-content: center;
     align-items: center;

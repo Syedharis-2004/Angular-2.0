@@ -43,6 +43,7 @@ input[type="radio"] {
 }
 
 .slider {
+    justify-content: flex-start;
     max-width: 900px;
     margin: auto;
     overflow: hidden;
@@ -56,8 +57,8 @@ input[type="radio"] {
     justify-content: space-around;
 }
 .card{
-    width: 751px!important;
-    height: auto!important;
+    max-width: 751px;
+    height: auto;
 }
 .card {
     padding: 28px;
@@ -234,3 +235,191 @@ input[type="radio"] {
     }
 }
 
+/*Media*/
+/* =========================
+   Testimonials Section - Full Responsiveness
+========================= */
+
+/* Large desktops (default desktop layout remains same, no changes) */
+
+/* Laptops & Large Tablets */
+@media (max-width: 1440px) {
+    .testimonials h1 {
+        font-size: 64px;
+    }
+    .tag {
+        width: auto;
+        padding: 8px 18px;
+        font-size: 22px;
+    }
+    .card {
+        width: 650px;
+        padding: 28px;
+        height: auto;
+    }
+    .card h3 {
+        font-size: 26px;
+    }
+    .card p {
+        font-size: 22px;
+    }
+    .profile img {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+/* Medium Tablets / Small Laptops */
+@media (max-width: 1024px) {
+    .testimonials h1 {
+        font-size: 48px;
+    }
+    .tag {
+        width: auto;
+        padding: 6px 16px;
+        font-size: 20px;
+    }
+    .card {
+        width: 500px;
+        padding: 24px;
+        height: auto;
+    }
+    .card h3 {
+        font-size: 22px;
+    }
+    .card p {
+        font-size: 18px;
+    }
+    .profile img {
+        width: 90px;
+        height: 90px;
+    }
+    .slides {
+        gap: 20px;
+        justify-content: center;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .testimonials h1 {
+        font-size: 36px;
+    }
+    .tag {
+        width: 70%;
+        padding: 5px 14px;
+        font-size: 18px;
+    }
+    .card {
+        width: 350px;
+        padding: 20px;
+        height: auto;
+    }
+    .card h3 {
+        font-size: 20px;
+    }
+    .card p {
+        font-size: 16px;
+    }
+    .profile img {
+        width: 70px;
+        height: 70px;
+    }
+    .slides {
+        gap: 16px;
+        justify-content: center;
+    }
+}
+
+/* Large Mobile Phones */
+@media (max-width: 480px) {
+    .testimonials h1 {
+        font-size: 28px;
+    }
+    .tag {
+        width: 80%;
+        padding: 4px 12px;
+        font-size: 16px;
+    }
+    .card {
+        width: 90vw;
+        padding: 16px;
+        height: auto;
+    }
+    .card h3 {
+        font-size: 18px;
+    }
+    .card p {
+        font-size: 14px;
+    }
+    .profile img {
+        width: 60px;
+        height: 60px;
+    }
+    .slides {
+        gap: 12px;
+        justify-content: center;
+    }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 360px) {
+    .testimonials h1 {
+        font-size: 24px;
+    }
+    .tag {
+        width: 90%;
+        padding: 4px 10px;
+        font-size: 14px;
+    }
+    .card {
+        width: 95vw;
+        padding: 14px;
+        height: auto;
+    }
+    .card h3 {
+        font-size: 16px;
+    }
+    .card p {
+        font-size: 12px;
+    }
+    .profile img {
+        width: 50px;
+        height: 50px;
+    }
+    .slides {
+        gap: 10px;
+        justify-content: center;
+    }
+}
+
+/* Ultra-small Phones */
+@media (max-width: 320px) {
+    .testimonials h1 {
+        font-size: 20px;
+    }
+    .tag {
+        width: 98%;
+        padding: 3px 8px;
+        font-size: 12px;
+    }
+    .card {
+        width: 98vw;
+        padding: 12px;
+        height: auto;
+    }
+    .card h3 {
+        font-size: 14px;
+    }
+    .card p {
+        font-size: 12px;
+    }
+    .profile img {
+        width: 45px;
+        height: 45px;
+    }
+    .slides {
+        gap: 8px;
+        justify-content: center;
+    }
+}

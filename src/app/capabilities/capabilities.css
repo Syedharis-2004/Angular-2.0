@@ -497,3 +497,115 @@ flex-grow: 1;
   justify-content: center;
   text-align: center;
 }
+/*Media*/
+/* ============================
+   LARGE TABLETS / SMALL LAPTOPS
+   ============================ */
+@media (max-width: 1200px) {
+  .section-title {
+    font-size: 48px;
+  }
+  .capability-card1,
+  .capability-card2,
+  .capability-card3,
+  .capability-card4,
+  .capability-card5,
+  .capability-card6 {
+    padding: 50px 40px;
+  }
+}
+
+/* ============================
+   TABLETS
+   ============================ */
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 40px;
+  }
+  .capabilities-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+  }
+  .capability-card1,
+  .capability-card2,
+  .capability-card3,
+  .capability-card4,
+  .capability-card5,
+  .capability-card6 {
+    padding: 40px 30px;
+  }
+}
+
+/* ============================
+   MOBILE LARGE
+   ============================ */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 32px;
+    line-height: 120%;
+  }
+  .section-subtitle {
+    font-size: 18px;
+    width: auto;
+    padding: 12px 24px;
+    height: auto;
+  }
+  .capabilities-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .capability-card1,
+  .capability-card2,
+  .capability-card3,
+  .capability-card4,
+  .capability-card5,
+  .capability-card6 {
+    padding: 30px 20px;
+  }
+  .capability-card1 p,
+  .capability-card2 p,
+  .capability-card3 p,
+  .capability-card4 p,
+  .capability-card5 p,
+  .capability-card6 p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ============================
+   MOBILE SMALL (MAIN FIX)
+   ============================ */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 26px;
+  }
+  .section-subtitle {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  .capability-card1,
+  .capability-card2,
+  .capability-card3,
+  .capability-card4,
+  .capability-card5,
+  .capability-card6 {
+    padding: 20px 15px;
+    gap: 20px;
+  }
+  .capability-card1 h3,
+  .capability-card2 h3,
+  .capability-card3 h3,
+  .capability-card4 h3,
+  .capability-card5 h3,
+  .capability-card6 h3 {
+    font-size: 1rem;
+  }
+  .capability-card1 ul li,
+  .capability-card2 ul li,
+  .capability-card3 ul li,
+  .capability-card4 ul li,
+  .capability-card5 ul li,
+  .capability-card6 ul li {
+    font-size: 0.85rem;
+  }
+}

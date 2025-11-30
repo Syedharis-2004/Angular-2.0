@@ -298,3 +298,183 @@ flex-grow: 1;
 .portfolio-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);}
+/*Media*/
+/* ============================
+   🌐 LARGE SCREENS (Above 1200px)
+   ============================ */
+@media (min-width: 1201px) {
+    .container {
+        max-width: 1200px;
+        padding: 60px 40px;
+    }
+}
+
+
+
+/* ============================
+   📱 TABLET MODE (1000px ↓)
+   ============================ */
+@media (max-width: 1000px) {
+
+    /* Portfolio section stacks */
+    .portfolio-section {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* Image moves on top */
+    .team-image-container {
+        width: 100%;
+        min-width: 100%;
+        min-height: 350px;
+        height: auto;
+        order: -1;
+        margin-bottom: 25px;
+        border-radius: 25px;
+    }
+
+    /* Service cards shrink */
+    .what-we-do-grid {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 25px;
+        height: auto;
+    }
+
+    .portfolio-list h2 {
+        font-size: 40px;
+    }
+
+    .portfolio-item {
+        height: auto;
+        padding: 20px;
+    }
+}
+
+
+
+/* ============================
+   📱 SMALL TABLETS (768px ↓)
+   ============================ */
+@media (max-width: 768px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .container {
+        padding: 25px 18px;
+    }
+
+    /* 3 cards become vertical */
+    .what-we-do-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .header h1 {
+        font-size: 52px;
+    }
+
+    .header p {
+        font-size: 20px;
+    }
+
+    .header .subtitle {
+        font-size: 18px;
+        padding: 4px 12px;
+    }
+
+    .portfolio-list h2 {
+        font-size: 36px;
+    }
+
+    .portfolio-item {
+        flex-direction: row;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    .item-icon img {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+
+
+/* ============================
+   📱 MOBILE (576px ↓)
+   ============================ */
+@media (max-width: 576px) {
+
+    .header h1 {
+        font-size: 40px;
+        line-height: 1.1;
+    }
+
+    .header p {
+        font-size: 18px;
+    }
+
+    .what-we-do-grid {
+        gap: 15px;
+    }
+
+    .service-card {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .portfolio-list h2 {
+        font-size: 28px;
+    }
+
+    .portfolio-item {
+        padding: 18px;
+    }
+
+    .team-image-container {
+        min-height: 250px;
+        border-radius: 18px;
+    }
+}
+
+
+
+/* ============================
+   📱 SMALL MOBILE (420px ↓)
+   ============================ */
+@media (max-width: 420px) {
+
+    .header h1 {
+        font-size: 34px;
+    }
+
+    .header p {
+        font-size: 16px;
+    }
+
+    .service-card h3 {
+        font-size: 16px;
+    }
+
+    .service-card p {
+        font-size: 13px;
+    }
+
+    .portfolio-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .item-icon img {
+        width: 40px;
+        height: 40px;
+    }
+}
