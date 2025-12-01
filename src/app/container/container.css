@@ -67,7 +67,18 @@
 
   /* YOUR ORIGINAL DESKTOP ALIGNMENT */
   margin-left: -200px;
+
 }
+  /*new*/
+
+  .content-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;   /* allows stacking on small devices */
+}
+
 
 /* ---------- TEXT CONTENT ---------- */
 .text-content {
@@ -79,23 +90,84 @@
   gap: 40px;
 }
 /*.image-container{
-  background-image: url('/assets/images/flower.png') !important ;
+  background-image: url('../../assets/images/flower.png') ;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}*/
+} */
 /* ---------- IMAGE ---------- */
-.image-container img {
+/*.image-container img {
   max-width: 818px;
   flex-shrink: 0;
 }
 
 .image-container{
-  /*background-image: url('../../assets/images/flower.png')!important;*/
+  background-image: url('../../assets/images/flower.png');
   width: 100%;
   height: auto;
   display: block;
+}*/
+/*.image-container {
+  background-image: url('/assets/images/flower.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 818px;
+  min-height: 500px;
 }
+
+/*.image-container img {
+  align-items: center;
+  max-width: 818px;
+  flex-shrink: 0;
+}
+*/
+/* Container for text + image */
+.content-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: nowrap; /* prevent stacking on desktop/tablets */
+}
+
+/* Columns */
+.text-content,
+.image-container {
+  flex: 1 1 50%; /* side by side on desktop/tablets */
+}
+
+/* Image container */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Responsive image */
+.image-container img,
+.responsive-image {
+  width: 100%;          /* scales with parent */
+  max-width: 818px;     /* limits size on large screens */
+  height: auto;         /* keep aspect ratio */
+  display: block;
+}
+
+/* Stack columns only on small screens (mobile) */
+@media (max-width: 600px) {
+  .content-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-content,
+  .image-container {
+    flex: 1 1 100%;
+  }
+}
+
+
 
 /* ---------- HEADINGS ---------- */
 .heading {
@@ -206,7 +278,10 @@
   .heading {
     font-size: 36px;
   }
-
+  .image-container {
+    max-width: 400px;
+    margin: 0 auto;
+  }
   .text-content {
     padding: 0 10px;
   }
