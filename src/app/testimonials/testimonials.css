@@ -36,6 +36,7 @@ body {
     margin-left: auto;
     margin-right: auto;         /* this forces perfect centering */
     max-width: 227px;
+
 }
 
 
@@ -172,7 +173,7 @@ input[type="radio"] {
 
 /* 480px - Large Mobile */
 @media (max-width: 480px) {
-    .testimonials{margin-top: 100vh;} 
+    .testimonials{margin-top: 110vh;} 
     .testimonials h1 { font-size: 28px; }
     .tag { width: 80%; font-size: 16px; }
     .card { width: 90vw; padding: 16px; }

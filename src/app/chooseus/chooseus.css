@@ -364,7 +364,7 @@ flex-grow: 0;
 /* Mobile devices */
 @media (max-width: 480px) {
     .why-section {
-        margin-top: 110vh;
+        margin-top: 120vh;
     }
     .title h2 {
         font-size: 28px;

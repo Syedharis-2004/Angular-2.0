@@ -34,8 +34,8 @@ a {
     font-weight: 400;
     display: inline;
     margin-bottom: 20px;
-    width: 407px;
-    height: 58px;
+    width: 100%;
+    height: auto !important;
     text-align: center;
 }
 
