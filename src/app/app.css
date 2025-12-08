@@ -1,53 +1,58 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-.main{
-   /* position: relative;*/
-    margin: 0px;
-    padding: 0px;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    height: auto;
-    display: inline-flexbox;
-    
+.main {
+  /* position: relative;*/
+  margin: 0px;
+  padding: 0px;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  display: inline-flexbox;
+
 }
-.navbar{
-    display: flex;
-    top: 0;
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    margin: 0px;
-    padding: 0px;
-    border-radius: 40px;
-    
+
+.navbar {
+  display: flex;
+  top: 0;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 40px;
+
 }
+
 .navbar {
   background-image: url('/assets/images/background.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-.servicesportfolio{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-    height: auto;
-} 
-.choose_us{
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-    height: auto;
+
+.servicesportfolio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: auto;
 }
+
+.choose_us {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: auto;
+}
+
 /*.capabilities{
 /* Auto layout */
 /*display: flex;
@@ -71,25 +76,27 @@ flex-grow: 0;
   display: grid;
   width: 100%;
   padding: 20px;
-  gap: 20px; /* spacing between grid items */
+  gap: 20px;
+  /* spacing between grid items */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-items: start;
 }
 
 /*.Testimonials {
   margin-top: 400px;      /* adjust as needed */
-  /*display: flex;          /* cleaner layout */
-  /*justify-content: center;
+/*display: flex;          /* cleaner layout */
+/*justify-content: center;
   align-items: center;
   width: 100%;
   
 }*/
 .Testimonials {
   /* FIX: Significantly reduce or remove this large, fixed margin. */
-  margin-top:80vh; /* Example: Use a smaller, more sensible margin */
+  margin-top: 120vh;
+  /* Example: Use a smaller, more sensible margin */
   /* OR use relative units for responsiveness: */
   /* margin-top: 5vw; */
-  
+
   display: flex;
   justify-content: center;
   align-items: center;

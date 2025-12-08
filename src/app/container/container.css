@@ -69,14 +69,16 @@
   margin-left: -200px;
 
 }
-  /*new*/
 
-  .content-section {
+/*new*/
+
+.content-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  flex-wrap: wrap;   /* allows stacking on small devices */
+  flex-wrap: wrap;
+  /* allows stacking on small devices */
 }
 
 
@@ -89,6 +91,7 @@
   flex-direction: column;
   gap: 40px;
 }
+
 /*.image-container{
   background-image: url('../../assets/images/flower.png') ;
   background-size: cover;
@@ -112,8 +115,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 818px;
-  min-height: 500px;
+
 }
 
 /*.image-container img {
@@ -122,19 +124,27 @@
   flex-shrink: 0;
 }
 */
+
 /* Container for text + image */
 .content-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  flex-wrap: nowrap; /* prevent stacking on desktop/tablets */
+  flex-wrap: nowrap;
+  /* prevent stacking on desktop/tablets */
 }
 
 /* Columns */
 .text-content,
 .image-container {
-  flex: 1 1 50%; /* side by side on desktop/tablets */
+  flex: 1 1 50%;
+  /* side by side on desktop/tablets */
+}
+
+.image-container img {
+  line-height: 818px;
+  flex-shrink: 0;
 }
 
 /* Image container */
@@ -146,12 +156,15 @@
 }
 
 /* Responsive image */
+/* Responsive image with cover fit */
 .image-container img,
 .responsive-image {
-  width: 100%;          /* scales with parent */
-  max-width: 818px;     /* limits size on large screens */
-  height: auto;         /* keep aspect ratio */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
+  border-radius: 20px;
+  /* Optional: matches other rounded corners */
 }
 
 /* Stack columns only on small screens (mobile) */
@@ -175,9 +188,11 @@
   font-weight: 600;
   line-height: 100%;
   color: #050304;
+  text-align: initial;
 }
 
 .description-bold {
+  text-align: initial;
   font-size: 28px;
   font-weight: 700;
   color: #050304;
@@ -186,8 +201,10 @@
 .description-text {
   font-size: 28px;
   font-weight: 400;
-  color: #444;
+  color: #050304;
   margin-right: 160px;
+  text-align: initial;
+  font-style: regular;
 }
 
 /* ---------- METRICS ---------- */
@@ -231,7 +248,8 @@
 @media (max-width: 1024px) {
   .content-section {
     flex-direction: column;
-    margin-left: 0;         /* FIX SHIFT */
+    margin-left: 0;
+    /* FIX SHIFT */
     text-align: center;
     align-items: center;
   }
@@ -278,10 +296,12 @@
   .heading {
     font-size: 36px;
   }
+
   .image-container {
     max-width: 400px;
     margin: 0 auto;
   }
+
   .text-content {
     padding: 0 10px;
   }

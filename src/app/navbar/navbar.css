@@ -1,1403 +1,1531 @@
  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Work Sans;
-}
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Work Sans;
+ }
 
-body {
-    background: #000;
-    color: white;
-    overflow-x: hidden;
-    width: 1880px;
-    height: 1040px;
-}
+ body {
+   background: #000;
+   color: white;
+   overflow-x: hidden;
+   width: 1880px;
+   height: 1040px;
+ }
 
-/* ---------------- SEARCH TOGGLE PLUGIN ---------------- */
-.search-toggle-plugin {
-    display: flex;
-    align-items: center;
-    position: relative;
-    gap: 5px;
-}
+ /* ---------------- SEARCH TOGGLE PLUGIN ---------------- */
+ .search-toggle-plugin {
+   display: flex;
+   align-items: center;
+   position: relative;
+   gap: 5px;
+ }
 
-/* Hide native checkbox */
-.search-toggle-plugin input[type="checkbox"] {
-    display: none;
-}
+ /* Hide native checkbox */
+ .search-toggle-plugin input[type="checkbox"] {
+   display: none;
+ }
 
-/* Search icon */
-.search-toggle-icon {
-    cursor: pointer;
-    font-size: 16px;
-    color: white; /* Inherits navbar text color */
-    transition: opacity 0.3s;
-}
+ /* Search icon */
+ .search-toggle-icon {
+   cursor: pointer;
+   font-size: 16px;
+   color: white;
+   /* Inherits navbar text color */
+   transition: opacity 0.3s;
+ }
 
-.search-toggle-icon:hover {
-    opacity: 0.8;
-}
+ .search-toggle-icon:hover {
+   opacity: 0.8;
+ }
 
-/* Search input hidden by default */
-.search-toggle-input {
-    width: 0;
-    opacity: 0;
-    padding: 6px 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    background-color: #fff;
-    color: #000;
-}
+ /* Search input hidden by default */
+ .search-toggle-input {
+   width: 0;
+   opacity: 0;
+   padding: 6px 10px;
+   border-radius: 6px;
+   border: 1px solid #ccc;
+   font-size: 14px;
+   transition: all 0.3s ease;
+   background-color: #fff;
+   color: #000;
+ }
 
-/* Show input when icon is clicked */
-#search-toggle-plugin:checked ~ .search-toggle-input {
-    width: 160px;
-    opacity: 1;
-}
+ /* Show input when icon is clicked */
+ #search-toggle-plugin:checked~.search-toggle-input {
+   width: 160px;
+   opacity: 1;
+ }
 
-/* ---------------- RESPONSIVE ---------------- */
+ /* ---------------- RESPONSIVE ---------------- */
 
-/* Tablets */
-@media (max-width: 768px) {
-    .search-toggle-icon {
-        font-size: 18px;
-    }
-    .search-toggle-input:checked {
-        width: 130px;
-        font-size: 13px;
-        padding: 5px 8px;
-    }
-}
+ /* Tablets */
+ @media (max-width: 768px) {
+   .search-toggle-icon {
+     font-size: 18px;
+   }
 
-/* Large phones */
-@media (max-width: 480px) {
-    .search-toggle-icon {
-        font-size: 17px;
-    }
-    .search-toggle-input:checked {
-        width: 110px;
-        font-size: 12px;
-        padding: 4px 6px;
-    }
-}
+   .search-toggle-input:checked {
+     width: 130px;
+     font-size: 13px;
+     padding: 5px 8px;
+   }
+ }
 
-/* Small phones */
-@media (max-width: 360px) {
-    .search-toggle-icon {
-        font-size: 16px;
-    }
-    .search-toggle-input:checked {
-        width: 90px;
-        font-size: 11px;
-        padding: 3px 5px;
-    }
-}
+ /* Large phones */
+ @media (max-width: 480px) {
+   .search-toggle-icon {
+     font-size: 17px;
+   }
 
-/* Ultra-small devices */
-@media (max-width: 320px) {
-    .search-toggle-icon {
-        font-size: 15px;
-    }
-    .search-toggle-input:checked {
-        width: 80px;
-        font-size: 10px;
-        padding: 3px 4px;
-    }
-}
+   .search-toggle-input:checked {
+     width: 110px;
+     font-size: 12px;
+     padding: 4px 6px;
+   }
+ }
 
-/* NAVBAR */
-.navbar {
-    width: 100%;
-    padding: 20px 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid white;
-}
-/* Default (Large screens) */
-.navbar-main {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: auto;
-  border: 1px solid #FAEDDD80;
-  border-radius: 20px;
-  text-align: center;
-}
+ /* Small phones */
+ @media (max-width: 360px) {
+   .search-toggle-icon {
+     font-size: 16px;
+   }
 
-/* Tablets & small laptops */
-@media (max-width: 1024px) {
-  .navbar-main {
-    height: 100px;
-    border-radius: 18px;
-    padding: 0 20px;
-  }
-}
+   .search-toggle-input:checked {
+     width: 90px;
+     font-size: 11px;
+     padding: 3px 5px;
+   }
+ }
 
-/* Large phones */
-@media (max-width: 768px) {
-  .navbar-main {
-    flex-direction: column;
-    height: auto; /* Let height adjust automatically */
-    padding: 10px 15px;
-    border-radius: 16px;
-  }
-}
+ /* Ultra-small devices */
+ @media (max-width: 320px) {
+   .search-toggle-icon {
+     font-size: 15px;
+   }
 
-/* Medium phones */
-@media (max-width: 480px) {
-  .navbar-main {
-    flex-direction: column;
-    height: auto;
-    padding: 8px 12px;
-    border-radius: 14px;
-  }
-}
+   .search-toggle-input:checked {
+     width: 80px;
+     font-size: 10px;
+     padding: 3px 4px;
+   }
+ }
 
-/* Small phones / ultra-small devices */
-@media (max-width: 360px) {
-  .navbar-main {
-    flex-direction: column;
-    height: auto;
-    padding: 6px 10px;
-    border-radius: 12px;
-  }
-}
+ /* NAVBAR */
+ .navbar {
+   width: 100%;
+   padding: 20px 60px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   border: 1px solid white;
+ }
 
-/* Extra small devices (320px and below) */
-@media (max-width: 320px) {
-  .navbar-main {
-    flex-direction: column;
-    height: auto;
-    padding: 5px 8px;
-    border-radius: 10px;
-  }
-}
+ /* Default (Large screens) */
+ .navbar-main {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   height: auto;
+   border: 1px solid #FAEDDD80;
+   border-radius: 20px;
+   text-align: center;
+ }
 
-.navbar-main .logo{
-  align-items: center;
-  text-align: center;
-}
-.logo img{
-  inline-size: 200px;
-  margin-bottom: 10px;
-  align-content: center;
-}
-.logo {
-  margin-top: 25px;
-  margin-left: 10px;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 18px;
-}
+ /* Tablets & small laptops */
+ @media (max-width: 1024px) {
+   .navbar-main {
+     height: 100px;
+     border-radius: 18px;
+     padding: 0 20px;
+   }
+ }
 
-.nav-links {
-  margin-top: 35px;
-    display: flex;
-    gap: 40px;
-    height: 28px;
-    
-}
+ /* Large phones */
+ @media (max-width: 768px) {
+   .navbar-main {
+     flex-direction: column;
+     height: auto;
+     /* Let height adjust automatically */
+     padding: 10px 15px;
+     border-radius: 16px;
+   }
+ }
 
-.nav-links a {
-    color: #ddd;
-    text-decoration: none;
-    font-size: 16px;
-}
+ /* Medium phones */
+ @media (max-width: 480px) {
+   .navbar-main {
+     flex-direction: column;
+     height: auto;
+     padding: 8px 12px;
+     border-radius: 14px;
+   }
+ }
 
-.right-actions {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-.search i{
-  color: white;
-}
-.search {
-    font-size: 18px;
-    cursor: pointer;
-}
-/* Default (large screens) */
-.cta-btn {
-    background: #d7ffe7;
-    padding: 10px 26px;
-    border-radius: 10px;
-    color: #000;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    text-align: center;
-    margin-right: 10px;
-}
+ /* Small phones / ultra-small devices */
+ @media (max-width: 360px) {
+   .navbar-main {
+     flex-direction: column;
+     height: auto;
+     padding: 6px 10px;
+     border-radius: 12px;
+   }
+ }
 
-/* Tablets & small laptops (max-width: 768px) */
-@media (max-width: 768px) {
-    .cta-btn {
-        padding: 9px 22px;
-        font-size: 15px;
-        border-radius: 9px;
-    }
-}
+ /* Extra small devices (320px and below) */
+ @media (max-width: 320px) {
+   .navbar-main {
+     flex-direction: column;
+     height: auto;
+     padding: 5px 8px;
+     border-radius: 10px;
+   }
+ }
 
-/* Large phones (max-width: 480px) */
-@media (max-width: 480px) {
-    .cta-btn {
-        padding: 8px 20px;
-        font-size: 14px;
-        border-radius: 8px;
-    }
-}
+ .navbar-main .logo {
+   align-items: center;
+   text-align: center;
+ }
 
-/* Small phones (max-width: 360px) */
-@media (max-width: 360px) {
-    .cta-btn {
-        padding: 7px 18px;
-        font-size: 13px;
-        border-radius: 7px;
-    }
-}
+ .logo img {
+   inline-size: 200px;
+   margin-bottom: 10px;
+   align-content: center;
+ }
 
-/* Ultra-small devices (max-width: 320px) */
-@media (max-width: 320px) {
-    .cta-btn {
-        padding: 6px 16px;
-        font-size: 12px;
-        border-radius: 6px;
-    }
-}
-/* HERO SECTION */
-.hero {
-    margin-top: 40px;
-    padding: 40px 60px;
-    display: grid;
-    grid-template-columns: 1.2fr 1.5fr 1fr;
-    align-items: center;
-    gap: 40px;
-    min-height: 80vh;
-    color: white;
-    border-radius: 20px;
-    align-items: flex-end;
-    justify-content: space-between;
-}
-.hero-left{
-  margin-left: px;
-  width: 1004px;
-  margin-bottom: 20%; 
-}
-.hero-left h1{
-  font-size: 70px;
-  font-weight: 500;
-  line-height: 100%;
-  font-family:worksans,sans-serif ;
+ .logo {
+   margin-top: 25px;
+   margin-left: 10px;
+   font-size: 18px;
+   font-weight: 700;
+   line-height: 18px;
+ }
 
-}
-.hero-right p{
-  font-size: 24px;
-  line-height: 100%;
-  font-weight: 400;
+ .nav-links {
+   margin-top: 35px;
+   display: flex;
+   gap: 40px;
+   height: 28px;
 
-}
-.hero-right{
-  text-align: center;
-  align-items: center;
-  width: 408px;
-  height: 162px;
-  margin-bottom: 100px;
-}
-@media (max-width: 1024px) {
-  .hero-left {
-    width: 80%;
-    margin-left: 5%;
-    margin-bottom: 15%;
-  }
+ }
 
-  .hero-left h1 {
-    font-size: 55px;
-  }
+ .nav-links a {
+   color: #ddd;
+   text-decoration: none;
+   font-size: 16px;
+ }
 
-  .hero-right {
-    width: 60%;
-    height: auto;
-    margin: 50px auto;
-  }
+ .right-actions {
+   display: flex;
+   align-items: center;
+   gap: 25px;
+ }
 
-  .hero-right p {
-    font-size: 20px;
-  }
-}
-@media (max-width: 768px) {
-  .hero-left {
-    width: 90%;
-    margin-left: 5%;
-    margin-bottom: 12%;
-  }
+ .search i {
+   color: white;
+ }
 
-  .hero-left h1 {
-    font-size: 45px;
-    line-height: 110%;
-    text-align: center;
-  }
+ .search {
+   font-size: 18px;
+   cursor: pointer;
+ }
 
-  .hero-right {
-    width: 80%;
-    margin: 40px auto;
-    height: auto;
-    padding: 10px;
-  }
+ /* Default (large screens) */
+ .cta-btn {
+   background: #d7ffe7;
+   padding: 10px 26px;
+   border-radius: 10px;
+   color: #000;
+   text-decoration: none;
+   font-weight: 600;
+   font-size: 16px;
+   text-align: center;
+   margin-right: 10px;
+ }
 
-  .hero-right p {
-    font-size: 18px;
-  }
-}
-@media (max-width: 600px) {
-  .hero-left {
-    width: 95%;
-    margin-left: 2.5%;
-    margin-bottom: 10%;
-  }
+ /* Tablets & small laptops (max-width: 768px) */
+ @media (max-width: 768px) {
+   .cta-btn {
+     padding: 9px 22px;
+     font-size: 15px;
+     border-radius: 9px;
+   }
+ }
 
-  .hero-left h1 {
-    font-size: 38px;
-    text-align: center;
-    line-height: 110%;
-  }
+ /* Large phones (max-width: 480px) */
+ @media (max-width: 480px) {
+   .cta-btn {
+     padding: 8px 20px;
+     font-size: 14px;
+     border-radius: 8px;
+   }
+ }
 
-  .hero-right {
-    width: 90%;
-    margin: 35px auto;
-    padding: 10px;
-  }
+ /* Small phones (max-width: 360px) */
+ @media (max-width: 360px) {
+   .cta-btn {
+     padding: 7px 18px;
+     font-size: 13px;
+     border-radius: 7px;
+   }
+ }
 
-  .hero-right p {
-    font-size: 16px;
-  }
-}
-@media (max-width: 480px) {
-  .hero-left {
-    width: 95%;
-    margin-left: 2.5%;
-    margin-bottom: 8%;
-  }
+ /* Ultra-small devices (max-width: 320px) */
+ @media (max-width: 320px) {
+   .cta-btn {
+     padding: 6px 16px;
+     font-size: 12px;
+     border-radius: 6px;
+   }
+ }
 
-  .hero-left h1 {
-    font-size: 30px;
-    line-height: 115%;
-  }
+ /* HERO SECTION */
+ .hero {
+   margin-top: 40px;
+   padding: 40px 60px;
+   display: grid;
+   grid-template-columns: 1.2fr 1.5fr 1fr;
+   align-items: center;
+   gap: 40px;
+   min-height: 80vh;
+   color: white;
+   border-radius: 20px;
+   align-items: flex-end;
+   justify-content: space-between;
+ }
 
-  .hero-right {
-    width: 95%;
-    padding: 8px;
-    height: auto;
-    margin-bottom: 30px;
-  }
+ .hero-left {
+   margin-top: 30%;
+   margin-left: px;
+   width: 1004px;
+   margin-bottom: 20%;
+   height: 600px;
+ }
 
-  .hero-right p {
-    font-size: 15px;
-  }
-}
+ .hero-left h1 {
+   font-size: 70px;
+   font-weight: 500;
+   line-height: 100%;
+   font-family: worksans, sans-serif;
 
-/* LEFT */
-.tag-row {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
+ }
 
-.tag {
-    background: #fff;
-    color: black;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 600;
-}
+ .hero-right p {
+   font-size: 24px;
+   line-height: 100%;
+   font-weight: 400;
 
-.subtag {
-    border: 1px solid #555;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 13px;
-}
+ }
 
-h1 {
-    font-size: 45px;
-    font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 30px;
-}
+ .hero-right {
+   text-align: center;
+   align-items: center;
+   width: 408px;
+   height: 162px;
+   margin-bottom: 100px;
+ }
 
-.hero-buttons {
-    display: flex;
-    gap: 20px;
-}
+ @media (max-width: 1024px) {
+   .hero-left {
+     width: 80%;
+     margin-left: 5%;
+     margin-bottom: 15%;
+   }
 
-.btn-light {
-    background: #d7ffe7;
-    padding: 12px 28px;
-    border-radius: 10px;
-    color: #000;
-    text-decoration: none;
-    font-weight: 600;
-    text-align: center;
-}
+   .hero-left h1 {
+     font-size: 55px;
+   }
 
-.btn-outline {
-    border: 1px solid #fff;
-    padding: 12px 28px;
-    border-radius: 10px;
-    color: white;
-    text-decoration: none;
-    text-align: center;
-}
-@media (max-width: 768px) {
-    .btn-light,
-    .btn-outline {
-        padding: 10px 24px;
-        font-size: 15px;
-        border-radius: 9px;
-    }
-}
-@media (max-width: 480px) {
-    .btn-light,
-    .btn-outline {
-        padding: 9px 22px;
-        font-size: 14px;
-        border-radius: 8px;
-    }
-}
-@media (max-width: 360px) {
-    .btn-light,
-    .btn-outline {
-        padding: 8px 20px;
-        font-size: 13px;
-        border-radius: 7px;
-    }
-}
-@media (max-width: 320px) {
-    .btn-light,
-    .btn-outline {
-        padding: 7px 18px;
-        font-size: 12px;
-        border-radius: 6px;
-    }
-}
+   .hero-right {
+     width: 60%;
+     height: auto;
+     margin: 50px auto;
+   }
 
-/* CENTER (Laptop Image) */
-.laptop-img {
-    width: 100%;
-    transform: rotate(-8deg);
-    filter: drop-shadow(0px 20px 35px rgba(0, 0, 0, 0.6));
-    border-radius: 10px;
-}
+   .hero-right p {
+     font-size: 20px;
+   }
+ }
 
-/* RIGHT */
+ @media (max-width: 768px) {
+   .hero-left {
+     width: 90%;
+     margin-left: 5%;
+     margin-bottom: 12%;
+   }
+
+   .hero-left h1 {
+     font-size: 45px;
+     line-height: 110%;
+     text-align: center;
+   }
+
+   .hero-right {
+     width: 80%;
+     margin: 40px auto;
+     height: auto;
+     padding: 10px;
+   }
+
+   .hero-right p {
+     font-size: 18px;
+   }
+ }
+
+ @media (max-width: 600px) {
+   .hero-left {
+     width: 95%;
+     margin-left: 2.5%;
+     margin-bottom: 10%;
+   }
+
+   .hero-left h1 {
+     font-size: 38px;
+     text-align: center;
+     line-height: 110%;
+   }
+
+   .hero-right {
+     width: 90%;
+     margin: 35px auto;
+     padding: 10px;
+   }
+
+   .hero-right p {
+     font-size: 16px;
+   }
+ }
+
+ @media (max-width: 480px) {
+   .hero-left {
+     width: 95%;
+     margin-left: 2.5%;
+     margin-bottom: 8%;
+   }
+
+   .hero-left h1 {
+     font-size: 30px;
+     line-height: 115%;
+   }
+
+   .hero-right {
+     width: 95%;
+     padding: 8px;
+     height: auto;
+     margin-bottom: 30px;
+   }
+
+   .hero-right p {
+     font-size: 15px;
+   }
+ }
+
+ /* LEFT */
+ .tag-row {
+   display: flex;
+   align-items: center;
+   gap: 15px;
+   margin-bottom: 20px;
+ }
+
+ .tag {
+   background: #fff;
+   color: black;
+   padding: 6px 14px;
+   border-radius: 20px;
+   font-size: 13px;
+   font-weight: 600;
+ }
+
+ .subtag {
+   border: 1px solid #555;
+   padding: 6px 14px;
+   border-radius: 20px;
+   font-size: 13px;
+ }
+
+ h1 {
+   font-size: 45px;
+   font-weight: 800;
+   line-height: 1.2;
+   margin-bottom: 30px;
+ }
+
+ .hero-buttons {
+   display: flex;
+   gap: 20px;
+ }
+
+ .btn-light {
+   background: #d7ffe7;
+   padding: 12px 28px;
+   border-radius: 10px;
+   color: #000;
+   text-decoration: none;
+   font-weight: 600;
+   text-align: center;
+ }
+
+ .btn-outline {
+   border: 1px solid #fff;
+   padding: 12px 28px;
+   border-radius: 10px;
+   color: white;
+   text-decoration: none;
+   text-align: center;
+ }
+
+ @media (max-width: 768px) {
+
+   .btn-light,
+   .btn-outline {
+     padding: 10px 24px;
+     font-size: 15px;
+     border-radius: 9px;
+   }
+ }
+
+ @media (max-width: 480px) {
+
+   .btn-light,
+   .btn-outline {
+     padding: 9px 22px;
+     font-size: 14px;
+     border-radius: 8px;
+   }
+ }
+
+ @media (max-width: 360px) {
+
+   .btn-light,
+   .btn-outline {
+     padding: 8px 20px;
+     font-size: 13px;
+     border-radius: 7px;
+   }
+ }
+
+ @media (max-width: 320px) {
+
+   .btn-light,
+   .btn-outline {
+     padding: 7px 18px;
+     font-size: 12px;
+     border-radius: 6px;
+   }
+ }
+
+ /* CENTER (Laptop Image) */
+ .laptop-img {
+   width: 100%;
+   transform: rotate(-8deg);
+   filter: drop-shadow(0px 20px 35px rgba(0, 0, 0, 0.6));
+   border-radius: 10px;
+ }
+
+ /* RIGHT */
 
 
-.clients {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+ .clients {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+ }
 
-.clients img {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-}
+ .clients img {
+   width: 38px;
+   height: 38px;
+   border-radius: 50%;
+ }
 
-.clients span {
-    font-size: 14px;
-    opacity: 0.8;
-}
+ .clients span {
+   font-size: 14px;
+   opacity: 0.8;
+ }
 
-/* RESPONSIVE */
-@media (max-width: 1100px) {
-    .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
+ /* RESPONSIVE */
+ @media (max-width: 1100px) {
+   .hero {
+     grid-template-columns: 1fr;
+     text-align: center;
+   }
 
-    .hero-right,
-    .hero-left {
-        margin-top: 20px;
-    }
+   .hero-right,
+   .hero-left {
+     margin-top: 20px;
+   }
 
-    .hero-buttons {
-        justify-content: center;
-        width: 100%;
-    }
+   .hero-buttons {
+     justify-content: center;
+     width: 100%;
+   }
 
-    .laptop-img {
-        margin: 30px auto;
-        transform: rotate(0deg);
-    }
-}
+   .laptop-img {
+     margin: 30px auto;
+     transform: rotate(0deg);
+   }
+ }
 
-@media (max-width: 700px) {
-    .navbar {
-        padding: 20px;
-        flex-direction: column;
-        gap: 15px;
-    }
+ @media (max-width: 700px) {
+   .navbar {
+     padding: 20px;
+     flex-direction: column;
+     gap: 15px;
+   }
 
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
+   .nav-links {
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 15px;
+   }
 
-    h1 {
-        font-size: 32px;
-    }
+   h1 {
+     font-size: 32px;
+   }
 
-    .hero {
-        padding: 20px;
-    }
-}
+   .hero {
+     padding: 20px;
+   }
+ }
 
  /* Pill Toggle Plugin - Namespaced to avoid conflicts */
-.pill-toggle-plugin {
-  font-weight: 400;
-  border-radius: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 5px;
-  box-sizing: border-box;
-  cursor: pointer;
-  font-family: inherit;
-  border: 1PX solid #F2FAFC80;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 10px 30px 10px 10px;
-  gap: 25px;
-  position: absolute;
-  width: auto;
-  height: 76px;
-  margin-top: -7%;
-  margin-left: 10px;
-  background: rgba(5, 3, 4, 0.1);
-  border: 1px solid rgba(242, 250, 252, 0.5);backdrop-filter: blur(4.5px);
-  border-radius: 100px;
-
-}
-@media (max-width: 1024px) {
-  .hero-left {
-    width: 80%;
-    margin-left: 5%;
-    margin-bottom: 15%;
-  }
-
-  .hero-left h1 {
-    font-size: 55px;
-  }
-
-  .hero-right {
-    width: 60%;
-    height: auto;
-    margin: 50px auto;
-  }
-
-  .hero-right p {
-    font-size: 20px;
-  }
-}
-@media (max-width: 768px) {
-  .hero-left {
-    width: 90%;
-    margin-left: 5%;
-    margin-bottom: 12%;
-  }
-
-  .hero-left h1 {
-    font-size: 45px;
-    line-height: 110%;
-    text-align: center;
-  }
-
-  .hero-right {
-    width: 80%;
-    margin: 40px auto;
-    height: auto;
-    padding: 10px;
-  }
-
-  .hero-right p {
-    font-size: 18px;
-  }
-}
-@media (max-width: 600px) {
-  .hero-left {
-    width: 95%;
-    margin-left: 2.5%;
-    margin-bottom: 10%;
-  }
-
-  .hero-left h1 {
-    font-size: 38px;
-    text-align: center;
-    line-height: 110%;
-  }
-
-  .hero-right {
-    width: 90%;
-    margin: 35px auto;
-    padding: 10px;
-  }
-
-  .hero-right p {
-    font-size: 16px;
-  }
-}
-@media (max-width: 480px) {
-  .hero-left {
-    width: 95%;
-    margin-left: 2.5%;
-    margin-bottom: 8%;
-  }
-
-  .hero-left h1 {
-    font-size: 30px;
-    line-height: 115%;
-  }
-
-  .hero-right {
-    width: 95%;
-    padding: 8px;
-    height: auto;
-    margin-bottom: 30px;
-  }
-
-  .hero-right p {
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .pill-toggle-plugin {
-    width: 70%;
-    left: 15%;
-    top: 420px;
-    height: auto;
-    padding: 12px 20px;
-    gap: 20px;
-  }
-}
-
-
-/* Labels */
-.pill-toggle-plugin span {
-  z-index: 2;
-  width: 50%;
-  text-align: center;
-  font-weight: bold;
-  color: white; /* default color */
-  pointer-events: none;
-  transition: color 0.3s;
-}
-
-/* Hide default checkbox */
-.pill-toggle-plugin input {
-  display: none;
-}
-
-/* The sliding circle */
-.pill-slider {
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 49%;
-  height: 67px;
-  background: #f4f7f4;
-  border-radius: 50px;
-  transition: 0.3s;
-  z-index: 1;
-}
-
-/* Move circle when toggled */
-.pill-toggle-plugin input:checked + .pill-slider {
-  transform: translateX(100%);
-}
-
-/* Change label colors when toggled */
-.pill-toggle-plugin input:checked ~ .pill-off img {
-  color: white; /* inactive label remains white */
-}
-
-
-.pill-toggle-plugin input:checked ~ .pill-on {
-  color: black; /* active label becomes black */
-}
-
-/* When unchecked, the left label becomes black and right remains white */
-.pill-toggle-plugin input:not(:checked) ~ .pill-off  {
-  color: black; /* active label */
-}
-
-.pill-toggle-plugin input:not(:checked) ~ .pill-on {
-  color: white; /* inactive label */
-}
-.pill-off img{
-  color: #d7ffe7;
-}
-/* Styling for the main container */
-.language-toggle {
-  display: flex; /* Use flexbox to lay out the options side-by-side */
-  width: 160px; /* Adjust width as needed */
-  height: 50px; /* Adjust height as needed */
-  background-color: #020202; /* Dark/Black background */
-  border-radius: 25px; /* Half of the height to make it a pill shape */
-  border: 1px solid white; /* Dashed white border effect */
-  overflow: hidden; /* Ensures contents respect the border-radius */
-  font-family: Arial, sans-serif; /* Use a clear font */
-  box-sizing: border-box;
-}
-
-/* Styling for each language option */
-.language-option {
-  flex: 1; /* Each option takes up equal space */
-  display: flex;
-  justify-content: center; /* Center the text horizontally */
-  align-items: center; /* Center the text vertically */
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer; /* Indicates it's clickable */
-  transition: all 0.3s ease; /* Smooth transition for hover/active states */
-}
-
-/* Separator Line (optional, but helps with the vertical split look) */
-.language-toggle .language-option:first-child {
-  border-right: 1px solid white; /* Subtle vertical line */
-}
-
-/* State for the actively selected (left side - ENG) */
-.eng-active {
-  color: #a0ffff; /* Light blue/teal color for active text */
-  /* background-color: #333; /* Uncomment if you want an active background color */
-}
-
-/* State for the inactive (right side - ARABIC) */
-.arb-inactive {
-  color: #e0e0e0; /* Slightly dimmer white for inactive text */
-  /* background-color: #000; /* Keep background dark */
-}
-
-/* Hover effect for better user experience */
-.language-option:hover {
-  opacity: 0.8;
-}
-/* Tablets & small laptops (max-width: 768px) */
-@media (max-width: 768px) {
-    .pill-toggle-plugin {
-        height: 55px;
-    }
-    .pill-slider {
-        height: 46px;
-    }
-    .pill-toggle-plugin span {
-        font-size: 14px;
-    }
-}
-
-/* Large phones (max-width: 480px) */
-@media (max-width: 480px) {
-    .pill-toggle-plugin {
-        height: 50px;
-    }
-    .pill-slider {
-        height: 41px;
-    }
-    .pill-toggle-plugin span {
-        font-size: 13px;
-    }
-}
-
-/* Small phones (max-width: 360px) */
-@media (max-width: 360px) {
-    .pill-toggle-plugin {
-        height: 46px;
-    }
-    .pill-slider {
-        height: 37px;
-    }
-    .pill-toggle-plugin span {
-        font-size: 12px;
-    }
-}
-
-/* Ultra-small devices (max-width: 320px) */
-@media (max-width: 320px) {
-    .pill-toggle-plugin {
-        height: 42px;
-    }
-    .pill-slider {
-        height: 33px;
-    }
-    .pill-toggle-plugin span {
-        font-size: 11px;
-    }
-}
-/* Tablets & small laptops (max-width: 768px) */
-@media (max-width: 768px) {
-    .language-toggle {
-        width: 140px;
-        height: 45px;
-        border-radius: 22px;
-    }
-    .language-option {
-        font-size: 14px;
-    }
-}
-
-/* Large phones (max-width: 480px) */
-@media (max-width: 480px) {
-    .language-toggle {
-        width: 130px;
-        height: 42px;
-        border-radius: 21px;
-    }
-    .language-option {
-        font-size: 13px;
-    }
-}
-
-/* Small phones (max-width: 360px) */
-@media (max-width: 360px) {
-    .language-toggle {
-        width: 120px;
-        height: 40px;
-        border-radius: 20px;
-    }
-    .language-option {
-        font-size: 12px;
-    }
-}
-
-/* Ultra-small devices (max-width: 320px) */
-@media (max-width: 320px) {
-    .language-toggle {
-        width: 110px;
-        height: 38px;
-        border-radius: 19px;
-    }
-    .language-option {
-        font-size: 11px;
-    }
-}
-/* ------------------------------ */
-/* DESKTOP (Your original design) */
-/* ------------------------------ */
-
-.pill-toggle-plugin {
-  border-radius: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 30px 10px 10px;
-  gap: 25px;
-
-  position: absolute;
-  width: 479px;
-  height: 76px;
-  left: 120px;
-  top: 465px;
-  margin-left: 10px;
-
-  background: rgba(5, 3, 4, 0.1);
-  border: 1px solid rgba(242, 250, 252, 0.5);
-  backdrop-filter: blur(4.5px);
-  cursor: pointer;
-}
-
-
-/* ------------------------------ */
-/* TABLET (768px – 1024px)        */
-/* ------------------------------ */
-
-@media (max-width: 1024px) {
-  .pill-toggle-plugin {
-    width: 380px;
-    height: 70px;
-    left: 40px;
-    top: 380px;
-    padding: 10px 20px;
-    gap: 15px;
-  }
-}
-
-
-/* ------------------------------ */
-/* LARGE MOBILE (600px – 767px)   */
-/* ------------------------------ */
-
-@media (max-width: 767px) {
-  .pill-toggle-plugin {
-    width: 90%;
-    height: 65px;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 350px;
-    padding: 10px 18px;
-    gap: 10px;
-  }
-}
-
-
-/* ------------------------------ */
-/* SMALL MOBILE (below 480px)     */
-/* ------------------------------ */
-
-@media (max-width: 480px) {
-  .pill-toggle-plugin {
-    width: 92%;
-    height: auto;
-    padding: 10px 15px;
-    top: 300px;
-    left: 50%;
-    transform: translateX(-50%);
-    gap: 8px;
-  }
-}
-
-/*ADDITION*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Work Sans;
-}
-
-/* --- KEY BODY CHANGES FOR RESPONSIVENESS --- */
-body {
-    background: #000;
-    color: white;
-    /* Removed fixed width: 1880px; and height: 1040px; */
-    overflow-x: hidden; /* Prevent horizontal scroll bar */
-    min-height: 100vh; /* Ensure body takes at least the full viewport height */
-    width: 100%; /* Ensure body is always 100% of viewport width */
-}
-/* ------------------------------------------- */
-
-/* ---------------- SEARCH TOGGLE PLUGIN ---------------- */
-.search-toggle-plugin {
-    display: flex;
-    align-items: center;
-    position: relative;
-    gap: 5px;
-}
-
-/* Hide native checkbox */
-.search-toggle-plugin input[type="checkbox"] {
-    display: none;
-}
-
-/* Search icon */
-.search-toggle-icon {
-    cursor: pointer;
-    font-size: 1.2rem; /* Use rem for text size */
-    color: white; /* Inherits navbar text color */
-    transition: opacity 0.3s;
-}
-
-.search-toggle-icon:hover {
-    opacity: 0.8;
-}
-
-/* Search input hidden by default */
-.search-toggle-input {
-    width: 0;
-    opacity: 0;
-    padding: 6px 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 0.9rem; /* Use rem for text size */
-    transition: all 0.3s ease;
-    background-color: #fff;
-    color: #000;
-}
-
-/* Show input when icon is clicked */
-#search-toggle-plugin:checked ~ .search-toggle-input {
-    width: 160px; /* Can remain fixed or switch to a max-width if preferred */
-    opacity: 1;
-}
-
-/* ---------------- RESPONSIVE SEARCH TOGGLE ---------------- */
-
-/* Tablets (max-width: 768px) */
-@media (max-width: 768px) {
-    .search-toggle-icon {
-        font-size: 1.1rem;
-    }
-    #search-toggle-plugin:checked ~ .search-toggle-input {
-        width: 130px;
-        font-size: 0.8rem;
-        padding: 5px 8px;
-    }
-}
-
-/* Phones (max-width: 480px) */
-@media (max-width: 480px) {
-    .search-toggle-icon {
-        font-size: 1rem;
-    }
-    #search-toggle-plugin:checked ~ .search-toggle-input {
-        width: 110px;
-        font-size: 0.75rem;
-        padding: 4px 6px;
-    }
-}
-
-/* ---------------- NAVBAR ---------------- */
-.navbar {
-    width: 100%;
-    padding: 20px 4vw; /* Use viewport units for horizontal padding */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* border: 1px solid white; (Kept for visual reference, remove in production) */
-}
-
-/* Default (Large screens) */
-.navbar-main {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: auto;
-    border: 1px solid #FAEDDD80;
-    border-radius: 20px;
-    align-items: center; /* Added for vertical alignment */
-    padding: 10px 20px; /* Added default vertical padding */
-}
-
-/* Tablets & small laptops */
-@media (max-width: 1024px) {
-    .navbar-main {
-        /* height: 100px; - Removed fixed height */
-        border-radius: 18px;
-        padding: 10px 20px; /* Consistency */
-    }
-    .logo img {
-        inline-size: 150px; /* Adjusted image size */
-    }
-    .nav-links {
-        gap: 20px; /* Reduced gap */
-    }
-}
-
-/* Large phones and down */
-@media (max-width: 768px) {
-    .navbar-main {
-        flex-direction: column;
-        text-align: center;
-        padding: 15px 15px;
-    }
-    .logo {
-        margin: 0 0 10px 0; /* Centered logo */
-    }
-    .nav-links {
-        margin-top: 10px; /* Reduced top margin */
-        justify-content: center;
-        flex-wrap: wrap; /* Allow links to wrap */
-    }
-    .right-actions {
-        margin-top: 15px;
-        justify-content: center;
-    }
-}
-
-.logo img {
-    inline-size: 200px;
-    margin-bottom: 10px;
-    /* align-content: center; (Not a valid CSS property) */
-}
-
-.logo {
-    /* margin-top: 25px; - Removed */
-    /* margin-left: 10px; - Removed */
-    font-size: 1.125rem;
-    font-weight: 700;
-    line-height: 1.125rem;
-}
-
-.nav-links {
-    /* margin-top: 35px; - Removed */
-    display: flex;
-    gap: 40px;
-    height: auto; /* Changed to auto for flexibility */
-}
-
-.nav-links a {
-    color: #ddd;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-.right-actions {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-.search i {
-    color: white;
-}
-.search {
-    font-size: 1.125rem;
-    cursor: pointer;
-}
-
-/* CTA Button Responsiveness */
-.cta-btn {
-    background: #d7ffe7;
-    padding: 10px 26px;
-    border-radius: 10px;
-    color: #000;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    text-align: center;
-    margin-right: 0; /* Removed fixed margin-right */
-}
-
-/* Reduced specificity/redundancy by using a single, effective set of media queries */
-@media (max-width: 480px) {
-    .cta-btn {
-        padding: 8px 18px;
-        font-size: 0.875rem;
-    }
-    .nav-links {
-        gap: 15px;
-    }
-}
-
-
-/* ---------------- HERO SECTION ---------------- */
-.hero {
-    margin-top: 40px;
-    padding: 40px 4vw; /* Use viewport units for horizontal padding */
-    display: grid;
-    /* Use flexible fractions, consider auto for some for max flexibility */
-    grid-template-columns: 1fr 1.5fr 1fr;
-    align-items: center;
-    gap: 40px;
-    min-height: 80vh;
-    color: white;
-    border-radius: 20px;
-    /* align-items: flex-end; - Removed for better vertical centering on smaller screens */
-    /* justify-content: space-between; - Removed, grid handles spacing */
-}
-
-.hero-left {
-    /* Removed fixed width: 1004px; */
-    width: 250%;
-    margin-left: 0; /* Resetting */
-    margin-bottom: 0; /* Let content dictate spacing */
-}
-.hero-left .pill-toggle-plugin{
-  margin-left: 2vh;
-}
-
-
-.hero-left h1 {
-    font-size: 4.375rem; /* 70px / 16 = 4.375rem */
-    font-weight: 500;
-    line-height: 100%; /* Improved line-height for readability */
-    font-family: 'Work Sans', sans-serif;
-}
-
-.hero-right p {
-    font-size: 1.5rem; /* 24px / 16 = 1.5rem */
-    line-height: 1.2;
-    font-weight: 400;
-}
-
-.hero-right {
-    text-align: center;
-    /* Removed fixed width: 408px; and height: 162px; */
-    width: 50%;
-    height: auto;
-    margin-bottom: 0; /* Let content dictate spacing */
-    margin-left: 70vh;
-    margin-top: 10vh;
-  }
-
-/* --- HERO SECTION RESPONSIVENESS --- */
-
-@media (max-width: 1100px) {
-    .hero {
-        /* This is the crucial step to stack layout */
-        grid-template-columns: 1fr;
-        text-align: center;
-        min-height: auto; /* Allow height to shrink when stacked */
-        padding: 20px;
-    }
-
-    .hero-right,
-    .hero-left {
-        width: 100%;
-        margin: 20px 0;
-    }
-
-    .hero-left h1 {
-        font-size: 3rem;
-    }
-
-    .hero-right p {
-        font-size: 1.25rem;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-        width: 100%;
-    }
-
-    .laptop-img {
-        margin: 30px auto;
-        transform: rotate(0deg); /* No rotation on smaller devices */
-    }
-    /* Hide the 'right' content on smaller screens to prioritize main content */
-    /* .hero-right { display: none; } */
-}
-
-@media (max-width: 768px) {
-    .hero-left h1 {
-        font-size: 2.25rem; /* 36px */
-    }
-    .tag-row {
-        justify-content: center;
-    }
-    .hero-buttons {
-        flex-direction: column; /* Stack buttons vertically */
-        align-items: center;
-    }
-    .hero-buttons > * {
-        width: 80%; /* Make buttons take up more space */
-    }
-    .hero-right p {
-        font-size: 1rem;
-    }
-}
-
-
-/* ---------------- UTILITY COMPONENTS ---------------- */
-
-/* Tags */
-.tag-row {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.tag {
-    background: #fff;
-    color: black;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    white-space: nowrap; /* Prevent wrapping for small tags */
-}
-
-.subtag {
-    border: 1px solid #555;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    white-space: nowrap;
-}
-
-/* Clients */
-.clients {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    justify-content: center; /* Center when stacked */
-}
-
-.clients img {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-}
-
-.clients span {
-    font-size: 0.875rem;
-    opacity: 0.8;
-}
-
-/* ---------------- PILL TOGGLE PLUGIN ---------------- */
-.pill-toggle-plugin {
-    /* Using position: relative for flow */
-    position: relative;
-    width: clamp(250px, 80%, 479px); /* Responsive width */
-    height: 76px;
-    margin: 0 auto 20px auto; /* Centered, added bottom margin for flow */
-    padding: 10px 30px 10px 10px;
-    gap: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    font-weight: 400;
-    border-radius: 100px;
-    box-sizing: border-box;
-    cursor: pointer;
-    background: rgba(5, 3, 4, 0.1);
-    border: 1px solid rgba(242, 250, 252, 0.5);
-    backdrop-filter: blur(4.5px);
-    
-    /* Removed fixed left, top, and complex margin properties */
-    left:initial ;
-    top: initial;
-    transform: none;
-}
-
-/* The sliding circle */
-.pill-slider {
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    /* Use calc for flexible width */
-    width: calc(50% - 4px); 
-    height: calc(100% - 8px); /* Full height minus padding */
-    background: #f4f7f4;
-    border-radius: 50px;
-    transition: 0.3s;
-    z-index: 1;
-}
-
-/* Move circle when toggled */
-.pill-toggle-plugin input:checked + .pill-slider {
-    transform: translateX(100%);
-}
-
-/* Labels */
-.pill-toggle-plugin span {
-    z-index: 2;
-    width: 50%;
-    text-align: center;
-    font-weight: bold;
-    color: white; 
-    pointer-events: none;
-    transition: color 0.3s;
-}
-
-/* --- PILL TOGGLE RESPONSIVENESS --- */
-@media (max-width: 768px) {
-    .pill-toggle-plugin {
-        height: 55px;
-        padding: 10px 15px;
-    }
-    .pill-slider {
-        height: calc(100% - 8px); 
-    }
-    .pill-toggle-plugin span {
-        font-size: 0.8rem;
-    }
-}
+ .pill-toggle-plugin {
+   font-weight: 400;
+   border-radius: 100px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0 5px;
+   box-sizing: border-box;
+   cursor: pointer;
+   font-family: inherit;
+   border: 1PX solid #F2FAFC80;
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   padding: 10px 30px 10px 10px;
+   gap: 25px;
+   position: absolute;
+   width: auto;
+   height: 76px;
+   margin-top: -7%;
+   margin-left: 10px;
+   background: rgba(5, 3, 4, 0.1);
+   border: 1px solid rgba(242, 250, 252, 0.5);
+   backdrop-filter: blur(4.5px);
+   border-radius: 100px;
+
+ }
+
+ @media (max-width: 1024px) {
+   .hero-left {
+     width: 80%;
+     margin-left: 5%;
+     margin-bottom: 15%;
+   }
+
+   .hero-left h1 {
+     font-size: 55px;
+   }
+
+   .hero-right {
+     width: 60%;
+     height: auto;
+     margin: 50px auto;
+   }
+
+   .hero-right p {
+     font-size: 20px;
+   }
+ }
+
+ @media (max-width: 768px) {
+   .hero-left {
+     width: 90%;
+     margin-left: 5%;
+     margin-bottom: 12%;
+   }
+
+   .hero-left h1 {
+     font-size: 45px;
+     line-height: 110%;
+     text-align: center;
+   }
+
+   .hero-right {
+     width: 80%;
+     margin: 40px auto;
+     height: auto;
+     padding: 10px;
+   }
+
+   .hero-right p {
+     font-size: 18px;
+   }
+ }
+
+ @media (max-width: 600px) {
+   .hero-left {
+     width: 95%;
+     margin-left: 2.5%;
+     margin-bottom: 10%;
+   }
+
+   .hero-left h1 {
+     font-size: 38px;
+     text-align: center;
+     line-height: 110%;
+   }
+
+   .hero-right {
+     width: 90%;
+     margin: 35px auto;
+     padding: 10px;
+   }
+
+   .hero-right p {
+     font-size: 16px;
+   }
+ }
+
+ @media (max-width: 480px) {
+   .hero-left {
+     width: 95%;
+     margin-left: 2.5%;
+     margin-bottom: 8%;
+   }
+
+   .hero-left h1 {
+     font-size: 30px;
+     line-height: 115%;
+   }
+
+   .hero-right {
+     width: 95%;
+     padding: 8px;
+     height: auto;
+     margin-bottom: 30px;
+   }
+
+   .hero-right p {
+     font-size: 15px;
+   }
+ }
+
+ @media (max-width: 1024px) {
+   .pill-toggle-plugin {
+     width: 70%;
+     left: 15%;
+     top: 420px;
+     height: auto;
+     padding: 12px 20px;
+     gap: 20px;
+   }
+ }
+
+
+ /* Labels */
+ .pill-toggle-plugin span {
+   z-index: 2;
+   width: 50%;
+   text-align: center;
+   font-weight: bold;
+   color: white;
+   /* default color */
+   pointer-events: none;
+   transition: color 0.3s;
+ }
+
+ /* Hide default checkbox */
+ .pill-toggle-plugin input {
+   display: none;
+ }
+
+ /* The sliding circle */
+ .pill-slider {
+   position: absolute;
+   top: 4px;
+   left: 4px;
+   width: 49%;
+   height: 67px;
+   background: #f4f7f4;
+   border-radius: 50px;
+   transition: 0.3s;
+   z-index: 1;
+ }
+
+ /* Move circle when toggled */
+ .pill-toggle-plugin input:checked+.pill-slider {
+   transform: translateX(100%);
+ }
+
+ /* Change label colors when toggled */
+ .pill-toggle-plugin input:checked~.pill-off img {
+   color: white;
+   /* inactive label remains white */
+ }
+
+
+ .pill-toggle-plugin input:checked~.pill-on {
+   color: black;
+   /* active label becomes black */
+ }
+
+ /* When unchecked, the left label becomes black and right remains white */
+ .pill-toggle-plugin input:not(:checked)~.pill-off {
+   color: black;
+   /* active label */
+ }
+
+ .pill-toggle-plugin input:not(:checked)~.pill-on {
+   color: white;
+   /* inactive label */
+ }
+
+ .pill-off img {
+   color: #d7ffe7;
+ }
+
+ /* Styling for the main container */
+ .language-toggle {
+   display: flex;
+   /* Use flexbox to lay out the options side-by-side */
+   width: 160px;
+   /* Adjust width as needed */
+   height: 50px;
+   /* Adjust height as needed */
+   background-color: #020202;
+   /* Dark/Black background */
+   border-radius: 25px;
+   /* Half of the height to make it a pill shape */
+   border: 1px solid white;
+   /* Dashed white border effect */
+   overflow: hidden;
+   /* Ensures contents respect the border-radius */
+   font-family: Arial, sans-serif;
+   /* Use a clear font */
+   box-sizing: border-box;
+ }
+
+ /* Styling for each language option */
+ .language-option {
+   flex: 1;
+   /* Each option takes up equal space */
+   display: flex;
+   justify-content: center;
+   /* Center the text horizontally */
+   align-items: center;
+   /* Center the text vertically */
+   font-size: 16px;
+   font-weight: 500;
+   cursor: pointer;
+   /* Indicates it's clickable */
+   transition: all 0.3s ease;
+   /* Smooth transition for hover/active states */
+ }
+
+ /* Separator Line (optional, but helps with the vertical split look) */
+ .language-toggle .language-option:first-child {
+   border-right: 1px solid white;
+   /* Subtle vertical line */
+ }
+
+ /* State for the actively selected (left side - ENG) */
+ .eng-active {
+   color: #a0ffff;
+   /* Light blue/teal color for active text */
+   /* background-color: #333; /* Uncomment if you want an active background color */
+ }
+
+ /* State for the inactive (right side - ARABIC) */
+ .arb-inactive {
+   color: #e0e0e0;
+   /* Slightly dimmer white for inactive text */
+   /* background-color: #000; /* Keep background dark */
+ }
+
+ /* Hover effect for better user experience */
+ .language-option:hover {
+   opacity: 0.8;
+ }
+
+ /* Tablets & small laptops (max-width: 768px) */
+ @media (max-width: 768px) {
+   .pill-toggle-plugin {
+     height: 55px;
+   }
+
+   .pill-slider {
+     height: 46px;
+   }
+
+   .pill-toggle-plugin span {
+     font-size: 14px;
+   }
+ }
+
+ /* Large phones (max-width: 480px) */
+ @media (max-width: 480px) {
+   .pill-toggle-plugin {
+     height: 50px;
+   }
+
+   .pill-slider {
+     height: 41px;
+   }
+
+   .pill-toggle-plugin span {
+     font-size: 13px;
+   }
+ }
+
+ /* Small phones (max-width: 360px) */
+ @media (max-width: 360px) {
+   .pill-toggle-plugin {
+     height: 46px;
+   }
+
+   .pill-slider {
+     height: 37px;
+   }
+
+   .pill-toggle-plugin span {
+     font-size: 12px;
+   }
+ }
+
+ /* Ultra-small devices (max-width: 320px) */
+ @media (max-width: 320px) {
+   .pill-toggle-plugin {
+     height: 42px;
+   }
+
+   .pill-slider {
+     height: 33px;
+   }
+
+   .pill-toggle-plugin span {
+     font-size: 11px;
+   }
+ }
+
+ /* Tablets & small laptops (max-width: 768px) */
+ @media (max-width: 768px) {
+   .language-toggle {
+     width: 140px;
+     height: 45px;
+     border-radius: 22px;
+   }
+
+   .language-option {
+     font-size: 14px;
+   }
+ }
+
+ /* Large phones (max-width: 480px) */
+ @media (max-width: 480px) {
+   .language-toggle {
+     width: 130px;
+     height: 42px;
+     border-radius: 21px;
+   }
+
+   .language-option {
+     font-size: 13px;
+   }
+ }
+
+ /* Small phones (max-width: 360px) */
+ @media (max-width: 360px) {
+   .language-toggle {
+     width: 120px;
+     height: 40px;
+     border-radius: 20px;
+   }
+
+   .language-option {
+     font-size: 12px;
+   }
+ }
+
+ /* Ultra-small devices (max-width: 320px) */
+ @media (max-width: 320px) {
+   .language-toggle {
+     width: 110px;
+     height: 38px;
+     border-radius: 19px;
+   }
+
+   .language-option {
+     font-size: 11px;
+   }
+ }
+
+ /* ------------------------------ */
+ /* DESKTOP (Your original design) */
+ /* ------------------------------ */
+
+ .pill-toggle-plugin {
+   border-radius: 100px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 10px 30px 10px 10px;
+   gap: 25px;
+
+   position: absolute;
+   width: 479px;
+   height: 76px;
+   left: 120px;
+   top: 465px;
+   margin-left: 10px;
+
+   background: rgba(5, 3, 4, 0.1);
+   border: 1px solid rgba(242, 250, 252, 0.5);
+   backdrop-filter: blur(4.5px);
+   cursor: pointer;
+ }
+
+
+ /* ------------------------------ */
+ /* TABLET (768px – 1024px)        */
+ /* ------------------------------ */
+
+ @media (max-width: 1024px) {
+   .pill-toggle-plugin {
+     width: 380px;
+     height: 70px;
+     left: 40px;
+     top: 380px;
+     padding: 10px 20px;
+     gap: 15px;
+   }
+ }
+
+
+ /* ------------------------------ */
+ /* LARGE MOBILE (600px – 767px)   */
+ /* ------------------------------ */
+
+ @media (max-width: 767px) {
+   .pill-toggle-plugin {
+     width: 90%;
+     height: 65px;
+     left: 50%;
+     transform: translateX(-50%);
+     top: 350px;
+     padding: 10px 18px;
+     gap: 10px;
+   }
+ }
+
+
+ /* ------------------------------ */
+ /* SMALL MOBILE (below 480px)     */
+ /* ------------------------------ */
+
+ @media (max-width: 480px) {
+   .pill-toggle-plugin {
+     width: 92%;
+     height: auto;
+     padding: 10px 15px;
+     top: 300px;
+     left: 50%;
+     transform: translateX(-50%);
+     gap: 8px;
+   }
+ }
+
+ /*ADDITION*/
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Work Sans;
+ }
+
+ /* --- KEY BODY CHANGES FOR RESPONSIVENESS --- */
+ body {
+   background: #000;
+   color: white;
+   /* Removed fixed width: 1880px; and height: 1040px; */
+   overflow-x: hidden;
+   /* Prevent horizontal scroll bar */
+   min-height: 100vh;
+   /* Ensure body takes at least the full viewport height */
+   width: 100%;
+   /* Ensure body is always 100% of viewport width */
+ }
+
+ /* ------------------------------------------- */
+
+ /* ---------------- SEARCH TOGGLE PLUGIN ---------------- */
+ .search-toggle-plugin {
+   display: flex;
+   align-items: center;
+   position: relative;
+   gap: 5px;
+ }
+
+ /* Hide native checkbox */
+ .search-toggle-plugin input[type="checkbox"] {
+   display: none;
+ }
+
+ /* Search icon */
+ .search-toggle-icon {
+   cursor: pointer;
+   font-size: 1.2rem;
+   /* Use rem for text size */
+   color: white;
+   /* Inherits navbar text color */
+   transition: opacity 0.3s;
+ }
+
+ .search-toggle-icon:hover {
+   opacity: 0.8;
+ }
+
+ /* Search input hidden by default */
+ .search-toggle-input {
+   width: 0;
+   opacity: 0;
+   padding: 6px 10px;
+   border-radius: 6px;
+   border: 1px solid #ccc;
+   font-size: 0.9rem;
+   /* Use rem for text size */
+   transition: all 0.3s ease;
+   background-color: #fff;
+   color: #000;
+ }
+
+ /* Show input when icon is clicked */
+ #search-toggle-plugin:checked~.search-toggle-input {
+   width: 160px;
+   /* Can remain fixed or switch to a max-width if preferred */
+   opacity: 1;
+ }
+
+ /* ---------------- RESPONSIVE SEARCH TOGGLE ---------------- */
+
+ /* Tablets (max-width: 768px) */
+ @media (max-width: 768px) {
+   .search-toggle-icon {
+     font-size: 1.1rem;
+   }
+
+   #search-toggle-plugin:checked~.search-toggle-input {
+     width: 130px;
+     font-size: 0.8rem;
+     padding: 5px 8px;
+   }
+ }
+
+ /* Phones (max-width: 480px) */
+ @media (max-width: 480px) {
+   .search-toggle-icon {
+     font-size: 1rem;
+   }
+
+   #search-toggle-plugin:checked~.search-toggle-input {
+     width: 110px;
+     font-size: 0.75rem;
+     padding: 4px 6px;
+   }
+ }
+
+ /* ---------------- NAVBAR ---------------- */
+ .navbar {
+   width: 100%;
+   padding: 20px 4vw;
+   /* Use viewport units for horizontal padding */
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   /* border: 1px solid white; (Kept for visual reference, remove in production) */
+ }
+
+ /* Default (Large screens) */
+ .navbar-main {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   height: auto;
+   border: 1px solid #FAEDDD80;
+   border-radius: 20px;
+   align-items: center;
+   /* Added for vertical alignment */
+   padding: 10px 20px;
+   /* Added default vertical padding */
+ }
+
+ /* Tablets & small laptops */
+ @media (max-width: 1024px) {
+   .navbar-main {
+     /* height: 100px; - Removed fixed height */
+     border-radius: 18px;
+     padding: 10px 20px;
+     /* Consistency */
+   }
+
+   .logo img {
+     inline-size: 150px;
+     /* Adjusted image size */
+   }
+
+   .nav-links {
+     gap: 20px;
+     /* Reduced gap */
+   }
+ }
+
+ /* Large phones and down */
+ @media (max-width: 768px) {
+   .navbar-main {
+     flex-direction: column;
+     text-align: center;
+     padding: 15px 15px;
+   }
+
+   .logo {
+     margin: 0 0 10px 0;
+     /* Centered logo */
+   }
+
+   .nav-links {
+     margin-top: 10px;
+     /* Reduced top margin */
+     justify-content: center;
+     flex-wrap: wrap;
+     /* Allow links to wrap */
+   }
+
+   .right-actions {
+     margin-top: 15px;
+     justify-content: center;
+   }
+ }
+
+ .logo img {
+   inline-size: 200px;
+   margin-bottom: 10px;
+   /* align-content: center; (Not a valid CSS property) */
+ }
+
+ .logo {
+   /* margin-top: 25px; - Removed */
+   /* margin-left: 10px; - Removed */
+   font-size: 1.125rem;
+   font-weight: 700;
+   line-height: 1.125rem;
+ }
+
+ .nav-links {
+   /* margin-top: 35px; - Removed */
+   display: flex;
+   gap: 40px;
+   height: auto;
+   /* Changed to auto for flexibility */
+ }
+
+ .nav-links a {
+   color: #ddd;
+   text-decoration: none;
+   font-size: 1rem;
+ }
+
+ .right-actions {
+   display: flex;
+   align-items: center;
+   gap: 25px;
+ }
+
+ .search i {
+   color: white;
+ }
+
+ .search {
+   font-size: 1.125rem;
+   cursor: pointer;
+ }
+
+ /* CTA Button Responsiveness */
+ .cta-btn {
+   background: #d7ffe7;
+   padding: 10px 26px;
+   border-radius: 10px;
+   color: #000;
+   text-decoration: none;
+   font-weight: 600;
+   font-size: 1rem;
+   text-align: center;
+   margin-right: 0;
+   /* Removed fixed margin-right */
+ }
+
+ /* Reduced specificity/redundancy by using a single, effective set of media queries */
+ @media (max-width: 480px) {
+   .cta-btn {
+     padding: 8px 18px;
+     font-size: 0.875rem;
+   }
+
+   .nav-links {
+     gap: 15px;
+   }
+ }
+
+
+ /* ---------------- HERO SECTION ---------------- */
+ .hero {
+   margin-top: 40px;
+   padding: 40px 4vw;
+   /* Use viewport units for horizontal padding */
+   display: grid;
+   /* Use flexible fractions, consider auto for some for max flexibility */
+   grid-template-columns: 1fr 1.5fr 1fr;
+   align-items: center;
+   gap: 40px;
+   min-height: 80vh;
+   color: white;
+   border-radius: 20px;
+   /* align-items: flex-end; - Removed for better vertical centering on smaller screens */
+   /* justify-content: space-between; - Removed, grid handles spacing */
+ }
+
+ .hero-left {
+   /* Removed fixed width: 1004px; */
+   width: 250%;
+   margin-left: 0;
+   /* Resetting */
+   margin-bottom: 0;
+   /* Let content dictate spacing */
+ }
+
+ .hero-left .pill-toggle-plugin {
+   margin-left: 2vh;
+ }
+
+
+ .hero-left h1 {
+   font-size: 4.375rem;
+   /* 70px / 16 = 4.375rem */
+   font-weight: 500;
+   line-height: 100%;
+   /* Improved line-height for readability */
+   font-family: 'Work Sans', sans-serif;
+ }
+
+ .hero-right p {
+   font-size: 1.5rem;
+   /* 24px / 16 = 1.5rem */
+   line-height: 1.2;
+   font-weight: 400;
+ }
+
+ .hero-right {
+   text-align: center;
+   /* Removed fixed width: 408px; and height: 162px; */
+   width: 50%;
+   height: auto;
+   margin-bottom: 0;
+   /* Let content dictate spacing */
+   margin-left: 70vh;
+   margin-top: 10vh;
+ }
+
+ /* --- HERO SECTION RESPONSIVENESS --- */
+
+ @media (max-width: 1100px) {
+   .hero {
+     /* This is the crucial step to stack layout */
+     grid-template-columns: 1fr;
+     text-align: center;
+     min-height: auto;
+     /* Allow height to shrink when stacked */
+     padding: 20px;
+   }
+
+   .hero-right,
+   .hero-left {
+     width: 100%;
+     margin: 20px 0;
+   }
+
+   .hero-left h1 {
+     font-size: 3rem;
+   }
+
+   .hero-right p {
+     font-size: 1.25rem;
+   }
+
+   .hero-buttons {
+     justify-content: center;
+     width: 100%;
+   }
+
+   .laptop-img {
+     margin: 30px auto;
+     transform: rotate(0deg);
+     /* No rotation on smaller devices */
+   }
+
+   /* Hide the 'right' content on smaller screens to prioritize main content */
+   /* .hero-right { display: none; } */
+ }
+
+ @media (max-width: 768px) {
+   .hero-left h1 {
+     font-size: 2.25rem;
+     /* 36px */
+   }
+
+   .tag-row {
+     justify-content: center;
+   }
+
+   .hero-buttons {
+     flex-direction: column;
+     /* Stack buttons vertically */
+     align-items: center;
+   }
+
+   .hero-buttons>* {
+     width: 80%;
+     /* Make buttons take up more space */
+   }
+
+   .hero-right p {
+     font-size: 1rem;
+   }
+ }
+
+
+ /* ---------------- UTILITY COMPONENTS ---------------- */
+
+ /* Tags */
+ .tag-row {
+   display: flex;
+   align-items: center;
+   gap: 15px;
+   margin-bottom: 20px;
+ }
+
+ .tag {
+   background: #fff;
+   color: black;
+   padding: 6px 14px;
+   border-radius: 20px;
+   font-size: 0.8rem;
+   font-weight: 600;
+   white-space: nowrap;
+   /* Prevent wrapping for small tags */
+ }
+
+ .subtag {
+   border: 1px solid #555;
+   padding: 6px 14px;
+   border-radius: 20px;
+   font-size: 0.8rem;
+   white-space: nowrap;
+ }
+
+ /* Clients */
+ .clients {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   justify-content: center;
+   /* Center when stacked */
+ }
+
+ .clients img {
+   width: 38px;
+   height: 38px;
+   border-radius: 50%;
+ }
+
+ .clients span {
+   font-size: 0.875rem;
+   opacity: 0.8;
+ }
+
+ /* ---------------- PILL TOGGLE PLUGIN ---------------- */
+ .pill-toggle-plugin {
+   /* Using position: relative for flow */
+   position: relative;
+   width: clamp(250px, 80%, 479px);
+   /* Responsive width */
+   height: 76px;
+   margin: 0 auto 20px auto;
+   /* Centered, added bottom margin for flow */
+   padding: 10px 30px 10px 10px;
+   gap: 25px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   font-weight: 400;
+   border-radius: 100px;
+   box-sizing: border-box;
+   cursor: pointer;
+   background: rgba(5, 3, 4, 0.1);
+   border: 1px solid rgba(242, 250, 252, 0.5);
+   backdrop-filter: blur(4.5px);
+
+   /* Removed fixed left, top, and complex margin properties */
+   left: initial;
+   top: initial;
+   transform: none;
+ }
+
+ /* The sliding circle */
+ .pill-slider {
+   position: absolute;
+   top: 4px;
+   left: 4px;
+   /* Use calc for flexible width */
+   width: calc(50% - 4px);
+   height: calc(100% - 8px);
+   /* Full height minus padding */
+   background: #f4f7f4;
+   border-radius: 50px;
+   transition: 0.3s;
+   z-index: 1;
+ }
+
+ /* Move circle when toggled */
+ .pill-toggle-plugin input:checked+.pill-slider {
+   transform: translateX(100%);
+ }
+
+ /* Labels */
+ .pill-toggle-plugin span {
+   z-index: 2;
+   width: 50%;
+   text-align: center;
+   font-weight: bold;
+   color: white;
+   pointer-events: none;
+   transition: color 0.3s;
+ }
+
+ /* --- PILL TOGGLE RESPONSIVENESS --- */
+ @media (max-width: 768px) {
+   .pill-toggle-plugin {
+     height: 55px;
+     padding: 10px 15px;
+   }
+
+   .pill-slider {
+     height: calc(100% - 8px);
+   }
+
+   .pill-toggle-plugin span {
+     font-size: 0.8rem;
+   }
+ }
