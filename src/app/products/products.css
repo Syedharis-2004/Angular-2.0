@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Work Sans;
+    font-family: 'Work Sans', sans-serif;
 }
 
 body {
@@ -28,7 +28,7 @@ a {
 
 }
 
-.tagline {
+/*.tagline {
     background: #f0f3f5;
     padding: 8px 20px;
     border-radius: 25px;
@@ -39,6 +39,43 @@ a {
     width: 100%;
     height: auto !important;
     text-align: center;
+}*/
+/* --- DESKTOP DEFAULT (your original design) --- */
+.tagline {
+    background: #f0f3f5;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 28px;
+    font-weight: 400;
+    display: inline-block;   /* allows width to work, but looks same on desktop */
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* --- TABLETS --- */
+@media (max-width: 1024px) {
+    .tagline {
+        font-size: 24px;
+        padding: 8px 18px;
+    }
+}
+
+/* --- MOBILE LARGE --- */
+@media (max-width: 768px) {
+    .tagline {
+        font-size: 20px;
+        padding: 6px 16px;
+    }
+}
+
+/* --- MOBILE SMALL --- */
+@media (max-width: 480px) {
+    .tagline {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
 }
 
 .hero h1 {
@@ -104,33 +141,6 @@ a {
 }
 
 /* MOVING TICKER BAR */
-/*.ticker {
-    background: linear-gradient(90deg, #247785 0%, #D8BF89 100%);
-    box-shadow: 0px 2.86245px 17.1747px rgba(0, 0, 0, 0.25);
-    color: white;
-    padding: 12px 0;
-    overflow: hidden;
-
-}
-
-.ticker-wrap span {
-    display: inline-block;
-    white-space: nowrap;
-    animation: scroll linear infinite;
-    font-size: 30.06px;
-    font-weight: 600;
-    line-height: 100%;
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
-}*/
 .ticker {
   background: linear-gradient(90deg, #247785 0%, #D8BF89 100%);
   box-shadow: 0px 2.8px 17px rgba(0, 0, 0, 0.25);
@@ -265,8 +275,7 @@ a {
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Work Sans;
+    font-family: 'Work Sans',sans-serif;
 }
 
 body {
@@ -300,8 +309,8 @@ a {
     font-weight: 400;
     display: inline;
     margin-bottom: 20px;
-    width: 407px;
-    height: 58px;
+    width: 100% !important;
+    height: auto !important;
     text-align: center;
 }
 

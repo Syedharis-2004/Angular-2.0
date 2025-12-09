@@ -12,7 +12,9 @@ body {
     width: 1920px;
     height: auto;
 }
-
+.arrow{
+  padding-right:10px ;
+}
 /* ---------------- SEARCH TOGGLE PLUGIN ---------------- */
 .search-toggle-plugin {
     display: flex;
@@ -282,7 +284,7 @@ body {
     justify-content: space-between;
 }
 .hero-left{
-  margin-left: px;
+  margin-left: -20px!important;
   width: 1004px;
   margin-bottom: 20%;
 
@@ -307,6 +309,7 @@ body {
   width: 408px;
   height: 162px;
   margin-bottom: 100px;
+  
 }
 @media (max-width: 1024px) {
   .hero-left {
@@ -497,31 +500,12 @@ h1 {
 
 /* RIGHT */
 
-
-/*.clients {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px;
-    gap: 0px;
-
-}
-
-.clients img {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px,0px,10px,10px;
-    gap: 15px;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-}
-*/
 .clients {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-right: 50px;
+
 }
 
 .clients img {

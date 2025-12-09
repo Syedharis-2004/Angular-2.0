@@ -2,10 +2,14 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: 'Work Sans', sans-serif;
 }
-
+body{
+  overflow-x: hidden;
+    width: 1920px;
+    height: auto;
+  
+}
 /* ---------- CONTAINER ---------- */
 .container2 {
   width: 90%;
@@ -22,6 +26,7 @@
 }
 
 .trust-bar p {
+  margin-top: 20px;
   font-size: 28px;
   color: #555;
   font-weight: 500;
@@ -34,6 +39,7 @@
   align-items: center;
   max-width: 1422px;
   margin: 0 auto;
+  margin-top: 100px;
   gap: 60px;
   flex-wrap: wrap;
 }
@@ -119,7 +125,7 @@
   width: 100%;
   height: auto;
   margin-left: -250px;
-  margin-bottom: 120px;
+  margin-bottom: 150px;
 }
 /* Responsive image */
 /* Responsive image with cover fit */
