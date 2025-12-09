@@ -92,38 +92,6 @@
   gap: 40px;
 }
 
-/*.image-container{
-  background-image: url('../../assets/images/flower.png') ;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-} */
-/* ---------- IMAGE ---------- */
-/*.image-container img {
-  max-width: 818px;
-  flex-shrink: 0;
-}
-
-.image-container{
-  background-image: url('../../assets/images/flower.png');
-  width: 100%;
-  height: auto;
-  display: block;
-}*/
-/*.image-container {
-  background-image: url('/assets/images/flower.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
-}
-
-/*.image-container img {
-  align-items: center;
-  max-width: 818px;
-  flex-shrink: 0;
-}
-*/
 
 /* Container for text + image */
 .content-section {
@@ -138,23 +106,21 @@
 /* Columns */
 .text-content,
 .image-container {
-  flex: 1 1 50%;
+  flex: 1 0 50%;
+  
   /* side by side on desktop/tablets */
 }
 
-.image-container img {
-  line-height: 818px;
-  flex-shrink: 0;
-}
 
 /* Image container */
 .image-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: left;
   width: 100%;
+  height: auto;
+  margin-left: -250px;
+  margin-bottom: 120px;
 }
-
 /* Responsive image */
 /* Responsive image with cover fit */
 .image-container img,
@@ -162,8 +128,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+  display: flex;
   border-radius: 20px;
+  align-items: center;
   /* Optional: matches other rounded corners */
 }
 
@@ -176,7 +143,7 @@
 
   .text-content,
   .image-container {
-    flex: 1 1 100%;
+    flex: 0 0 auto!important;
   }
 }
 
