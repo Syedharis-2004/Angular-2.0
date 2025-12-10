@@ -2,76 +2,41 @@
     <div class="tag">Testimonials</div>
     <h1>Trusted by Innovators Worldwide</h1>
 
-    <div class="slider">
 
-        <!-- Radio Buttons -->
-        <input type="radio" name="slide" id="s1" checked>
-        <input type="radio" name="slide" id="s2">
-        <input type="radio" name="slide" id="s3">
-
-        <!-- Slides Wrapper -->
-        <div class="slides">
-
-            <!-- Slide 1 -->
-            <div class="card">
-                <p>
-                    Libero suscipit unde. Labore cumque voluptatum accusamus 
-                    fugiat qui voluptates corporis dignissimos.
-                </p>
-                <hr>
-
-                <div class="profile">
-                    <img src="../../assets/images/client 1.png">
-                    <div>
-                        <h3>Jorge Monahan</h3>
-                        <span>Customer Integration Representative</span>
-                        <div class="stars">★★★★★</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="card">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Doloremque mollitia voluptatum.
-                </p>
-                <hr>
-                <div class="profile">
-                    <img src="../../assets/images/client 1.png">
-                    <div>
-                        <h3>Anna Smith</h3>
-                        <span>Product Designer</span>
-                        <div class="stars">★★★★★</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="card">
-                <p>
-                    Voluptatem officia minus asperiores tempora autem expedita 
-                    repellendus cupiditate.
-                </p>
-                <hr>
-                <div class="profile">
-                    <img src="../../assets/images/client 2.png">
-                    <div>
-                        <h3>Daniel Collins</h3>
-                        <span>Marketing Manager</span>
-                        <div class="stars">★★★★★</div>
-                    </div>
-                </div>
-            </div>
-
+    <div class="slider-container">
+  <div class="slider-wrapper" #sliderWrapper>
+    <div class="slide" *ngFor="let item of testimonials; let i = index" [class.active]="i === currentIndex"
+      (click)="goTo(i)">
+      <div class="testimonial-card">
+        <p class="testimonial-text">{{ item.text }}</p>
+        <hr>
+        <div class="testimonial-profile">
+          <div class="profile-img">
+            <img [src]="item.img" alt="{{ item.name }}" class="profile-img">
+          </div>
+          <div class="profile-info">
+            <h4 class="profile-name">{{ item.name }}</h4>
+            <span class="profile-role">{{ item.role }}</span>
+          </div>
         </div>
 
-        <!-- Navigation Dots -->
-        <div class="dots">
-            <label for="s1" class="dot"></label>
-            <label for="s2" class="dot"></label>
-            <label for="s3" class="dot"></label>
+        <div class="rating-stars">
+          <!-- Render 5 stars -->
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
         </div>
+      </div>
     </div>
+  </div>
+
+  <!-- Dots Navigation -->
+  <div class="dots-container">
+    <span *ngFor="let d of dots; let i = index" class="dot" [class.active-dot]="i === currentIndex" (click)="goTo(i)">
+    </span>
+  </div>
+</div>
 </section>
 

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 /* =========================
    Global Styles
 ========================= */
@@ -48,111 +50,6 @@ body {
     font-size: 72px;
     font-weight: 700;
     margin-bottom: 40px;
-}
-
-/* Hide radio buttons */
-input[type="radio"] {
-    display: none;
-}
-
-/* Slider */
-.slider {
-    max-width: 900px;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-}
-
-.slides {
-    display: flex;
-    width: 300%;
-    transition: transform 0.6s ease-in-out;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-/* Cards */
-.card {
-    width: 750px;
-    max-width: 100%;
-    padding: 28px;
-    background: #e8f6fb;
-    border-radius: 20px;
-    text-align: left;
-    flex-shrink: 0;
-}
-
-.card h3 {
-    font-size: 28px;
-    font-weight: 600;
-}
-
-.card span {
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.card p {
-    font-size: 28px;
-    margin-bottom: 20px;
-    line-height: 120%;
-}
-
-/* Profile */
-.profile {
-    display: flex;
-    gap: 14px;
-    align-items: center;
-}
-
-.profile img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-}
-
-/* Stars */
-.stars {
-    display: flex;
-    width: 28px;
-    height: 28px;
-    margin-top: 5px;
-    color: #007a87;
-}
-
-/* Slide Controls */
-#s1:checked~.slides {
-    transform: translateX(0);
-}
-
-#s2:checked~.slides {
-    transform: translateX(-33.33%);
-}
-
-#s3:checked~.slides {
-    transform: translateX(-66.66%);
-}
-
-/* Dots */
-.dots {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.dot {
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    display: inline-block;
-    background: #c6d1d8;
-    margin: 0 6px;
-    cursor: pointer;
-}
-
-#s1:checked~.dots label:nth-child(1),
-#s2:checked~.dots label:nth-child(2),
-#s3:checked~.dots label:nth-child(3) {
-    background: #00b4c5;
 }
 
 /* =========================
@@ -280,19 +177,6 @@ input[type="radio"] {
         font-size: 14px;
     }
 
-    .card {
-        width: 95vw;
-        padding: 14px;
-    }
-
-    .profile img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .card p {
-        font-size: 12px;
-    }
 }
 
 /* 320px - Ultra Small Mobile */
@@ -306,20 +190,7 @@ input[type="radio"] {
         font-size: 12px;
     }
 
-    .card {
-        width: 98vw;
-        padding: 12px;
     }
-
-    .profile img {
-        width: 45px;
-        height: 45px;
-    }
-
-    .card p {
-        font-size: 12px;
-    }
-}
 
 @media (max-width: 768px) {
     .tag {
@@ -348,4 +219,306 @@ input[type="radio"] {
         width: 100%;
         max-width: 210px;
     }
+}
+/*Carsoul*/
+
+:host {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafb;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
+}
+
+/* ------------------------------
+   Slider Container
+------------------------------ */
+.slider-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  padding: 60px 20px;
+}
+
+/* ------------------------------
+   Slider Wrapper
+------------------------------ */
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.slider-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* ------------------------------
+   Individual Slide
+------------------------------ */
+.slide {
+  flex: 0 0 auto;
+  max-width: 750px;
+  margin: 0 15px;
+  cursor: pointer;
+  opacity: 0.6;
+  transform: scale(0.92);
+  transition: all 0.5s ease;
+  scroll-snap-align: center;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
+  position: relative;
+}
+
+/* ------------------------------
+   Testimonial Card
+------------------------------ */
+.testimonial-card {
+  width: 100%;
+  min-height: 350px; /* adaptive height */
+  padding: 40px 30px;
+  border-radius: 32px;
+  background: #F2FAFC;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+/* Testimonial Text */
+.testimonial-text {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
+  color: #4b5563;
+  margin-bottom: 20px;
+  font-style: normal;
+}
+
+/* Profile Section */
+.testimonial-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.profile-img img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e5e7eb;
+}
+
+.profile-info {
+  text-align: left;
+}
+
+.profile-name {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 33px;
+}
+
+.profile-role {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  display: block;
+  margin-top: 2px;
+}
+
+/* Rating Stars */
+.rating-stars {
+  color: #0d9488;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+/* Dots */
+.dots-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #d1d5db;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active-dot {
+  background-color: #0d9488;
+  transform: scale(1.2);
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+
+/* ------------------------------
+   Desktop Large Screens (no change)
+------------------------------ */
+
+/* ------------------------------
+   Tablets / Small Laptops
+------------------------------ */
+@media (max-width: 1024px) {
+  .slider-container {
+    padding: 50px 20px;
+  }
+
+  .slide {
+    max-width: 750px; /* show 2 slides */
+  }
+
+  .testimonial-card {
+    padding: 32px 22px;
+    min-height: auto;
+  }
+
+  .testimonial-text {
+    font-size: 22px;
+  }
+
+  .profile-name {
+    font-size: 22px;
+  }
+}
+
+/* ------------------------------
+   Tablets Portrait / Large Mobile
+------------------------------ */
+@media (max-width: 768px) {
+  .slider-container {
+    padding: 40px 10px;
+  }
+
+  .slide {
+    min-width: 100%; /* show 1 slide */
+    margin: 0 10px;
+    transform: scale(0.96);
+  }
+
+  .slide.active {
+    transform: scale(1);
+  }
+
+  .testimonial-card {
+    padding: 28px 18px;
+    min-height: 280px;
+  }
+
+  .testimonial-text {
+    font-size: 20px;
+  }
+
+  .profile-img img {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+/* ------------------------------
+   Mobile Devices
+------------------------------ */
+@media (max-width: 480px) {
+  .slide {
+    min-width: 100%;
+    margin: 0 5px;
+  }
+
+  .testimonial-card {
+    padding: 24px 16px;
+    min-height: 260px;
+    border-radius: 18px;
+  }
+
+  .testimonial-text {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .profile-img img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .profile-name {
+    font-size: 18px;
+  }
+
+  .dots-container {
+    margin-top: 20px;
+  }
+}
+
+/* ------------------------------
+   Small Mobile (360px)
+------------------------------ */
+@media (max-width: 360px) {
+  .testimonial-card {
+    padding: 22px 14px;
+    min-height: 240px;
+  }
+
+  .testimonial-text {
+    font-size: 16px;
+  }
+
+  .profile-img img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .profile-name {
+    font-size: 16px;
+  }
+}
+
+/* ------------------------------
+   Ultra Small Mobile (320px)
+------------------------------ */
+@media (max-width: 320px) {
+  .testimonial-card {
+    padding: 20px 12px;
+    min-height: 220px;
+  }
+
+  .testimonial-text {
+    font-size: 14px;
+  }
+
+  .profile-img img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .profile-name {
+    font-size: 14px;
+  }
 }
