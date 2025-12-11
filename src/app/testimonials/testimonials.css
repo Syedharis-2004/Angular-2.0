@@ -7,7 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Work Sans;
+    font-family: 'Work Sans', sans-serif;
 }
 
 body {
@@ -43,206 +43,32 @@ body {
     max-width: 227px;
 
 }
-
-
-
 .testimonials h1 {
-    font-size: 72px;
-    font-weight: 700;
-    margin-bottom: 40px;
-}
+    font-size: clamp(28px, 5vw, 72px);
+    font-weight: 600;
+    margin-bottom: clamp(20px, 4vw, 40px); /* Adjust margin-bottom responsively */
+    text-align: center;
+    line-height: 1.2;
+    padding: 0 clamp(10px, 3vw, 15px); /* Adjust horizontal padding responsively */
+    width: 100%;
+    max-width: 100%;
+    /* flex-wrap is typically for flex containers, h1 is block by default */
+    }
 
 /* =========================
    Responsive Design
 ========================= */
 
-/* 1440px - Laptops */
-@media (max-width: 1440px) {
-    .testimonials h1 {
-        font-size: 64px;
-    }
-
-    .tag {
-        font-size: 22px;
-        padding: 6px 16px;
-    }
-
-    .card {
-        width: 650px;
-    }
-
-    .card p {
-        font-size: 22px;
-    }
-
-    .profile img {
-        width: 110px;
-        height: 110px;
-    }
-}
-
-/* 1024px - Tablets / Small Laptops */
-@media (max-width: 1024px) {
-    .testimonials h1 {
-        font-size: 48px;
-    }
-
-    .tag {
-        font-size: 20px;
-    }
-
-    .card {
-        width: 500px;
-        padding: 24px;
-    }
-
-    .card h3 {
-        font-size: 22px;
-    }
-
-    .card p {
-        font-size: 18px;
-    }
-
-    .profile img {
-        width: 90px;
-        height: 90px;
-    }
-}
-
-/* 768px - Tablets */
-@media (max-width: 768px) {
-    .testimonials h1 {
-        font-size: 36px;
-    }
-
-    .tag {
-        width: 70%;
-        font-size: 18px;
-    }
-
-    .card {
-        width: 350px;
-        padding: 20px;
-    }
-
-    .profile img {
-        width: 70px;
-        height: 70px;
-    }
-
-    .card p {
-        font-size: 16px;
-    }
-}
-
-/* 480px - Large Mobile */
-@media (max-width: 480px) {
-    .testimonials {
-        margin-top: 170vh;
-    }
-
-    .testimonials h1 {
-        font-size: 28px;
-    }
-
-    .tag {
-        width: 80%;
-        font-size: 16px;
-    }
-
-    .card {
-        width: 90vw;
-        padding: 16px;
-    }
-
-    .profile img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .card p {
-        font-size: 14px;
-    }
-}
-
-/* 360px - Small Mobile */
-@media (max-width: 360px) {
-    .testimonials h1 {
-        font-size: 24px;
-    }
-
-    .tag {
-        width: 90%;
-        font-size: 14px;
-    }
-
-}
-
-/* 320px - Ultra Small Mobile */
-@media (max-width: 320px) {
-    .testimonials h1 {
-        font-size: 20px;
-    }
-
-    .tag {
-        width: 98%;
-        font-size: 12px;
-    }
-
-    }
-
-@media (max-width: 768px) {
-    .tag {
-        width: 100%;
-        /* full width */
-        max-width: 300px;
-    }
-}
-
-@media (max-width: 480px) {
-    .tag {
-        width: 100%;
-        max-width: 260px;
-    }
-}
-
-@media (max-width: 360px) {
-    .tag {
-        width: 100%;
-        max-width: 230px;
-    }
-}
-
-@media (max-width: 320px) {
-    .tag {
-        width: 100%;
-        max-width: 210px;
-    }
-}
-/*Carsoul*/
-
-:host {
-  display: block;
-  font-family: 'Inter', sans-serif;
-  background-color: #f9fafb;
-}
-
-* {
-  box-sizing: border-box;
-  font-family: 'Work Sans', sans-serif;
-}
-
 /* ------------------------------
    Slider Container
 ------------------------------ */
 .slider-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-  padding: 60px 20px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    padding: 40px 0;
 }
 
 /* ------------------------------
@@ -250,12 +76,12 @@ body {
 ------------------------------ */
 .slider-wrapper {
   display: flex;
-  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: transform 0.5s ease-out; /* Fallback for JS animation */
   scroll-behavior: smooth;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+  width: 100%;
+  overflow-x: hidden; /* Desktop default is hidden (programmatic only) */
+  scrollbar-width: none; /* Hide scrollbar */
+  padding: 0; /* Removing centering hack, let JS/width handle it */
 }
 
 .slider-wrapper::-webkit-scrollbar {
@@ -266,21 +92,20 @@ body {
    Individual Slide
 ------------------------------ */
 .slide {
-  flex: 0 0 auto;
-  max-width: 750px;
-  margin: 0 15px;
+  flex: 0 0 auto; /* Stop shrinking */
+  width: 750px; /* Fixed width as requested */
+  padding: 10px;
   cursor: pointer;
-  opacity: 0.6;
-  transform: scale(0.92);
-  transition: all 0.5s ease;
-  scroll-snap-align: center;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  /* scroll-snap-align removed from global to prevent desktop snapping */
 }
 
+/* Active State */
 .slide.active {
-  opacity: 1;
-  transform: scale(1);
-  z-index: 1;
-  position: relative;
+  /* Optional scale effect can be re-enabled if desired */
+  /* transform: scale(1.05); */
+  z-index: 2;
 }
 
 /* ------------------------------
@@ -288,27 +113,39 @@ body {
 ------------------------------ */
 .testimonial-card {
   width: 100%;
-  min-height: 350px; /* adaptive height */
-  padding: 40px 30px;
-  border-radius: 32px;
+  height: 100%; /* Fill slide height */
+  min-height: 350px;
+  padding: 30px;
+  border-radius: 20px;
   background: #F2FAFC;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  text-align: center;
   border: 1px solid rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
 }
 
 /* Testimonial Text */
 .testimonial-text {
   font-size: 28px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 33px;
   text-align: center;
   color: #4b5563;
   margin-bottom: 20px;
+  /* Reduced bottom margin to accommodate HR */
   font-style: normal;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Profile Section */
@@ -325,7 +162,8 @@ body {
   height: 60px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #e5e7eb;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .profile-info {
@@ -337,21 +175,19 @@ body {
   font-size: 28px;
   font-weight: 600;
   line-height: 33px;
+  color: #050304;
 }
 
 .profile-role {
-  font-size: 16px;
+  font-size: 14px;
+  color: #666;
   font-weight: 500;
-  line-height: 19px;
-  display: block;
-  margin-top: 2px;
 }
 
 /* Rating Stars */
 .rating-stars {
-  color: #0d9488;
+  color: #eab308;
   font-size: 18px;
-  letter-spacing: 2px;
 }
 
 /* Dots */
@@ -359,12 +195,12 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 30px;
-  gap: 10px;
+  gap: 8px;
 }
 
 .dot {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background-color: #d1d5db;
   cursor: pointer;
@@ -373,152 +209,138 @@ body {
 
 .dot.active-dot {
   background-color: #0d9488;
-  transform: scale(1.2);
+  width: 20px;
+  border-radius: 10px;
 }
 
 /* ===============================
-   RESPONSIVE
+   MEDIA QUERIES
 =============================== */
 
-/* ------------------------------
-   Desktop Large Screens (no change)
------------------------------- */
-
-/* ------------------------------
-   Tablets / Small Laptops
------------------------------- */
+/* Tablet settings - Inherit Centered Desktop Layout + Enable Touch */
 @media (max-width: 1024px) {
-  .slider-container {
-    padding: 50px 20px;
+  /* Enable scrolling and snapping for Tablet/Mobile */
+  .slider-wrapper {
+      /* Keep padding inherited from Global (0 25%) used for centered view */
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
   }
-
+  
   .slide {
-    max-width: 750px; /* show 2 slides */
+    /* Inherit global width (66.66%) for centered look */
+    /* flex: 0 0 50%; <--- REMOVED */
+    /* width: 50%; <--- REMOVED */
+    /* max-width: 50%; <--- REMOVED */
+    
+    padding: 0 15px;
+    box-sizing: border-box;
+    scroll-snap-align: center; /* Center snap is best for this layout */
   }
 
   .testimonial-card {
-    padding: 32px 22px;
-    min-height: auto;
+    width: 100%;
+    min-height: 320px;
+    padding: 30px;
+    box-sizing: border-box;
   }
 
-  .testimonial-text {
-    font-size: 22px;
-  }
-
-  .profile-name {
-    font-size: 22px;
+  .testimonials h1 {
+    font-size: 48px;
   }
 }
 
-/* ------------------------------
-   Tablets Portrait / Large Mobile
------------------------------- */
+/* Mobile settings - ONE CARD AT A TIME */
 @media (max-width: 768px) {
+  .testimonials {
+      padding-left: 0;
+      padding-right: 0;
+      margin-top: 170vh;
+  }
+
   .slider-container {
-    padding: 40px 10px;
+      padding: 40px 0; 
+      overflow: visible; 
+      overflow-x: hidden;
+  }
+  
+  .slider-wrapper {
+      padding: 0; /* Ensure no padding on mobile wrapper either */
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      scroll-padding: 0;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory; 
+      /* Ensure touch drag works immediately and allows vertical scroll */
+      touch-action: pan-y;
   }
 
+  /* Slide bucket: Full viewport width */
   .slide {
-    min-width: 100%; /* show 1 slide */
-    margin: 0 10px;
-    transform: scale(0.96);
-  }
-
-  .slide.active {
-    transform: scale(1);
-  }
-
-  .testimonial-card {
-    padding: 28px 18px;
-    min-height: 280px;
-  }
-
-  .testimonial-text {
-    font-size: 20px;
-  }
-
-  .profile-img img {
-    width: 55px;
-    height: 55px;
-  }
-}
-
-/* ------------------------------
-   Mobile Devices
------------------------------- */
-@media (max-width: 480px) {
-  .slide {
+    flex: 0 0 100%;
+    width: 100%;
     min-width: 100%;
-    margin: 0 5px;
+    max-width: 100%;
+    margin: 0; 
+    padding: 0; /* Layout handled by card dimensions */
+    
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    box-sizing: border-box;
+    
+    /* Flex to center the card inside the slide area */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
+  /* Card: Precise width calculation for margins */
   .testimonial-card {
-    padding: 24px 16px;
-    min-height: 260px;
-    border-radius: 18px;
+    /* Ensure exactly 20px gap on each side */
+    width: calc(100% - 40px); 
+    max-width: 450px;
+    min-height: 300px;
+    padding: 24px 20px;
+    margin: 0 auto;
+    
+    transform: translateZ(0); 
   }
 
-  .testimonial-text {
-    font-size: 18px;
-    line-height: 1.3;
+  .testimonials h1 {
+    font-size: 32px;
+    padding: 0 20px;
   }
 
-  .profile-img img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .profile-name {
-    font-size: 18px;
-  }
-
-  .dots-container {
-    margin-top: 20px;
+  .tag {
+    font-size: 14px;
+    padding: 6px 16px;
+    margin: 0 auto 10px auto;
   }
 }
 
-/* ------------------------------
-   Small Mobile (360px)
------------------------------- */
-@media (max-width: 360px) {
+/* Small Mobile */
+@media (max-width: 480px) {
+  /* Smaller percentage for edge-to-edge look if needed, or keep 90% */
   .testimonial-card {
-    padding: 22px 14px;
-    min-height: 240px;
+    width: 92%; /* Slightly wider on tiny screens */
+    min-height: auto;
+    padding: 20px 15px;
   }
 
   .testimonial-text {
-    font-size: 16px;
+    font-size: 28px;
   }
-
-  .profile-img img {
-    width: 45px;
-    height: 45px;
-  }
-
-  .profile-name {
-    font-size: 16px;
+  .testimonials h1 {
+    font-size: 24px;
+    padding: 0 15px;
   }
 }
 
-/* ------------------------------
-   Ultra Small Mobile (320px)
------------------------------- */
+/* Ultra Small Mobile */
 @media (max-width: 320px) {
   .testimonial-card {
-    padding: 20px 12px;
-    min-height: 220px;
-  }
-
-  .testimonial-text {
-    font-size: 14px;
-  }
-
-  .profile-img img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .profile-name {
-    font-size: 14px;
+    width: max-content;
+    max-width: 300px; /* Almost full width for 320px */
+    padding: 15px 10px;
   }
 }
