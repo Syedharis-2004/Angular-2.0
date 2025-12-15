@@ -195,8 +195,10 @@ body{
 
   padding: 30px 60px;
   gap: 30px;
-  width: 234px;
-  height: 193px;
+  max-width: 234px;
+  width: auto;
+  max-height: 193px;
+  height: auto;
 
   background: #F2FAFC;
   box-shadow: 0px 4px 20px rgba(201, 197, 186, 0.3);
@@ -204,7 +206,7 @@ body{
 }
 
 .metric-item .number {
-  font-size: 70px;
+  font-size: clamp(35px, 5vw, 70px);
   font-weight: 600;
   color: #333;
 }

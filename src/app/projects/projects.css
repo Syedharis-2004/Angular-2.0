@@ -154,14 +154,14 @@ a {
 }
 
 .project-title {
-    font-size: 28px;
+    font-size: clamp(20px, 5vw, 28px);
     font-weight: 600;
     margin: 0 0 5px 0;
     color: #333;
 }
 
 .project-description {
-    font-size: 20px;
+    font-size: clamp(18px, 5vw, 20px);
     font-weight: 500;
     color: #666;
     margin: 0 0 15px 0;
@@ -171,12 +171,13 @@ a {
     display: flex;
     align-items: center;
     font-weight: 400;
-    font-size: 24px;
+    font-size: clamp(16px, 5vw, 24px);
     color: black;
     padding: 15px 30px;
     transition: color 0.3s;
-    width: 297px;
-    height: 63px;
+    max-width: 297px;
+    width: auto;
+    height: auto;
     text-align: center;
     background-color: none;
     box-sizing: border-box;
