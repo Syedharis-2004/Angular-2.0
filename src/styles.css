@@ -8,6 +8,7 @@ body{
 /* Prevent horizontal scrolling */
 html, body {
     overflow-x: hidden;
+    align-items: center;
 }
 * {
   font-family: 'Work Sans', sans-serif !important;
