@@ -6,10 +6,6 @@
 }
 
 body {
-  /* Auto layout */
-  /*display: flex;
-flex-direction:column;
-align-items: flex-start;*/
   padding: 0px;
   gap: 100px;
   text-align: center;
@@ -68,14 +64,11 @@ body {
 
 .section-description {
   color: #666;
-  font-size: 1rem;
+  font-size: clamp(20px,5vw,28px);
   margin-bottom: 40px;
 }
 
 .capabilities-grid {
-  /* Frame 24 */
-
-  /* Auto layout */
   display: flex;
   flex-direction: column;
   align-items: self-start;
@@ -128,9 +121,42 @@ body {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
+/* Default (Desktop – keep as is) */
 .icon img {
   width: 55px;
   height: 55px;
+}
+
+/* Large tablets / small laptops */
+@media (max-width: 1200px) {
+  .icon img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .icon img {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Large mobiles */
+@media (max-width: 768px) {
+  .icon img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Small mobiles */
+@media (max-width: 480px) {
+  .icon img {
+    width: 34px;
+    height: 34px;
+  }
 }
 
 .capability-card1 h3 {
@@ -599,7 +625,7 @@ body {
   }
 
   .capabilities-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr, 1fr;
     gap: 25px;
   }
 
@@ -627,7 +653,7 @@ body {
    ============================ */
 @media (max-width: 480px) {
   .section-title {
-    font-size: 26px;
+    font-size: 28px;
   }
 
   .section-subtitle {

@@ -52,7 +52,7 @@
         }
 
         .header h1 {
-            font-size: 72px;
+            font-size:clamp(28px,5vw,72px);
             margin-bottom: 10px;
             font-weight: 600;
         }
@@ -356,6 +356,50 @@ flex-grow: 1;
     }
 }
 
+/* ============================
+   📱 TABLET MODE (1024px ↓)
+   ============================ */
+@media (max-width: 1024px) {
+
+    /* Portfolio section stacks */
+    .portfolio-section {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* Image moves on top */
+    .team-image-container {
+        width: 100%;
+        min-width: 100%;
+        min-height: 350px;
+        height: auto;
+        order: -1;
+        margin-bottom: 25px;
+        border-radius: 25px;
+    }
+
+    /* Service cards shrink */
+    .what-we-do-grid {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 25px;
+        height: auto;
+    }
+
+    .portfolio-list h2 {
+        font-size: 40px;
+    }
+
+    .portfolio-item {
+        height: auto;
+        padding: 20px;
+    }
+}
 
 
 /* ============================
@@ -453,7 +497,7 @@ flex-grow: 1;
 @media (max-width: 420px) {
 
     .header h1 {
-        font-size: 34px;
+        font-size: 28px;
     }
 
     .header p {

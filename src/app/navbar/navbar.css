@@ -299,7 +299,7 @@ body {
 
 }
 .hero-right p{
-  direction: initial;
+  
   text-align: left;
   font-size: 24px;
   line-height: 100%;
@@ -441,6 +441,7 @@ h1 {
 }
 
 .btn-light {
+
     background: #d7ffe7;
     padding: 12px 28px;
     border-radius: 10px;
@@ -1288,7 +1289,7 @@ body {
         align-items: center;
     }
     .hero-buttons > * {
-        width: 80%; /* Make buttons take up more space */
+        width: auto; /* Make buttons take up more space */
     }
     .hero-right p {
         font-size: 1rem;

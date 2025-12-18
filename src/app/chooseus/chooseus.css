@@ -92,9 +92,9 @@
         display: grid;
         min-width: 280px;
         gap: 25px;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))!important;
 
+    }
     .stats-grid .stat-cream .stat-light-blue {
         align-items: end;
     }
@@ -118,7 +118,7 @@
         font-family: 'Work Sans';
         font-style: normal;
         font-weight: 600;
-        font-size: 70px;
+        font-size: clamp(35px, 10vw, 70px);
         line-height: 82px;
         text-align: center;
     }
@@ -129,7 +129,7 @@
         font-family: 'Work Sans';
         font-style: normal;
         font-weight: 500;
-        font-size: 18px;
+        font-size: clamp(16px, 10vw, 18px);
         line-height: 21px;
         color: #F2FAFC;
         /* Inside auto layout */
@@ -154,7 +154,7 @@
         font-family: 'Work Sans';
         font-style: normal;
         font-weight: 600;
-        font-size: 70px;
+        font-size: clamp(35px, 10vw, 70px);
         line-height: 82px;
         text-align: center;
     }
@@ -165,7 +165,7 @@
         font-family: 'Work Sans';
         font-style: normal;
         font-weight: 500;
-        font-size: 18px;
+        font-size: clamp(16px, 10vw, 18px);
         line-height: 21px;
         color: black;
         /* Inside auto layout */
@@ -190,7 +190,7 @@
         font-family: 'Work Sans';
         font-style: normal;
         font-weight: 600;
-        font-size: 70px;
+        font-size: clamp(35px, 10vw, 70px);
         line-height: 82px;
         text-align: center;
     }
@@ -201,7 +201,7 @@
         font-family: 'Work Sans';
         font-style: normal;
         font-weight: 500;
-        font-size: 18px;
+        font-size: clamp(16px, 10vw, 18px);;
         line-height: 21px;
         color: black;
         /* Inside auto layout */
@@ -226,7 +226,7 @@
         font-family: 'Work Sans';
         font-style: normal;
         font-weight: 600;
-        font-size: 70px;
+        font-size: clamp(35px, 10vw, 70px);
         line-height: 82px;
         text-align: center;
     }
@@ -237,7 +237,7 @@
         font-family: 'Work Sans';
         font-style: normal;
         font-weight: 500;
-        font-size: 18px;
+        font-size: clamp(16px, 10vw, 18px);
         line-height: 21px;
         color: black;
         /* Inside auto layout */
@@ -266,6 +266,9 @@
 
     /* Responsive */
     @media (max-width: 768px) {
+        .why-section {
+            margin-top: 30vh;
+        }
         .title h2 {
             font-size: 28px;
         }
@@ -281,7 +284,7 @@
 
         .stats-grid {
             width: 100%;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns:  1fr !important;
         }
     }
 
@@ -339,7 +342,12 @@
         .stats-grid {
             width: 100%;
         }
-
+        .stats-grid {
+        display: grid;
+        min-width: 280px;
+        gap: 25px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))!important;
+        }            
         .feature {
             max-width: 100%;
             font-size: 24px;
