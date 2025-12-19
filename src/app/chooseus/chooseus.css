@@ -265,7 +265,7 @@
     }
 
     /* Responsive */
-    @media (max-width: 768px) {
+    /*@media (max-width: 768px) {
         .why-section {
             margin-top: 30vh;
         }
@@ -287,7 +287,7 @@
             grid-template-columns:  1fr !important;
         }
     }
-
+*/
     @media (max-width: 480px) {
         .stats-grid {
             grid-template-columns: 1fr;
@@ -326,56 +326,23 @@
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     }
 
-    /*Media*/
-    /* =========================
-   Responsive Media Queries
-========================= */
-
-    /* Large tablets / smaller desktops */
-    @media (max-width: 1024px) {
-        .why-container {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .left-features,
-        .stats-grid {
-            width: 100%;
-        }
-        .stats-grid {
-        display: grid;
-        min-width: 280px;
-        gap: 25px;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))!important;
-        }            
-        .feature {
-            max-width: 100%;
-            font-size: 24px;
-            padding: 18px;
-        }
-
-        .stat {
-            max-width: 100%;
-            padding: 25px 15px;
-        }
-
-        .stat h3 {
-            font-size: 50px;
-            line-height: 60px;
-        }
-    }
-
+    
     /* Tablets / small devices */
     @media (max-width: 768px) {
+        .why-section {
+            margin-top: 30vh;
+        }
         .title h2 {
             font-size: 40px;
         }
 
         .stats-grid {
-            grid-template-columns: 1fr 1fr;
             gap: 20px;
+            align-items: center;
         }
-
+        .stats-grid .stat-blue.stat-cream.stat-gold.stat-light-blue {
+            align-items: center;
+        }
         .feature {
             font-size: 22px;
             padding: 18px;
@@ -390,7 +357,7 @@
     /* Mobile devices */
     @media (max-width: 480px) {
         .why-section {
-            margin-top: 190vh;
+            margin-top: 170vh;
         }
 
         .title h2 {

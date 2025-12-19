@@ -258,7 +258,7 @@ body{
   }
 
   .metrics {
-    flex-direction: column;
+    /*flex-direction: column;*/
     align-items: center;
     gap: 25px;
   }
@@ -271,7 +271,11 @@ body{
   .heading {
     font-size: 36px;
   }
-
+  .metrics {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
   .image-container {
     max-width: 400px;
     margin: 0 auto;
