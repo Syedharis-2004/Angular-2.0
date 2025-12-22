@@ -15,9 +15,7 @@
 <!-- MOVING BAR -->
 <div class="ticker">
     <div class="ticker-wrap">
-        <span>From Idea to MVP in 8 Weeks • Build Smarter. Launch Faster. • AI-Accelerated Product Development •</span>
-        <span>From Idea to MVP in 8 Weeks • Build Smarter. Launch Faster. • AI-Accelerated Product Development •</span>
-        <span>From Idea to MVP in 8 Weeks • Build Smarter. Launch Faster. • AI-Accelerated Product Development •</span>
+        <span *ngFor="let item of tickerItems">{{item}}</span>
     </div>
 </div>
 
@@ -26,21 +24,21 @@
     <div class="footer-container">
 
         <div class="footer-left">
-            <div class="logo"><img src="../../assets/images/logo.png" alt="" srcset=""></div>
+            <div class="logo"><img src="../../assets/images/logo.png" alt="Manarah Ventures Logo"></div>
             <p>
                 With Softy Solutions, you don't just build faster — you build smarter.
                 Let’s make your launch unforgettable.
             </p>
 
             <div class="social-icons">
-                <a href="#"><img src="../../assets/icon/linkdin.png" alt="" srcset=""></a>
-                <a href="#"><img src="../../assets/icon/twitter.png" alt="" srcset=""></a>
-                <a href="#"><img src="../../assets/icon/git hub.png" alt="" srcset=""></a>
+                <a href="#"><img src="../../assets/icon/linkdin.png" alt="LinkedIn"></a>
+                <a href="#"><img src="../../assets/icon/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="../../assets/icon/git hub.png" alt="GitHub"></a>
             </div>
         </div>
 
         <div class="footer-section">
-            <h3>Quick Links</h3>
+            <h3>Quick Link</h3>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -53,30 +51,41 @@
         <div class="footer-section">
             <h3>Services</h3>
             <ul>
-                <li>UI/UX Design</li>
-                <li>Web Development</li>
-                <li>Mobile Apps</li>
-                <li>Branding</li>
-                <li>Consulting</li>
+                <li><a href="#">UI/UX Design</a></li>
+                <li><a href="#">Web Development</a></li>
+                <li><a href="#">Mobile Apps</a></li>
+                <li><a href="#">Branding</a></li>
+                <li><a href="#">Consulting</a></li>
             </ul>
         </div>
 
         <div class="footer-section">
             <h3>Contact</h3>
-            <ul>
-                <li>hello@manarahventures.com</li>
-                <li>+1 (555) 123-4567</li>
-                <li>San Francisco, CA</li>
+            <ul class="contact-list">
+                <li>
+                    <img src="../../assets/icon/Frame.png" alt="" class="contact-icon">
+                    <a href="mailto:hello@manarahventures.com">hello@manarahventures.com</a>
+                </li>
+                <li>
+                    <img src="../../assets/icon/telephone.png" alt="" class="contact-icon">
+                    <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                </li>
+                <li>
+                    <img src="../../assets/icon/location.png" alt="" class="contact-icon">
+                    <span>San Francisco, CA</span>
+                </li>
             </ul>
         </div>
 
     </div>
 
     <div class="footer-bottom">
-        © 2024 Manarah Ventures. All rights reserved.
-        <span class="right-links">
-            <a href="#">Privacy Policy</a> •
-            <a href="#">Terms of Service</a>
-        </span>
+        <div class="footer-bottom-container">
+            <p>© 2024 Manarah Ventures. All rights reserved.</p>
+            <div class="right-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
     </div>
 </footer>

@@ -1,7 +1,7 @@
   <section class="testimonials">
     <div class="tag">Testimonials</div>
     <h1>Trusted by Innovators Worldwide</h1>
-    <div class="slider-container">
+  <div class="slider-container">
   <div class="slider-wrapper" #sliderWrapper>
     <div class="slide" *ngFor="let item of testimonials; let i = index" [class.active]="i === currentIndex"
       (click)="goTo(i)">
@@ -11,7 +11,7 @@
         <div class="testimonial-profile">
           <div class="profile-img">
             <img [src]="item.img" alt="{{ item.name }}" class="profile-img">
-          </div><img src="" alt="" srcset="">
+          </div>
           <div class="profile-info">
             <h4 class="profile-name">{{ item.name }}</h4>
             <span class="profile-role">{{ item.role }}</span>

@@ -278,7 +278,7 @@ padding: 30px 60px;
 gap: 30px;
 
 width: clamp(250px, 100%, 513.33px);
-height: clamp(200px, 100%, 291.4px);
+height: auto;
 
 background: #F2FAFC;
 box-shadow: 0px 4px 20px rgba(201, 197, 186, 0.3);
