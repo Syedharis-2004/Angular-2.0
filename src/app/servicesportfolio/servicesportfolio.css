@@ -403,12 +403,14 @@ flex-grow: 1;
     .what-we-do-grid {
         gap: 20px;
         flex-wrap: wrap;
+        flex-direction: column;
+        /*grid-template-columns: 2fr,1fr!important;*/
 
     }
 
     .service-card {
         width: 100%;
-        max-width: 100%;
+        max-width: 50%;
         padding: 25px;
         height: auto;
     }
