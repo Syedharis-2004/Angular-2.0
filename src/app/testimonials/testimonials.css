@@ -12,6 +12,7 @@
 
 body {
     background: #fff;
+    width: 100%;
 }
 
 /* =========================
@@ -20,6 +21,7 @@ body {
 .testimonials {
     text-align: center;
     padding: 60px 20px;
+    width: 100%;
 }
 
 .tag {
@@ -367,6 +369,6 @@ body {
     font-size: 14px;
   }
   .testimonials{
-    margin-top: 155vh;
+    margin-top: 0vh;
   }
 }

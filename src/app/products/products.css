@@ -30,15 +30,17 @@ a {
 
 /* --- DESKTOP DEFAULT (your original design) --- */
 .tagline {
-    background: #f0f3f5;
     padding: 8px 20px;
     border-radius: 25px;
     font-size: clamp(16px,5vw,28px);
     font-weight: 400;
     display: inline-block;   /* allows width to work, but looks same on desktop */
     margin-bottom: 20px;
-    width: 100%;
+    width: fit-content;
     text-align: center;
+    background: linear-gradient(90deg, #F2FAFC 0%, #FAEDDD 100%);
+    box-shadow: 0px 1px 11px rgba(201, 197, 186, 0.26);
+
 }
 
 
@@ -47,6 +49,7 @@ a {
     margin-bottom: 15px;
     line-height: 100%;
     font-weight: 600;
+    color: #050304;
 }
 
 .sub-text {
