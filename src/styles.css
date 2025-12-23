@@ -3,8 +3,9 @@
 html, body { height: 100%; }
 body { margin: 0; }
 body{
-    background-image:url(./assets/images/Group\ 2.png) ;
-}
+    /*background-image:url(./assets/images/Group\ 2.png) ;*/
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #F2FAFC;
+  }
 /* Prevent horizontal scrolling */
 html, body {
     overflow-x: hidden;

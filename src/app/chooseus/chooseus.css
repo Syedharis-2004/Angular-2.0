@@ -254,7 +254,7 @@
     }
 
     .explore-btn {
-
+        width: fit-content;
         background: linear-gradient(#BBE3E5, #FAEDDD);
         border: none;
         padding: 12px 28px;

@@ -129,12 +129,9 @@
         }
         .icon img{
         /* Frame */
-
         width: 48.75px;
         height: 65px;
-
         transform: rotate(-15deg);
-
         /* Inside auto layout */
         flex: none;
         order: 0;
