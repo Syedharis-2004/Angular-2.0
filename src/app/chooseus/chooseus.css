@@ -93,158 +93,148 @@
         min-width: 280px;
         gap: 25px;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))!important;
-
-    }
-    .stats-grid .stat-cream .stat-light-blue {
-        align-items: end;
     }
 
-    /*.stat {
-    padding: 35px 20px;
-    border-radius: 15px;
-    color: #000;
-}*/
     .stat-blue {
-
-        background: #1e828c;
+        background: #006D77; /* Dark Teal */
         color: #ffffff;
         max-width: 350px;
         max-height: 293px;
         padding: 35px 20px;
         border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .stat-blue h3 {
         font-family: 'Work Sans';
         font-style: normal;
         font-weight: 600;
-        font-size: clamp(35px, 10vw, 70px);
-        line-height: 82px;
+        font-size: clamp(35px, 10vw, 64px); /* Approx 4rem */
+        line-height: 1.1;
         text-align: center;
+        margin-bottom: 10px;
     }
 
     .stat-blue p {
-        margin-top: 8px;
-        /* Client Retention Rate */
         font-family: 'Work Sans';
         font-style: normal;
         font-weight: 500;
-        font-size: clamp(16px, 10vw, 18px);
-        line-height: 21px;
+        font-size: clamp(14px, 2vw, 16px);
+        line-height: 1.4;
         color: #F2FAFC;
-        /* Inside auto layout */
-        flex: none;
-        order: 1;
-        flex-grow: 0;
-
+        text-align: center;
     }
-
-    /* Colors */
 
     .stat-gold {
         margin-top: 20px;
-        background: #d3b178;
+        background: #D4B483; /* Gold/Beige */
         max-width: 318px;
         max-height: 293px;
         border-radius: 30px;
         padding: 35px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .stat-gold h3 {
         font-family: 'Work Sans';
         font-style: normal;
         font-weight: 600;
-        font-size: clamp(35px, 10vw, 70px);
-        line-height: 82px;
+        font-size: clamp(35px, 10vw, 64px);
+        line-height: 1.1;
         text-align: center;
+        color: #000;
+        margin-bottom: 10px;
     }
 
     .stat-gold p {
-        margin-top: 8px;
-        /* Client Retention Rate */
         font-family: 'Work Sans';
         font-style: normal;
-        font-weight: 500;
-        font-size: clamp(16px, 10vw, 18px);
-        line-height: 21px;
-        color: black;
-        /* Inside auto layout */
-        flex: none;
-        order: 1;
-        flex-grow: 0;
-
+        font-weight: 600;
+        font-size: clamp(14px, 2vw, 16px);
+        line-height: 1.4;
+        color: #000;
+        text-align: center;
     }
 
 
     .stat-light-blue {
-
-        background: #a9d7dd;
+        background: #A8DADC; /* Light Blue */
         max-width: 346px;
         max-height: 293px;
         border-radius: 30px;
         padding: 35px 20px;
-
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .stat-light-blue h3 {
         font-family: 'Work Sans';
         font-style: normal;
         font-weight: 600;
-        font-size: clamp(35px, 10vw, 70px);
-        line-height: 82px;
+        font-size: clamp(35px, 10vw, 64px);
+        line-height: 1.1;
         text-align: center;
+        color: #000;
+        margin-bottom: 10px;
     }
 
     .stat-light-blue p {
-        margin-top: 8px;
-        /* Client Retention Rate */
         font-family: 'Work Sans';
         font-style: normal;
-        font-weight: 500;
-        font-size: clamp(16px, 10vw, 18px);;
-        line-height: 21px;
-        color: black;
-        /* Inside auto layout */
-        flex: none;
-        order: 1;
-        flex-grow: 0;
-
+        font-weight: 600;
+        font-size: clamp(14px, 2vw, 16px);
+        line-height: 1.4;
+        color: #000;
+        text-align: center;
     }
 
 
     .stat-cream {
         margin-top: 10px;
-        background: #f0ddc6;
+        background: #FFE8D6; /* Cream/Peach */
         max-width: 315px;
         max-height: 293px;
         border-radius: 30px;
         padding: 35px 20px;
         margin-bottom: -10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .stat-cream h3 {
         font-family: 'Work Sans';
         font-style: normal;
         font-weight: 600;
-        font-size: clamp(35px, 10vw, 70px);
-        line-height: 82px;
+        font-size: clamp(35px, 10vw, 64px);
+        line-height: 1.1;
         text-align: center;
+        color: #006D77; /* Dark Teal for number? Or Keep black? Reference image shows Dark Teal number actually? No wait, ref image shows '15+' in dark teal. */
+        margin-bottom: 10px;
+    }
+    
+    /* Correction: In reference image, 15+ is Dark Teal. Let's make it Dark Teal. */
+    .stat-cream h3 {
+       color: #006D77;
     }
 
     .stat-cream p {
-        margin-top: 8px;
-        /* Client Retention Rate */
         font-family: 'Work Sans';
         font-style: normal;
-        font-weight: 500;
-        font-size: clamp(16px, 10vw, 18px);
-        line-height: 21px;
-        color: black;
-        /* Inside auto layout */
-        flex: none;
-        order: 1;
-        flex-grow: 0;
-
+        font-weight: 600;
+        font-size: clamp(14px, 2vw, 16px);
+        line-height: 1.4;
+        color: #006D77; /* Dark Teal for text 'Industries Served' per reference */
+        text-align: center;
     }
 
     /* CTA button */
@@ -297,19 +287,56 @@
             font-size: 26px;
         }
     }
-
     .feature {
-        background: #fff;
+        background: #F2FAFC; /* Reverted to light blue match design */
         padding: 25px;
+        margin-bottom: 15px; /* Increased margin slightly */
         border-radius: 12px;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-        text-align: left;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        align-items: flex-start; /* Align icon to top if text wraps */
+        gap: 20px; /* Increased gap */
+        max-width: 859px;
+        max-height: 136px;
+        color: #050304;
+        font-family: 'Work Sans';
+        box-shadow: none; /* Removed shadow per flat design look, or keep subtle if preferred */
     }
 
     .feature:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        /* Kept hover for interactivity, though flat design usually static */
+        transform: translateY(-2px); 
+    }
+
+    .feature i, .feature img {
+        /* Ensure icon size is consistent */
+        flex-shrink: 0;
+        margin-top: 5px; /* Optical alignment with title */
+    }
+
+    .feature-text {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .feature h2 {
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: clamp(1.1rem, 2vw, 24px); /* Adjusted size */
+        line-height: 1.2;
+        color: #000000;
+        margin: 0;
+    }
+
+    .feature p {
+        margin-top: 5px;
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-weight: 400; /* Regular weight for body text */
+        font-size: clamp(0.9rem, 2vw, 16px);
+        line-height: 1.5;
+        color: #333333; 
     }
 
     .stat {

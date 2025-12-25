@@ -75,6 +75,7 @@ flex-grow: 0;
 .projects {
   display: grid;
   width: 100%;
+  height: auto;
   padding: 20px;
   gap: 20px;
   /* spacing between grid items */

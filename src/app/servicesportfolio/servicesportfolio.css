@@ -16,6 +16,8 @@
         }
 
         body {
+            width: 100% !important;
+            height: auto;
             font-family: 'Work Sans', sans-serif;
             line-height: 1.6;
             color: var(--text-dark);
@@ -24,7 +26,7 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 100%!important;
             margin: 0 auto;
             background-color: var(--card-bg-white); /* The central content block is white */
             padding: 60px 40px;
@@ -77,7 +79,7 @@
             border-radius: 10px;
             flex: 1;
             min-width: 250px;
-            max-width: 350px;
+            max-width: 400px;
             position: relative;
         }
 
@@ -97,13 +99,13 @@
         }
 
         .service-card h3 {
-            font-size: 18px;
+            font-size: clamp(18px, 5vw, 28px);
             margin-bottom: 10px;
             font-weight: 700;
         }
 
         .service-card p {
-            font-size: 14px;
+            font-size: 18px;
             color: var(--text-light);
         }
 
@@ -181,13 +183,13 @@
         }
 
         .item-content h3 {
-            font-size: 17px;
+            font-size: clamp(20px, 5vw, 28px);
             margin-bottom: 3px;
             font-weight: 600;
         }
 
         .item-content p {
-            font-size: 14px;
+            font-size: clamp(16px, 5vw, 20px);
             color: var(--text-light);
         }
 

@@ -199,7 +199,7 @@ body {
 .nav-links a {
     color: #ddd;
     text-decoration: none;
-    font-size: 16px;
+    font-size: clamp(14px, 2.5vw, 24px);
 }
 
 .right-actions {
@@ -1002,7 +1002,7 @@ body {
 /* ---------------- NAVBAR ---------------- */
 .navbar {
     width: 100%;
-    padding: 20px 4vw; /* Use viewport units for horizontal padding */
+    padding: 20px 1vw; /* Use viewport units for horizontal padding */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1034,6 +1034,7 @@ body {
         padding: 8px 15px;
         height: auto;
         max-width: 95%;
+        width: 100%;
         margin: 0 auto;
     }
     
@@ -1313,7 +1314,7 @@ body {
     width: 50%;
     height: auto;
     margin-bottom: 0; /* Let content dictate spacing */
-    margin-left: 70vh;
+    margin-left: 67vh;
     margin-top: 10vh;
   }
 
@@ -1493,3 +1494,4 @@ body {
         font-size: 0.8rem;
     }
 }
+/*media*/
