@@ -45,7 +45,7 @@ a {
 
 
 .hero h1 {
-    font-size:clamp(28,5vw,72px);
+    font-size:clamp(28px,5vw,72px);
     margin-bottom: 15px;
     line-height: 100%;
     font-weight: 600;
@@ -54,12 +54,11 @@ a {
 
 .sub-text {
     color: #444;
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 400;
-    max-width: 550px;
-    line-height: 100%;
+    max-width: 650px;
+    line-height: 1.5;
     margin: auto;
-    display: flex;
     margin-bottom: 30px;
 }
 
@@ -165,7 +164,7 @@ a {
 }
 
 .footer-left .logo img {
-    height: 90px;
+    height: clamp(60px,5vw,90px);
     width: auto;
 }
 
