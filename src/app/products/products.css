@@ -142,19 +142,19 @@ a {
 /* FOOTER SECTION */
 .footer {
     background: linear-gradient(360deg, #D8BF89 0%, #BBE3E5 100%);
-    padding: 80px 0 40px;
-    margin-top: 100px;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
-
+    padding: 60px 4vw 40px;
+    margin: 100px 20px 20px; /* Added margins to show border radius */
+    border-radius: 40px;
+    color: #050304;
+    
 }
 
 .footer-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 4vw;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
-    gap: 60px;
+    grid-template-columns: 2.5fr 1fr 1fr 1.5fr;
+    gap: 40px;
 }
 
 .footer-left {
@@ -169,11 +169,11 @@ a {
 }
 
 .footer-left p {
-    font-size:clamp(16px,5vw,28px);
+    font-size: clamp(16px, 5vw, 28px);
     font-weight: 400;
-    line-height: 1.4;
-    color:#050304;
-    max-width: 400px;
+    line-height: 1.5;
+    color: #050304;
+    max-width: 350px;
     text-align: left;
     margin: 0;
 }
@@ -184,8 +184,8 @@ a {
 }
 
 .social-icons a img {
-    width: clamp(24px,5vw,44px);
-    height:clamp(24px,5vw,44px);
+    width: 24px;
+    height: 24px;
     opacity: 0.8;
     transition: opacity 0.3s ease;
 }
@@ -195,10 +195,10 @@ a {
 }
 
 .footer-section h3 {
-    font-size:clamp(16px,5vw,28px);
+    font-size: clamp(16px, 5vw, 28px);
     font-weight: 700;
-    color:#050304;
-    margin-bottom: 30px;
+    color: #050304;
+    margin-bottom: 25px;
 }
 
 .footer-section ul {
@@ -208,11 +208,14 @@ a {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    word-break: none;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .footer-section ul li a,
 .footer-section ul li span {
-    font-size:clamp(16px,5vw,28px);
+    font-size: clamp(16px, 5vw, 28px);
     color: #247785;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -235,8 +238,8 @@ a {
 
 /* FOOTER BOTTOM */
 .footer-bottom {
-    margin-top: 80px;
-    padding-top: 40px;
+    margin-top: 40px;
+    padding-top: 30px;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -252,10 +255,11 @@ a {
 }
 
 .footer-bottom p {
-    font-size:clamp(16px,5vw,28px);
-    color: #247785;
+    font-size: clamp(16px, 5vw, 28px);
+    color: #050304; /* Darker text for readability */
     font-weight: 400;
     margin: 0;
+    opacity: 0.6;
 }
 
 .right-links {
@@ -264,7 +268,7 @@ a {
 }
 
 .right-links a {
-    font-size: clamp(16px,5vw,28px);
+    font-size: clamp(16px, 5vw, 28px);
     color: #247785;
     font-weight: 400;   
     text-decoration: none;

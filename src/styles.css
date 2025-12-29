@@ -1,16 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
-
-html, body { height: 100%; }
-body { margin: 0; }
-body{
-    /*background-image:url(./assets/images/Group\ 2.png) ;*/
-    background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #F2FAFC;
-  }
-/* Prevent horizontal scrolling */
-html, body {
-    overflow-x: hidden;
-    align-items: center;
-}
+/* Global Reset */
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Work Sans', sans-serif !important;
+}
+
+/* Base HTML & Body */
+html, body {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Body Background */
+body {
+  margin: 0;
+  background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #F2FAFC;
+}
+
+/* Angular Root */
+app-root {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* 🔥 Force ALL Angular components full width */
+app-root > * {
+  display: block;
+  width: 100%;
+  max-width: 100%;
 }
