@@ -170,10 +170,10 @@ a {
 
 .footer-left p {
     font-size: clamp(16px, 5vw, 28px);
-    font-weight: 400;
-    line-height: 1.5;
-    color: #050304;
-    max-width: 350px;
+    font-weight: 410;
+    line-height: 1.2;
+    color: #444;
+    max-width: 442px;
     text-align: left;
     margin: 0;
 }
@@ -256,10 +256,9 @@ a {
 
 .footer-bottom p {
     font-size: clamp(16px, 5vw, 28px);
-    color: #050304; /* Darker text for readability */
-    font-weight: 400;
+    color: #247785;
+    font-weight: 420;
     margin: 0;
-    opacity: 0.6;
 }
 
 .right-links {
