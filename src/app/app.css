@@ -52,52 +52,18 @@
   width: 100%;
   height: auto;
 }
-
-/*.capabilities{
-/* Auto layout */
-/*display: flex;
-flex-direction:column;
-align-items: flex-start;
-padding: 0px;
-gap: 100px;
-text-align: center;
-align-items: center;
-justify-content: space-between;
-width: 1800px;
-height: 1341.8px;
-/* Inside auto layout */
-/*flex: none;
-order: 3;
-align-self: stretch;
-flex-grow: 0;
-
-}*/
 .projects {
   display: grid;
   width: 100%;
   height: auto;
   padding: 20px;
   gap: 20px;
-  /* spacing between grid items */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-items: start;
 }
 
-/*.Testimonials {
-  margin-top: 400px;      /* adjust as needed */
-/*display: flex;          /* cleaner layout */
-/*justify-content: center;
-  align-items: center;
-  width: 100%;
-  
-}*/
 .Testimonials {
-  /* FIX: Significantly reduce or remove this large, fixed margin. */
-  /*margin-top: 120vh;
-  /* Example: Use a smaller, more sensible margin */
-  /* OR use relative units for responsiveness: */
-  /* margin-top: 5vw; */
-
+  
   display: flex;
   justify-content: center;
   align-items: center;
