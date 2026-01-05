@@ -1,34 +1,5 @@
-<main class="main">
-  <div class="navbar">
+<div class="page-wrapper" [class.home-bg]="isHome">
   <app-navbar></app-navbar>
-  </div>
-  <div class="container">
-    <app-container> </app-container>
-  </div>
-  <div class="servicesportfolio">
-    <app-servicesportfolio> </app-servicesportfolio>
-  </div>
 
-  <div class="capabilities">
-    <app-capabilities> </app-capabilities>
-  </div>
-
-  <div class="choose_us">
-    <app-chooseus> </app-chooseus>
-  </div>
-
-  <div class="projects">
-    <app-projects> </app-projects>
-  </div>
-
-  <div class="Testimonials">
-    <app-testimonials></app-testimonials>
-  </div>
-
-  <div class="Products">
-    <app-products></app-products>
-  </div>
-  
-</main>
-
-<router-outlet />
+  <router-outlet />
+</div>

@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #000;
+    background: transparent !important;
     color: white;
     overflow-x: hidden;
     width: 100%;
@@ -116,7 +116,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid white;
+    background: black !important;
 }
 /* Default (Large screens) */
 .navbar-main {
@@ -127,6 +127,7 @@ body {
   border: 1px solid #FAEDDD80;
   border-radius: 20px;
   text-align: center;
+  background: black !important;
 }
 
 /* Tablets & small laptops - Consolidated below at line 1092 */

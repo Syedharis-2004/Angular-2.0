@@ -20,6 +20,16 @@ body {
   background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #F2FAFC;
 }
 
+/* Body Background Scoping for Page Continuity */
+/*body.home-page .page-wrapper {
+  background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%) !important;
+}
+*/
+
+body.contact-page .page-wrapper {
+  background: linear-gradient(135deg, #e8f5f5 0%, #f5f0e8 100%) !important;
+}
+
 /* Angular Root */
 app-root {
   display: block;

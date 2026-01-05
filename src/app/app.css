@@ -25,11 +25,10 @@
 
 }
 
-.navbar {
-  background-image: url('/assets/images/background.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+/* Remove background from app-navbar as it's now handled by page-wrapper */
+app-navbar {
+  display: block;
+  width: 100%;
 }
 
 .servicesportfolio {

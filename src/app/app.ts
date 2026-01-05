@@ -1,30 +1,36 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, ChangeDetectorRef, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
 import { Navbar } from './navbar/navbar';
-import test from 'node:test';
-import { Projects } from './projects/projects';
-import { Products } from './products/products';
-import { Container } from './container/container';
-import { Servicesportfolio } from './servicesportfolio/servicesportfolio';
-import { Capabilities } from './capabilities/capabilities';
-import { Chooseus } from './chooseus/chooseus';
-import { Testimonials } from './testimonials/testimonials';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
-  imports: [ RouterOutlet,
-     Navbar,
-     Projects,
-     Products,
-     Container,
-     Servicesportfolio,
-     Capabilities,
-     Chooseus,
-     Testimonials,],
+  standalone: true,
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    Navbar
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('my-app');
-}
+export class App implements OnInit {
+  constructor(public router: Router, private cdr: ChangeDetectorRef) {}
 
+  ngOnInit() {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      // Small delay to ensure URL is updated
+      setTimeout(() => {
+        this.cdr.detectChanges();
+      }, 50);
+    });
+  }
+
+  get isHome(): boolean {
+    // Precise check for home route
+    return this.router.url === '/' || this.router.url.startsWith('/home');
+  }
+}
