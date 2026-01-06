@@ -1,4 +1,5 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -9,11 +10,20 @@ import { RouterLink } from '@angular/router';
   styleUrl: './contact.css',
 })
 export class Contact implements OnInit, OnDestroy {
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
+
   ngOnInit() {
-    document.body.classList.add('contact-page');
+    if (isPlatformBrowser(this.platformId)) {
+      this.document.body.classList.add('contact-page');
+    }
   }
 
   ngOnDestroy() {
-    document.body.classList.remove('contact-page');
+    if (isPlatformBrowser(this.platformId)) {
+      this.document.body.classList.remove('contact-page');
+    }
   }
 }

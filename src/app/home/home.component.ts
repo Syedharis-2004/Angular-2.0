@@ -1,4 +1,5 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { Container } from '../container/container';
 import { Servicesportfolio } from '../servicesportfolio/servicesportfolio';
@@ -25,11 +26,20 @@ import { Products } from '../products/products';
   styleUrl: './home.component.css',
 })
 export class HomeComponent implements OnInit, OnDestroy {
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
+
   ngOnInit() {
-    document.body.classList.add('home-page');
+    if (isPlatformBrowser(this.platformId)) {
+      this.document.body.classList.add('home-page');
+    }
   }
 
   ngOnDestroy() {
-    document.body.classList.remove('home-page');
+    if (isPlatformBrowser(this.platformId)) {
+      this.document.body.classList.remove('home-page');
+    }
   }
 }

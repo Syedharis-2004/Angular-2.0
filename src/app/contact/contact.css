@@ -10,14 +10,36 @@
 .contact-page {
   font-family: 'Inter', sans-serif !important;
   min-height: 100vh;
-  background: linear-gradient(180deg, #CEE3E3 0%, #FFFFFF 50%, #FFFFFF 100%);
+  background: #FFFFFF;
   color: #000;
+  padding: 20px; /* Outer margin for the rounded container look */
 }
 
 /* Header Section */
 .contact-header {
   text-align: center;
-  padding: 100px 20px 60px;
+  margin-top: -120px; /* Pull header up under the transparent relative navbar */
+  padding: 180px 20px 100px; /* Adjusted padding for better spacing with the overlay */
+  /*background: linear-gradient(180deg, #257888 0%, #B2D8D8 100%);*/
+  background:
+    radial-gradient(
+      1200px 600px at 85% 15%,
+      rgba(64, 176, 184, 0.55) 0%,
+      rgba(64, 176, 184, 0.25) 35%,
+      rgba(64, 176, 184, 0.05) 60%,
+      transparent 70%
+    ),
+    linear-gradient(
+      135deg,
+      #6fa38f 0%,
+      #6fb1a8 35%,
+      #7fb8b0 55%,
+      #d6caa3 100%
+    );
+  border-radius: 60px;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
 }
 
 .badge {
@@ -25,19 +47,20 @@
   background: white;
   padding: 12px 30px;
   border-radius: 50px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   color: #1A1A1A;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .contact-header h1 {
-  font-size: 64px;
+  font-size: clamp(40px, 5vw, 84px);
   font-weight: 700;
-  color: #000;
+  color: #1A1A1A;
   margin: 0;
-  letter-spacing: -1px;
+  letter-spacing: -2px;
+  line-height: 1;
 }
 
 /* Contact Content */
@@ -71,7 +94,7 @@
   right: 0;
   width: 100%;
   height: 100%;
-  background: url('https://raw.githubusercontent.com/Syedharis-2004/Angular-2.0/main/src/assets/images/wave.svg') no-repeat center center;
+  background: url('../../assets/images/cardvi.png') no-repeat center center;
   background-size: cover;
   opacity: 0.4;
   z-index: 1;
@@ -80,6 +103,7 @@
 .card-content {
   position: relative;
   z-index: 2;
+  background: none;
 }
 
 .info-group {
@@ -202,28 +226,25 @@
 
 /* Footer Implementation */
 .contact-footer {
-  background: linear-gradient(180deg, #D7EFF1 0%, #D8C39F 100%);
-  padding: 80px 60px 0;
-  border-radius: 40px 40px 0 0;
+  /*background: linear-gradient(180deg, #CDE5E5 0%, #E7D7BD 100%);*/
+  background: linear-gradient(360deg, #D8BF89 0%, #BBE3E5 100%);
+  padding: 80px 100px 0;
+  border-radius: 60px 60px 0 0;
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr 1.2fr 1.2fr 1.5fr;
+  grid-template-columns: 1.5fr 1fr 2.5fr 1.5fr; /* Rebalanced for better space allocation */
   gap: 40px;
-  padding-bottom: 60px;
+  padding-bottom: 80px;
+  align-items: start;
 }
 
-.footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.footer-logo img {
-  inline-size: 200px;
+.logo img {
+  width: 180px;
+  height: auto;
 }
 
 .brand-name {
@@ -243,21 +264,31 @@
   color: #257888;
   letter-spacing: 2px;
 }
+.footer-column {
+  word-break: break-word; /* Allow long words to break if needed */
+}
 
+.services-grid-internal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
 .footer-column h4 {
-  font-size: 18px;
+  font-size: clamp(18px, 1.5vw, 24px); /* Slightly reduced max size */
   font-weight: 700;
-  color: #1A1A1A;
-  margin-bottom: 24px;
+  color: #000;
+  margin-bottom: 30px;
+  font-family: 'Inter', sans-serif !important;
 }
 
 .footer-column a {
   display: block;
-  color: #257888;
+  color: #387D8A;
   text-decoration: none;
-  font-size: 14px;
-  margin-bottom: 12px;
+  font-size: clamp(16px, 1.2vw, 20px); /* Rebalanced size */
+  margin-bottom: 15px;
   font-weight: 500;
+  transition: opacity 0.3s;
 }
 
 .footer-column a:hover {
@@ -266,21 +297,25 @@
 
 .contact-detail {
   display: flex;
-  gap: 12px;
+  gap: 15px;
   margin-bottom: 20px;
+  align-items: flex-start;
 }
 
 .footer-icon {
-  width: 20px;
-  height: 20px;
-  opacity: 0.7;
+  font-family: 'Font Awesome 6 Free' !important;
+  font-weight: 900 !important;
+  font-size: 20px;
+  color: #387D8A;
+  width: 24px;
+  text-align: center;
 }
 
 .contact-detail address {
   font-style: normal;
-  font-size: 14px;
-  color: #257888;
-  line-height: 1.6;
+  font-size: clamp(16px, 1.2vw, 20px); /* Rebalanced size */
+  color: #387D8A;
+  line-height: 1.5;
 }
 
 .footer-bottom {
@@ -294,8 +329,9 @@
 }
 
 .footer-bottom p {
-  font-size: 14px;
-  color: #257888;
+  font-size: clamp(16px, 1vw, 20px);
+  color: #387D8A;
+  font-weight: 500;
 }
 
 .footer-bottom-links {
@@ -304,9 +340,10 @@
 }
 
 .footer-bottom-links a {
-  color: #257888;
+  color: #387D8A;
   text-decoration: none;
-  font-size: 14px;
+  font-size: clamp(16px, 1vw, 20px);
+  font-weight: 500;
 }
 
 /* Responsive Design */

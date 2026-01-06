@@ -27,7 +27,7 @@ body {
 */
 
 body.contact-page .page-wrapper {
-  background: linear-gradient(135deg, #e8f5f5 0%, #f5f0e8 100%) !important;
+  /*background: linear-gradient(135deg, #e8f5f5 0%, #f5f0e8 100%) !important;*/
 }
 
 /* Angular Root */
@@ -42,4 +42,43 @@ app-root > * {
   display: block;
   width: 100%;
   max-width: 100%;
+}
+
+/* Global Styles */
+body.contact-page .navbar {
+    background: transparent !important;
+    position: relative !important;
+    z-index: 1000;
+    border-bottom: none !important;
+}
+
+body.contact-page .navbar-main {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(10px);
+}
+
+body.contact-page .nav-links a,
+body.contact-page .logo,
+body.contact-page .search-toggle-icon {
+    color: #FFFFFF !important;
+}
+
+body.contact-page .cta-btn {
+    background: #FFFFFF !important;
+    color: #257888 !important;
+}
+
+body.contact-page .language-toggle {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+body.contact-page .language-option {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+body.contact-page .eng-active {
+    color: #FFFFFF !important;
+    font-weight: 700;
 }
