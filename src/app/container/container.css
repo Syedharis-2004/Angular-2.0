@@ -113,6 +113,7 @@ body{
   display: flex;
   border-radius: 20px;
   align-items: center;
+  margin-top: -40vh;
   /* Optional: matches other rounded corners */
 }
 
