@@ -100,17 +100,17 @@
     margin-top: 40px;
 }
 
-.btn-light {
+/*.btn-light {
     background: #d1ffde !important;
     color: #000 !important;
     padding: 12px 28px !important;
     border-radius: 50px !important; /* Pill shape like reference */
-    font-weight: 600 !important;
+    /*font-weight: 600 !important;
     text-decoration: none !important;
     transition: transform 0.3s;
-}
+}*/
 
-.btn-outline {
+/*.btn-outline {
     background: transparent !important;
     border: 1px solid rgba(255,255,255,0.5) !important;
     color: #ffffff !important;
@@ -118,7 +118,7 @@
     border-radius: 50px !important;
     font-weight: 600 !important;
     text-decoration: none !important;
-}
+}*/
 
 /* CLIENTS */
 .clients {
