@@ -18,24 +18,9 @@
 /* Header Section */
 .contact-header {
   text-align: center;
-  margin-top: -120px; /* Pull header up under the transparent relative navbar */
+  margin-top: -152px; /* Pull header up under the transparent relative navbar */
   padding: 180px 20px 100px; /* Adjusted padding for better spacing with the overlay */
-  /*background: linear-gradient(180deg, #257888 0%, #B2D8D8 100%);*/
-  background:
-    radial-gradient(
-      1200px 600px at 85% 15%,
-      rgba(64, 176, 184, 0.55) 0%,
-      rgba(64, 176, 184, 0.25) 35%,
-      rgba(64, 176, 184, 0.05) 60%,
-      transparent 70%
-    ),
-    linear-gradient(
-      135deg,
-      #6fa38f 0%,
-      #6fb1a8 35%,
-      #7fb8b0 55%,
-      #d6caa3 100%
-    );
+  background: linear-gradient(to bottom, #4a9e9a, #d4c794);
   border-radius: 20px;
   margin-bottom: 60px;
   position: relative;
@@ -108,6 +93,7 @@
 
 .info-group {
   margin-bottom: 50px;
+  
 }
 
 .info-group h3 {
@@ -149,7 +135,7 @@
 .form-group label {
   font-size: 14px;
   font-weight: 500;
-  color: #333;
+  color: #257888;
 }
 
 .form-group input,

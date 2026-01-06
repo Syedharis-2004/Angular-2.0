@@ -27,6 +27,8 @@ body {
 */
 
 body.contact-page .page-wrapper {
+  /*background-color: #257888;*/
+  background: none;
   /*background: linear-gradient(135deg, #e8f5f5 0%, #f5f0e8 100%) !important;*/
 }
 
@@ -55,7 +57,7 @@ body.contact-page .navbar {
 body.contact-page .navbar-main {
     background: rgba(255, 255, 255, 0.1) !important;
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    backdrop-filter: blur(10px);
+    
 }
 
 body.contact-page .nav-links a,
