@@ -293,9 +293,7 @@ body {
     align-items: center;
     justify-content: space-between;
     background: black !important;
-    /*border-radius: 20px;*/
-    border-top-left-radius: 20px !important;
-    border-top-right-radius: 20px !important;
+    border-radius:0px 0px 20px 20px;
 }
 /* Default (Large screens) */
 .navbar-main {
@@ -1459,7 +1457,7 @@ body {
     gap: 40px;
     min-height: 80vh;
     color: white;
-    border-radius: 20px;
+    border-radius:0px 0px 20px 20px;
     /* align-items: flex-end; - Removed for better vertical centering on smaller screens */
     /* justify-content: space-between; - Removed, grid handles spacing */
 }

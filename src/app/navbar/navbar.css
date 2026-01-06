@@ -921,7 +921,7 @@ h1 {
 
 /* --- KEY BODY CHANGES FOR RESPONSIVENESS --- */
 body {
-    background: #000;
+    /*background: #000;*/
     color: white;
     /* Removed fixed width: 1880px; and height: 1040px; */
     overflow-x: hidden; /* Prevent horizontal scroll bar */

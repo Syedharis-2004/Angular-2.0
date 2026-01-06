@@ -36,7 +36,7 @@
       #7fb8b0 55%,
       #d6caa3 100%
     );
-  border-radius: 60px;
+  border-radius: 20px;
   margin-bottom: 60px;
   position: relative;
   z-index: 1;
@@ -229,7 +229,7 @@
   /*background: linear-gradient(180deg, #CDE5E5 0%, #E7D7BD 100%);*/
   background: linear-gradient(360deg, #D8BF89 0%, #BBE3E5 100%);
   padding: 80px 100px 0;
-  border-radius: 60px 60px 0 0;
+  border-radius: 40px;
 }
 
 .footer-container {
