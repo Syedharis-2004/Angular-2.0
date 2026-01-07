@@ -8,7 +8,7 @@
 }
 
 .contact-page {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'work sans', sans-serif !important;
   min-height: 100vh;
   background: #FFFFFF;
   color: #000;
@@ -18,13 +18,14 @@
 /* Header Section */
 .contact-header {
   text-align: center;
-  margin-top: -152px; /* Pull header up under the transparent relative navbar */
+  margin-top: -162px; /* Pull header up under the transparent relative navbar */
   padding: 180px 20px 100px; /* Adjusted padding for better spacing with the overlay */
   background: linear-gradient(to bottom, #4a9e9a, #d4c794);
   border-radius: 20px;
   margin-bottom: 60px;
   position: relative;
   z-index: 1;
+  /*width: 1920px;*/
 }
 
 .badge {
@@ -210,6 +211,26 @@
   transform: translateY(-1px);
 }
 
+/* Validation Styles */
+.form-group input.ng-invalid.ng-touched,
+.form-group textarea.ng-invalid.ng-touched {
+  border-color: #ef4444; /* Red border for invalid */
+  background-color: #fef2f2; /* Light red background */
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 13px;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.submit-btn:disabled {
+  background-color: #9CA3AF; /* Grey out disabled button */
+  cursor: not-allowed;
+  transform: none;
+}
+ 
 /* Footer Implementation */
 .contact-footer {
   /*background: linear-gradient(180deg, #CDE5E5 0%, #E7D7BD 100%);*/

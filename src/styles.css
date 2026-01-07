@@ -27,10 +27,11 @@ body {
 */
 
 body.contact-page .page-wrapper {
-  /*background-color: #257888;*/
-  background: none;
-  /*background: linear-gradient(135deg, #e8f5f5 0%, #f5f0e8 100%) !important;*/
+   background: none;
 }
+body.portfolio-page .page-wrapper {
+  background: none !important;
+ }
 
 /* Angular Root */
 app-root {
@@ -81,6 +82,43 @@ body.contact-page .language-option {
 }
 
 body.contact-page .eng-active {
+    color: #FFFFFF !important;
+    font-weight: 700;
+}
+/* Portfolio Global Styles */
+body.portfolio-page .navbar {
+    background: transparent !important;
+    position: relative !important;
+    z-index: 1000;
+    border-bottom: none !important;
+}
+
+body.portfolio-page .navbar-main {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+body.portfolio-page .nav-links a,
+body.portfolio-page .logo,
+body.portfolio-page .search-toggle-icon {
+    color: #FFFFFF !important;
+}
+
+body.portfolio-page .cta-btn {
+    background: #FFFFFF !important;
+    color: #257888 !important;
+}
+
+body.portfolio-page .language-toggle {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+body.portfolio-page .language-option {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+body.portfolio-page .eng-active {
     color: #FFFFFF !important;
     font-weight: 700;
 }

@@ -1,0 +1,74 @@
+<main class="portfolio">
+  <!-- Header Section -->
+  <section class="portfolio-header">
+    <div class="badge">Portfolio</div>
+    <h1>Turning Ideas Into Impactful Projects</h1>
+    <p>Every project tells a story of challenges faced, ideas explored, and results delivered. Discover how we bring imagination to life through design and technology.</p>
+  </section>
+  <section class="portfolio-section">
+  <div class="container">
+
+    <header class="section-header">
+      <h2>Where Ideas Become Products</h2>
+      <p>
+        A collection of our most impactful digital solutions, crafted with
+        strategy, design, and cutting-edge technology.
+      </p>
+    </header>
+
+    <!-- Dynamic Projects Loop -->
+    <div *ngFor="let project of projects" class="portfolio-card-container">
+      
+      <!-- Brand Card (Left) -->
+      <div class="brand-card">
+        <h2 class="vertical-text">E-BLE</h2>
+        <div class="brand-details">
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.subtitle }}</p>
+        </div>
+      </div>
+
+      <!-- Content Card (Right) -->
+      <div class="content-card">
+        
+        <!-- Slider Section -->
+        <div class="slider-section">
+          <div class="slides" [style.transform]="'translateX(' + (-project.currentSlide * 100) + '%)'">
+            <img *ngFor="let img of project.images" [src]="img" alt="Project Project">
+          </div>
+          
+          <!-- Arrows -->
+          <button class="arrow left" (click)="prevSlide(project)">&#10094;</button>
+          <button class="arrow right" (click)="nextSlide(project)">&#10095;</button>
+
+          <!-- Dots -->
+          <div class="dots">
+            <span *ngFor="let img of project.images; let i = index" 
+                  [class.active]="i === project.currentSlide"
+                  (click)="goToSlide(project, i)"></span>
+          </div>
+        </div>
+
+        <!-- Project Details (Scope & Highlights) -->
+        <div class="project-details">
+          <div class="detail-column">
+            <h4>Scope</h4>
+            <ul>
+              <li *ngFor="let item of project.scope">{{ item }}</li>
+            </ul>
+          </div>
+          <div class="detail-column">
+            <h4>Highlights</h4>
+            <ul>
+              <li *ngFor="let item of project.highlights">{{ item }}</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+<app-products></app-products>
+</main>
