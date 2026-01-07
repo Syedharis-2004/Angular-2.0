@@ -108,7 +108,7 @@
 .brand-details {
   position: relative;
   z-index: 2;
-  margin-top: auto; /* Push to bottom if needed, or adjust */
+ /* margin-top: auto; /* Push to bottom if needed, or adjust */
 }
 
 .brand-details h3 {
