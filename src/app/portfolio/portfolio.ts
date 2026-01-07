@@ -50,7 +50,7 @@ export class Portfolio implements OnInit {
         'Successful pilot project conducted with 3,200+ work orders processed end-to-end'
       ],
       images: [
-         'assets/images/Frame 33.png',
+         'assets/images/charts (2).png',
          'assets/images/mobile.png',
          'assets/images/e-commerce.png'
       ],
@@ -68,7 +68,7 @@ export class Portfolio implements OnInit {
       ],
       images: [
          'assets/images/mobile.png',
-         'assets/images/Frame 33.png',
+         'assets/images/e-commerce.png',
          'assets/images/charts (2).png'
       ],
       currentSlide: 0
