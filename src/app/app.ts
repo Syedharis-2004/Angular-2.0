@@ -38,6 +38,7 @@ export class App implements OnInit {
     this.isTransparentPage = url.startsWith('/portfolio') || 
                              url.startsWith('/our-services') ||
                              url.startsWith('/about') ||
+                             url.startsWith('/contact') ||
                              url.includes('our-services') ||
                              url.includes('portfolio');
   }

@@ -14,6 +14,7 @@
     padding-bottom: 120px;
     /* Gradient matching reference: Teal -> Light Peach */
     background: linear-gradient(180deg, #1A748E 0%, #63A89C 50%, #fee6c5 100%);
+    border-radius: 0 0 40px 40px;
     position: relative;
     z-index: 1;
   }

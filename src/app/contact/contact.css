@@ -11,17 +11,19 @@
   font-family: 'work sans', sans-serif !important;
   min-height: 100vh;
   background: #FFFFFF;
+  background: #FFFFFF;
   color: #000;
-  padding: 20px; /* Outer margin for the rounded container look */
+  padding: 0;
 }
 
 /* Header Section */
 .contact-header {
   text-align: center;
   margin-top: -162px; /* Pull header up under the transparent relative navbar */
-  padding: 180px 20px 100px; /* Adjusted padding for better spacing with the overlay */
-  background: linear-gradient(to bottom, #4a9e9a, #d4c794);
-  border-radius: 20px;
+  padding: 220px 20px 120px; /* Adjusted padding for better spacing with the overlay */
+  /* Background matching Portfolio: Teal to Peach gradient */
+  background: linear-gradient(180deg, #1A748E 0%, #63A89C 50%, #fee6c5 100%);
+  border-radius: 0 0 40px 40px;
   margin-bottom: 60px;
   position: relative;
   z-index: 1;
