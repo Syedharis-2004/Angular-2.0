@@ -16,21 +16,33 @@ import { filter } from 'rxjs/operators';
   styleUrl: './app.css'
 })
 export class App implements OnInit {
+  isTransparentPage = false;
+
   constructor(public router: Router, private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
+    this.checkTransparency(); // Initial check
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe(() => {
-      // Small delay to ensure URL is updated
+      this.checkTransparency();
+      // Small delay just in case, though direct check should work
       setTimeout(() => {
         this.cdr.detectChanges();
       }, 50);
     });
   }
 
+  checkTransparency() {
+    const url = this.router.url;
+    this.isTransparentPage = url.startsWith('/portfolio') || 
+                             url.startsWith('/our-services') ||
+                             url.startsWith('/about') ||
+                             url.includes('our-services') ||
+                             url.includes('portfolio');
+  }
+
   get isHome(): boolean {
-    // Precise check for home route
     return this.router.url === '/' || this.router.url.startsWith('/home');
   }
 }

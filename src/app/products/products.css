@@ -143,8 +143,8 @@ a {
 .footer {
     background: linear-gradient(360deg, #D8BF89 0%, #BBE3E5 100%);
     padding: 60px 4vw 40px;
-    margin: 100px 20px 20px; /* Added margins to show border radius */
-    border-radius: 40px;
+    margin: 100px 20px 0; /* Removed bottom margin */
+    border-radius: 40px 40px 0 0; /* Flatten bottom corners */
     color: #050304;
     
 }

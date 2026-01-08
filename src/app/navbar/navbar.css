@@ -118,7 +118,10 @@ body {
     justify-content: space-between;
     background: black !important;
     border-radius: 20px 20px 0px 0px!important;
+    position: relative;
+    z-index: 100;
 }
+
 /* Default (Large screens) */
 .navbar-main {
   display: flex;
@@ -1545,4 +1548,54 @@ body.contact-page .language-option {
 body.contact-page .eng-active {
     color: #FFFFFF !important;
     font-weight: 700;
+}
+
+/* Glass effect for main container */
+.navbar-main.transparent {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(15px);
+    box-shadow: none !important;
+}
+
+.navbar.transparent {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Override children when parent is transparent */
+.navbar.transparent .nav-links a {
+    color: #FFFFFF !important;
+}
+
+.navbar.transparent .logo {
+    color: #FFFFFF !important; /* In case logo was text, for image verify filter if needed */
+}
+
+.navbar.transparent .search-toggle-icon {
+    color: #FFFFFF !important;
+}
+
+.navbar.transparent .cta-btn {
+    background: #FFFFFF !important;
+    color: #257888 !important;
+}
+
+.navbar.transparent .language-toggle {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.navbar.transparent .language-option {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.navbar.transparent .eng-active {
+    color: #FFFFFF !important;
+}
+
+app-navbar {
+    position: relative;
+    z-index: 1000;
 }

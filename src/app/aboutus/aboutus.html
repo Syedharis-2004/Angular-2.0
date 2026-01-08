@@ -1,0 +1,110 @@
+<main class="about-page">
+  <!-- Header Section -->
+  <section class="about-header">
+    <div class="badge">About Us</div>
+    <h1>Why We Are The Best</h1>
+    <p>By combining innovation with technical expertise, we help businesses optimize performance, connect systems, and bring new ideas to life.</p>
+  </section>
+
+  <!-- Our Story Section -->
+  <section class="story-section">
+    <div class="story-container">
+      
+      <!-- Left Column: Content -->
+      <div class="story-content">
+        <h2>Our Story</h2>
+        <div class="story-text">
+          <p>We started Manarah Ventures to fix a common problem: companies know they need to evolve digitally, but they're blocked by bandwidth, unclear direction, or unreliable delivery.</p>
+          <p>We provide clarity, execution, and continuity.</p>
+          <p>Our approach combines strategic thinking with hands-on execution, ensuring every solution we build creates measurable business value.</p>
+        </div>
+
+        <ul class="story-features">
+          <li><strong>Clarity</strong> on what to build and why</li>
+          <li><strong>Execution</strong> that ships, not just decks</li>
+          <li><strong>Ongoing</strong> support so the product keeps performing</li>
+        </ul>
+
+        <div class="story-quote">
+          "You get a partner who understands real business pressure timelines, budgets, stakeholders — and delivers with that in mind."
+        </div>
+      </div>
+
+      <!-- Right Column: Image & Cards -->
+      <div class="story-visuals">
+        <div class="main-image">
+           <!-- Placeholder for team image -->
+           <img src="../../assets/images/meeting.png" alt="Team Meeting" onerror="this.src='https://placehold.co/600x400/103c4a/FFF'"> 
+        </div>
+        
+        <div class="visual-cards">
+          <div class="v-card">
+            <i class="fas fa-users-gear"></i>
+            <span>Expert Team</span>
+          </div>
+          <div class="v-card">
+            <i class="fas fa-rocket"></i>
+            <span>Fast Delivery</span>
+          </div>
+          <div class="v-card">
+            <i class="fas fa-heart"></i>
+            <span>Client First</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Work Section -->
+  <section class="how-we-work">
+    <div class="container2">
+        <div class="section-header">
+            <div class="badge-pill">Our Work</div>
+            <h2>How We Work</h2>
+            <p>Our proven methodology ensures successful project delivery from concept to launch and beyond</p>
+        </div>
+
+        <div class="work-grid">
+            <div class="work-card" *ngFor="let item of workProcess">
+                <div class="icon-circle">
+                    <i [class]="item.icon"></i>
+                </div>
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.description }}</p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack Section -->
+  <section class="tech-stack-section">
+    <div class="tech-header">
+        <div class="badge-pill">technologies</div>
+        <h2>Technology Stack Highlights</h2>
+        <p>We work across modern enterprise, web, mobile, data, and AI stacks to meet you where you are and take you forward.</p>
+    </div>
+
+    <!-- Tech Icons Row -->
+    <div class="tech-icons-row">
+        <div class="tech-item" *ngFor="let tech of technologies">
+            <div class="tech-icon-circle">
+                <i [class]="tech.icon"></i>
+            </div>
+            <span class="tech-label">{{ tech.name }}</span>
+        </div>
+    </div>
+
+    <!-- Tech Cards Row -->
+    <div class="tech-cards-row">
+        <div class="tech-card" *ngFor="let card of techCards">
+            <div class="card-icon">
+                <i [class]="card.icon"></i>
+            </div>
+            <h3>{{ card.title }}</h3>
+            <p>{{ card.description }}</p>
+        </div>
+    </div>
+  </section>
+  <app-testimonials></app-testimonials>
+  <app-products></app-products>
+</main>

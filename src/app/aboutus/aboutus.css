@@ -1,0 +1,356 @@
+/* About Page Reset */
+.about-page {
+    font-family: 'work sans', sans-serif !important;
+    background: #fdfdfd;
+    color: #1A1A1A;
+    padding-bottom: 0;
+  }
+  
+  /* Header Section */
+  .about-header {
+    text-align: center;
+    margin-top: -162px;
+    padding-top: 220px;
+    padding-bottom: 120px;
+    /* Gradient matching reference: Teal -> Light Peach */
+    background: linear-gradient(180deg, #1A748E 0%, #63A89C 50%, #fee6c5 100%);
+    position: relative;
+    z-index: 1;
+  }
+  
+  .badge {
+    display: inline-block;
+    background: linear-gradient(to right, #ffffff, #fff5e6);
+    padding: 12px 35px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .about-header h1 {
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 700;
+    margin-bottom: 24px;
+    line-height: 1.2;
+    color: #111;
+  }
+  
+  .about-header p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #222;
+  }
+  
+  /* Story Section */
+  .story-section {
+    padding: 80px 20px;
+    background: #fff;
+  }
+  
+  .story-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  
+  /* Left Column */
+  .story-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #111;
+  }
+  
+  .story-text p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #444;
+    font-size: 1.05rem;
+  }
+  
+  .story-features {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+  }
+  
+  .story-features li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    font-size: 1.05rem;
+    color: #333;
+  }
+  
+  .story-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #F4A261; /* Orange/Gold check */
+    font-weight: bold;
+  }
+  
+  .story-features strong {
+    color: #006D77; /* Teal styling for keywords */
+  }
+  
+  .story-quote {
+    background: #F0F8F8;
+    border-left: 4px solid #D8BF89;
+    padding: 20px;
+    border-radius: 8px;
+    font-style: italic;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Right Column */
+  .story-visuals {
+    background: #EAF6F6; /* Light teal background card */
+    padding: 30px;
+    border-radius: 30px;
+    text-align: center;
+  }
+  
+  .main-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  
+  .visual-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .v-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+  
+  .v-card i {
+    font-size: 24px;
+    color: #006D77;
+  }
+  
+  .v-card span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .story-container {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    
+    .about-header {
+        padding-top: 180px; /* Adjust if needed for mobile */
+    }
+  }
+
+/* How We Work Section */
+.how-we-work {
+    padding: 80px 20px;
+    background: #FFFAF4; /* Light beige/peach tint from reference */
+}
+
+.container2 {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.badge-pill {
+    display: inline-block;
+    background: #FFF5E6;
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.section-header p {
+    color: #444;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.work-card {
+    background: #F0FAFC; /* Light Blue */
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon-circle {
+    font-size: 32px;
+    color: #008080; /* Teal icon color */
+    margin-bottom: 20px;
+}
+
+.work-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.work-card p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Tech Stack Section (Reused look) */
+.tech-stack-section {
+    padding: 100px 20px;
+    background: #FFFAF4; /* Using the same background flow */
+    text-align: center;
+}
+
+.tech-header {
+    margin-bottom: 60px;
+}
+
+.tech-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.tech-header p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Tech Icons Row */
+.tech-icons-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.tech-icon-circle {
+  width: 70px;
+  height: 70px;
+  background: #ffffff;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05); /* Soft shadow */
+  font-size: 28px;
+  color: #1A1A1A;
+  transition: transform 0.3s ease;
+}
+
+.tech-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1A1A1A;
+}
+
+/* Tech Cards Row */
+.tech-cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.tech-card {
+  background: linear-gradient(180deg, #F0FCFD 0%, #FFFFFF 100%); /* Very subtle gradient based on ref */
+  border-radius: 24px;
+  padding: 40px 30px;
+  flex: 1 1 300px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.card-icon {
+  font-size: 36px;
+  color: #006D77; /* Teal */
+  margin-bottom: 20px;
+}
+
+.tech-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.tech-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .container2 {
+        padding: 0 10px;
+    }
+}

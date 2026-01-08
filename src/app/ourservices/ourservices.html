@@ -1,0 +1,91 @@
+<main class="services-page">
+  <!-- Header Section -->
+  <section class="services-header">
+    <div class="badge">Services</div>
+    <h1>End-To-End Technology<br>Expertise.</h1>
+    <p>We provide a full spectrum of digital, data, and AI services designed to create measurable business value.</p>
+  </section>
+
+  <!-- Services Content Section -->
+  <section class="services-content">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <header class="section-title">
+        <div class="sub-badge">Our Work</div>
+        <h2>Our Services</h2>
+        <p>Our proven methodology ensures successful project delivery from concept to launch and beyond</p>
+      </header>
+
+      <!-- Services Grid -->
+      <div class="services-grid">
+        <button *ngFor="let service of services" 
+                class="service-btn" 
+                [class.active]="selectedService.id === service.id"
+                (click)="selectService(service)">
+          {{ service.title }}
+        </button>
+      </div>
+
+      <!-- Detail Card -->
+      <div class="service-detail-card" *ngIf="selectedService">
+        <div class="card-layout">
+          <!-- Left: Title & Icon -->
+          <div class="card-left">
+            <div class="service-icon">
+              <i [class]="selectedService.icon"></i>
+            </div>
+            <h3>{{ selectedService.title }}</h3>
+          </div>
+
+          <!-- Right: Details List -->
+          <div class="card-right">
+            <div class="detail-block">
+              <div class="detail-header">
+                <h4>{{ selectedService.title }}</h4> <!-- Reusing title as section header -->
+                <span class="toggle-icon">&#10003;</span>
+              </div>
+              <ul class="detail-list">
+                <li *ngFor="let detail of selectedService.details">{{ detail }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <app-projects></app-projects>
+      <!-- Tech Stack Section -->
+      <section class="tech-stack-section">
+        <div class="tech-header">
+            <div class="sub-badge">technologies</div>
+            <h2>Technology Stack Highlights</h2>
+            <p>We work across modern enterprise, web, mobile, data, and AI stacks to meet you where you are and take you forward.</p>
+        </div>
+
+        <!-- Tech Icons Row -->
+        <div class="tech-icons-row">
+            <div class="tech-item" *ngFor="let tech of technologies">
+                <div class="tech-icon-circle">
+                    <i [class]="tech.icon"></i>
+                </div>
+                <span class="tech-label">{{ tech.name }}</span>
+            </div>
+        </div>
+
+        <!-- Tech Cards Row -->
+        <div class="tech-cards-row">
+            <div class="tech-card" *ngFor="let card of techCards">
+                <div class="card-icon">
+                    <i [class]="card.icon"></i>
+                </div>
+                <h3>{{ card.title }}</h3>
+                <p>{{ card.description }}</p>
+            </div>
+        </div>
+      </section>
+
+    </div>
+  </section>
+  <app-testimonials></app-testimonials>
+  <app-products></app-products>
+  
+</main>

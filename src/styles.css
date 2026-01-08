@@ -122,3 +122,13 @@ body.portfolio-page .eng-active {
     color: #FFFFFF !important;
     font-weight: 700;
 }
+
+/* Fix for FontAwesome icons being overridden by global * reset */
+.fa-solid, .fas {
+  font-family: "Font Awesome 6 Free" !important;
+  font-weight: 900 !important;
+}
+.fa-brands, .fab {
+  font-family: "Font Awesome 6 Brands" !important;
+  font-weight: 400 !important;
+}
